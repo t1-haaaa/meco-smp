@@ -14,7 +14,7 @@
 set -euo pipefail
 
 MC_VERSION="${MC_VERSION:-1.20.4}"
-PAPER_API="https://api.papermc.io/v2/projects/paper"
+PAPER_API="https://fill.papermc.io/v3/projects/paper"
 PLAYIT_URL="https://github.com/playit-cloud/playit-agent/releases/latest/download/playit-linux-x86_64"
 
 echo "==> [1/7] Updating system packages..."
@@ -22,11 +22,12 @@ sudo apt-get update
 sudo apt-get install -y curl jq wget unzip tar gnupg openjdk-21-jre-headless
 
 echo "==> [2/7] Installing Playit.gg agent (linux-x86_64)..."
-if ! command -v playit >/dev/null 2>&1; then
-  curl -sL "${PLAYIT_URL}" -o playit
-  chmod +x playit
-  sudo mv playit /usr/local/bin/playit
-fi
+# Always fetch a fresh copy: a stale/corrupt cached binary (e.g. an HTML
+# error page saved as `playit`) breaks every later run.
+rm -f /usr/local/bin/playit ./playit
+curl -sL "${PLAYIT_URL}" -o playit
+chmod +x playit
+sudo mv playit /usr/local/bin/playit
 playit --version || true
 
 echo "==> [3/7] Pre-linking playit agent with stored secret (if provided)..."
@@ -40,17 +41,19 @@ else
 fi
 
 echo "==> [4/7] Fetching latest PaperMC build for Minecraft ${MC_VERSION}..."
-PAPER_BUILD=$(curl -s "${PAPER_API}/versions/${MC_VERSION}/builds" \
-  | jq -r '.builds[-1].build' 2>/dev/null || true)
+# PaperMC's Fill API (v3): build list is newest-first, stable channel only.
+BUILDS=$(curl -s "${PAPER_API}/versions/${MC_VERSION}/builds")
+PAPER_BUILD=$(echo "${BUILDS}" | jq -r '[.[] | select(.channel == "STABLE")][0].id' 2>/dev/null || true)
 if [ -z "${PAPER_BUILD}" ] || [ "${PAPER_BUILD}" = "null" ]; then
-  echo "ERROR: No PaperMC build found for version ${MC_VERSION}."
+  echo "ERROR: No stable PaperMC build found for version ${MC_VERSION}."
   echo "       Override with:  MC_VERSION=1.21.1 bash setup.sh"
   exit 1
 fi
-PAPER_JAR=$(curl -s "${PAPER_API}/versions/${MC_VERSION}/builds/${PAPER_BUILD}" \
-  | jq -r '.downloads.application.name')
-curl -sL -o server.jar \
-  "${PAPER_API}/versions/${MC_VERSION}/builds/${PAPER_BUILD}/downloads/${PAPER_JAR}"
+PAPER_JAR=$(echo "${BUILDS}" | jq -r --argjson id "${PAPER_BUILD}" \
+  '.[] | select(.id == $id) | .downloads["server:default"].name')
+PAPER_URL=$(echo "${BUILDS}" | jq -r --argjson id "${PAPER_BUILD}" \
+  '.[] | select(.id == $id) | .downloads["server:default"].url')
+curl -sL -o server.jar "${PAPER_URL}"
 echo "      Downloaded: ${PAPER_JAR} (build ${PAPER_BUILD})"
 
 echo "==> [5/7] Downloading ViaVersion ecosystem (version compatibility plugins)..."
