@@ -54,13 +54,33 @@ fi
 echo "==> Agent log tail:"; tail -n 5 playit.log || true
 
 echo ""
-echo "==> Starting meco smp PaperMC server (G1GC, 10G min / 14G max heap)..."
+echo "==> Detecting available RAM to size the JVM heap..."
+# Codespaces machines vary (16GB premium vs 8GB standard). Size the heap to
+# ~55% of total RAM so the OS and playit agent always keep headroom, with the
+# 16GB defaults (-Xms10G -Xmx14G) when the box is big enough. Override with
+# MC_XMX / MC_XMS env vars if you want explicit values.
+MEM_KB=$(awk '/MemTotal/{print $2}' /proc/meminfo)
+MEM_GB=$((MEM_KB / 1024 / 1024))
+XMX="${MC_XMX:-}"
+XMS="${MC_XMS:-}"
+if [ -z "${XMX}" ]; then
+  HEAP_GB=$(( (MEM_GB * 55) / 100 ))
+  HEAP_GB=$(( HEAP_GB > 14 ? 14 : HEAP_GB ))
+  HEAP_GB=$(( HEAP_GB < 2 ? 2 : HEAP_GB ))
+  XMX="${HEAP_GB}G"
+fi
+if [ -z "${XMS}" ]; then
+  XMS=$(( ${XMX%G} * 70 / 100 ))G
+fi
+echo "==> Detected ${MEM_GB}GB RAM - using -Xms${XMS} -Xmx${XMX}"
+
+echo "==> Starting meco smp PaperMC server (G1GC, heap ${XMS} / ${XMX})..."
 echo "==> Server console is interactive here. Stop with Ctrl+C."
 echo ""
-# JVM flags tuned for the 16GB Codespaces box:
-#   -Xms10G / -Xmx14G  : large heap, keep 2GB for the OS and playit agent
-#   -XX:+UseG1GC       : modern low-pause garbage collector
-java -Xms10G -Xmx14G \
+# JVM flags tuned for the Codespaces box:
+#   -Xms / -Xmx          : heap auto-sized to available RAM (55% of total)
+#   -XX:+UseG1GC         : modern low-pause garbage collector
+java -Xms"${XMS}" -Xmx"${XMX}" \
   -XX:+UseG1GC \
   -XX:+ParallelRefProcEnabled \
   -XX:MaxGCPauseMillis=200 \
