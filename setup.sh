@@ -15,7 +15,10 @@ set -euo pipefail
 
 MC_VERSION="${MC_VERSION:-1.20.4}"
 PAPER_API="https://fill.papermc.io/v3/projects/paper"
-PLAYIT_URL="https://github.com/playit-cloud/playit-agent/releases/latest/download/playit-linux-amd64"
+# Pinned to v0.17.1: the classic playit agent that prints the claim link and
+# runs the tunnel in one process. The newer 1.0.x CLI (daemon+frontend) fails
+# to provision in Codespaces containers.
+PLAYIT_URL="https://github.com/playit-cloud/playit-agent/releases/download/v0.17.1/playit-linux-amd64"
 
 echo "==> [1/7] Updating system packages..."
 sudo apt-get update
@@ -29,7 +32,7 @@ sudo rm -f /usr/local/bin/playit
 curl -sL "${PLAYIT_URL}" -o playit
 chmod +x playit
 sudo mv playit /usr/local/bin/playit
-playit --version || true
+echo "      playit agent installed ($(head -c 1 /usr/local/bin/playit >/dev/null 2>&1 && echo ok))"
 
 echo "==> [3/7] Pre-linking playit agent with stored secret (if provided)..."
 if [ -n "${PLAYIT_SECRET:-}" ]; then

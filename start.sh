@@ -20,6 +20,7 @@ echo "==> Starting Playit.gg agent (static tunnel on port 25565)..."
 pkill -f "playit" 2>/dev/null || true
 sleep 1
 nohup playit ${PLAYIT_SECRET:+--secret "${PLAYIT_SECRET}"} > playit.log 2>&1 &
+echo "==> Playit agent PID: $!"
 
 # Give the agent a moment to print the Claim Link or tunnel address.
 echo "==> Reading agent output..."
