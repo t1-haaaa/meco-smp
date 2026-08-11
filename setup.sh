@@ -61,16 +61,23 @@ curl -sL -o server.jar "${PAPER_URL}"
 echo "      Downloaded: ${PAPER_JAR} (build ${PAPER_BUILD})"
 
 # -----------------------------------------------------------------------------
-# Modrinth helper: download the latest stable jar for a project.
+# Modrinth helper: download the latest jar for a project.
 #   $1 = project slug   $2 = output filename   $3 = game version (default 1.20.4)
-# Prefers "release" builds; falls back to beta/pre-release if needed.
+#   $4 = channel preference: "release" (default) or "latest" (any channel)
+# "release" prefers stable builds and falls back to the newest build overall;
+# "latest" takes the absolute newest build (needed for GrimAC, whose new
+# client-protocol support ships in alpha builds before release).
 # -----------------------------------------------------------------------------
 modrinth_jar() {
-  local slug="$1" out="$2" gv="${3:-1.20.4}" vers url
+  local slug="$1" out="$2" gv="${3:-1.20.4}" prefer="${4:-release}" vers url
   vers=$(curl -s "https://api.modrinth.com/v2/project/${slug}/version?game_versions=%5B%22${gv}%22%5D&loaders=%5B%22paper%22%2C%22spigot%22%2C%22bukkit%22%5D")
-  url=$(echo "${vers}" | jq -r '[.[] | select(.version_type == "release")][0].files[0].url // empty' 2>/dev/null)
-  if [ -z "${url}" ] || [ "${url}" = "null" ]; then
+  if [ "${prefer}" = "latest" ]; then
     url=$(echo "${vers}" | jq -r '.[0].files[0].url // empty' 2>/dev/null)
+  else
+    url=$(echo "${vers}" | jq -r '[.[] | select(.version_type == "release")][0].files[0].url // empty' 2>/dev/null)
+    if [ -z "${url}" ] || [ "${url}" = "null" ]; then
+      url=$(echo "${vers}" | jq -r '.[0].files[0].url // empty' 2>/dev/null)
+    fi
   fi
   if [ -n "${url}" ] && [ "${url}" != "null" ]; then
     curl -sL -o "plugins/${out}" "${url}"
@@ -110,7 +117,7 @@ modrinth_jar worldguard WorldGuard.jar                # region protection
 modrinth_jar multiverse-core Multiverse-Core.jar      # multi-world support
 modrinth_jar clearlag++ ClearLag.jar                  # drops/entity cleanup
 modrinth_jar placeholderapi PlaceholderAPI.jar        # %placeholder% support
-modrinth_jar grimac GrimAC.jar                        # anti-cheat (GrimAC)
+modrinth_jar grimac GrimAC.jar 1.20.4 latest      # anti-cheat (GrimAC) - newest build for newest client protocols
 modrinth_jar tab-was-taken TAB.jar                    # tablist & nametags (NEZNAMY)
 modrinth_jar lifestealz LifeStealZ.jar                # lifesteal hearts mechanic
 ls -lh plugins/
