@@ -24,7 +24,8 @@ sudo apt-get install -y curl jq wget unzip tar gnupg openjdk-21-jre-headless
 echo "==> [2/7] Installing Playit.gg agent (linux-x86_64)..."
 # Always fetch a fresh copy: a stale/corrupt cached binary (e.g. an HTML
 # error page saved as `playit`) breaks every later run.
-rm -f /usr/local/bin/playit ./playit
+rm -f ./playit
+sudo rm -f /usr/local/bin/playit
 curl -sL "${PLAYIT_URL}" -o playit
 chmod +x playit
 sudo mv playit /usr/local/bin/playit
