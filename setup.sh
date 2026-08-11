@@ -20,11 +20,11 @@ PAPER_API="https://fill.papermc.io/v3/projects/paper"
 # to provision in Codespaces containers.
 PLAYIT_URL="https://github.com/playit-cloud/playit-agent/releases/download/v0.17.1/playit-linux-amd64"
 
-echo "==> [1/7] Updating system packages..."
+echo "==> [1/8] Updating system packages..."
 sudo apt-get update
 sudo apt-get install -y curl jq wget unzip tar gnupg openjdk-21-jre-headless
 
-echo "==> [2/7] Installing Playit.gg agent (linux-x86_64)..."
+echo "==> [2/8] Installing Playit.gg agent (linux-x86_64)..."
 # Always fetch a fresh copy: a stale/corrupt cached binary (e.g. an HTML
 # error page saved as `playit`) breaks every later run.
 rm -f ./playit
@@ -34,7 +34,7 @@ chmod +x playit
 sudo mv playit /usr/local/bin/playit
 echo "      playit agent installed ($(head -c 1 /usr/local/bin/playit >/dev/null 2>&1 && echo ok))"
 
-echo "==> [3/7] Pre-linking playit agent with stored secret (if provided)..."
+echo "==> [3/8] Pre-linking playit agent with stored secret (if provided)..."
 if [ -n "${PLAYIT_SECRET:-}" ]; then
   # Non-interactive link so fresh containers skip the claim-link step.
   mkdir -p "${HOME}/.config/playit"
@@ -44,7 +44,7 @@ else
   echo "      No PLAYIT_SECRET - first run of start.sh will print a Claim Link."
 fi
 
-echo "==> [4/7] Fetching latest PaperMC build for Minecraft ${MC_VERSION}..."
+echo "==> [4/8] Fetching latest PaperMC build for Minecraft ${MC_VERSION}..."
 # PaperMC's Fill API (v3): build list is newest-first, stable channel only.
 BUILDS=$(curl -s "${PAPER_API}/versions/${MC_VERSION}/builds")
 PAPER_BUILD=$(echo "${BUILDS}" | jq -r '[.[] | select(.channel == "STABLE")][0].id' 2>/dev/null || true)
@@ -60,10 +60,29 @@ PAPER_URL=$(echo "${BUILDS}" | jq -r --argjson id "${PAPER_BUILD}" \
 curl -sL -o server.jar "${PAPER_URL}"
 echo "      Downloaded: ${PAPER_JAR} (build ${PAPER_BUILD})"
 
-echo "==> [5/7] Downloading ViaVersion ecosystem (version compatibility plugins)..."
+# -----------------------------------------------------------------------------
+# Modrinth helper: download the latest stable jar for a project.
+#   $1 = project slug   $2 = output filename   $3 = game version (default 1.20.4)
+# Prefers "release" builds; falls back to beta/pre-release if needed.
+# -----------------------------------------------------------------------------
+modrinth_jar() {
+  local slug="$1" out="$2" gv="${3:-1.20.4}" vers url
+  vers=$(curl -s "https://api.modrinth.com/v2/project/${slug}/version?game_versions=%5B%22${gv}%22%5D&loaders=%5B%22paper%22%2C%22spigot%22%2C%22bukkit%22%5D")
+  url=$(echo "${vers}" | jq -r '[.[] | select(.version_type == "release")][0].files[0].url // empty' 2>/dev/null)
+  if [ -z "${url}" ] || [ "${url}" = "null" ]; then
+    url=$(echo "${vers}" | jq -r '.[0].files[0].url // empty' 2>/dev/null)
+  fi
+  if [ -n "${url}" ] && [ "${url}" != "null" ]; then
+    curl -sL -o "plugins/${out}" "${url}"
+    echo "      Downloaded: plugins/${out}"
+  else
+    echo "WARN: No ${gv} build found for Modrinth project ${slug}"
+  fi
+}
+
+echo "==> [5/8] Downloading ViaVersion ecosystem (version compatibility plugins)..."
 mkdir -p plugins
-# Each plugin is pulled from its latest GitHub release. The Via family lets
-# clients of ANY Minecraft version join the 1.20.4 server:
+# The Via family lets clients of ANY Minecraft version join the 1.20.4 server:
 #   ViaVersion  - newer clients (up to latest) can join
 #   ViaBackwards- older clients (back to 1.7.x) can join
 #   ViaRewind   - legacy protocol support (1.7-1.8 clients on ViaBackwards)
@@ -80,9 +99,23 @@ for repo in ${VIA_REPOS}; do
     echo "WARN: No jar release found for ${repo}"
   fi
 done
+
+echo "==> [6/8] Downloading server plugins (Modrinth, 1.20.4)..."
+mkdir -p plugins
+modrinth_jar authmereloaded AuthMeReloaded.jar        # /register + /login auth for cracked players
+modrinth_jar skinsrestorer SkinsRestorer.jar          # skins for cracked/offline accounts
+modrinth_jar vaultunlocked Vault.jar                  # economy API (VaultUnlocked fork)
+modrinth_jar worldedit WorldEdit.jar                  # world editing for admins
+modrinth_jar worldguard WorldGuard.jar                # region protection
+modrinth_jar multiverse-core Multiverse-Core.jar      # multi-world support
+modrinth_jar clearlag++ ClearLag.jar                  # drops/entity cleanup
+modrinth_jar placeholderapi PlaceholderAPI.jar        # %placeholder% support
+modrinth_jar grimac GrimAC.jar                        # anti-cheat (GrimAC)
+modrinth_jar tab-was-taken TAB.jar                    # tablist & nametags (NEZNAMY)
+modrinth_jar lifestealz LifeStealZ.jar                # lifesteal hearts mechanic
 ls -lh plugins/
 
-echo "==> [6/7] Writing eula.txt and server.properties..."
+echo "==> [7/8] Writing eula.txt and server.properties..."
 echo "eula=true" > eula.txt
 
 cat > server.properties <<'EOF'
@@ -93,7 +126,7 @@ motd=\u00A76\u00A7lWelcome to meco smp \u00A77| \u00A7a24/7 Playit.gg Hosted
 server-port=25565
 difficulty=normal
 gamemode=survival
-max-players=20
+max-players=1000
 view-distance=10
 simulation-distance=10
 spawn-protection=16
@@ -103,7 +136,7 @@ pvp=true
 white-list=false
 EOF
 
-echo "==> [7/7] Configuring GitHub CLI..."
+echo "==> [8/8] Configuring GitHub CLI..."
 if [ -n "${GH_PAT:-}" ]; then
   echo "${GH_PAT}" | gh auth login --with-token
   gh auth status

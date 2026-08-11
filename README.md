@@ -11,11 +11,24 @@ IP / domain** that never changes. No VPS required.
 | Server name       | meco smp                                                  |
 | MC version        | 1.20.4 (PaperMC, default)                                 |
 | Protocol compat   | ViaVersion / ViaBackwards / ViaRewind (any client version)|
+| Max players       | 1000                                                      |
 | MOTD              | §6**Welcome to meco smp** §7\| §a24/7 Playit.gg Hosted |
 | Online mode       | `false` (cracked / offline clients allowed)               |
 | Whitelist         | `false` (anyone can join)                                 |
 | Port              | `25565`                                                   |
 | JVM heap          | 10G min / 14G max, G1GC                                   |
+
+## Installed plugins
+
+- **Auth:** AuthMeReloaded, SkinsRestorer
+- **Compatibility:** ViaVersion, ViaBackwards, ViaRewind
+- **Economy/API:** Vault (VaultUnlocked), PlaceholderAPI
+- **World:** WorldEdit, WorldGuard, Multiverse-Core
+- **Gameplay:** LifeStealZ (hearts on kill/lose on death), TAB (tablist/nametags)
+- **Performance/security:** ClearLag++, GrimAC (anti-cheat)
+
+> Note: `nLogin` (paid/discontinued), `SuperLobby` (abandoned in 2017) and
+> `AdvancedMarkt` (does not exist) from the reference video were not included.
 
 ## How it works
 
