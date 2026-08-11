@@ -15,7 +15,7 @@ set -euo pipefail
 
 MC_VERSION="${MC_VERSION:-1.20.4}"
 PAPER_API="https://fill.papermc.io/v3/projects/paper"
-PLAYIT_URL="https://github.com/playit-cloud/playit-agent/releases/latest/download/playit-linux-x86_64"
+PLAYIT_URL="https://github.com/playit-cloud/playit-agent/releases/latest/download/playit-linux-amd64"
 
 echo "==> [1/7] Updating system packages..."
 sudo apt-get update
