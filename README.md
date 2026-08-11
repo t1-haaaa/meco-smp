@@ -9,8 +9,11 @@ IP / domain** that never changes. No VPS required.
 | Setting           | Value                                                     |
 |-------------------|-----------------------------------------------------------|
 | Server name       | meco smp                                                  |
+| MC version        | 1.20.4 (PaperMC, default)                                 |
+| Protocol compat   | ViaVersion / ViaBackwards / ViaRewind (any client version)|
 | MOTD              | §6**Welcome to meco smp** §7\| §a24/7 Playit.gg Hosted |
 | Online mode       | `false` (cracked / offline clients allowed)               |
+| Whitelist         | `false` (anyone can join)                                 |
 | Port              | `25565`                                                   |
 | JVM heap          | 10G min / 14G max, G1GC                                   |
 
@@ -18,7 +21,8 @@ IP / domain** that never changes. No VPS required.
 
 1. `.devcontainer/devcontainer.json` creates a Codespace with Java 21.
 2. `setup.sh` runs automatically on creation: installs dependencies + the
-   playit.gg agent, downloads the latest PaperMC jar (1.21.1 by default),
+   playit.gg agent, downloads the PaperMC jar (**1.20.4**), the ViaVersion
+   plugin family (ViaVersion, ViaBackwards, ViaRewind) into `plugins/`,
    accepts the EULA, and writes `server.properties` with the meco smp MOTD.
 3. `start.sh` starts the playit.gg agent (prints the one-time **Claim Link**),
    then boots the server.
@@ -117,7 +121,8 @@ and `start.sh` passes it with `playit --secret ...` — no claim link needed.
 
 | What               | How                                                          |
 |--------------------|--------------------------------------------------------------|
-| Change MC version  | `MC_VERSION=1.21.4 bash setup.sh` (any version Paper builds) |
+| Change MC version  | `MC_VERSION=1.21.1 bash setup.sh` (any version Paper builds) |
+| Update Via plugins | Re-run `bash setup.sh` (pulls latest releases)               |
 | Edit server props  | `server.properties`, then restart via `bash start.sh`        |
 | View agent output  | `tail -f playit.log`                                         |
 | Change tunnel port | playit.gg dashboard → tunnels → edit (must match server)     |

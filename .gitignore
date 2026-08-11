@@ -4,6 +4,9 @@ eula.txt
 server.properties
 world/
 
+# Downloaded plugins (fetched by setup.sh at runtime)
+plugins/
+
 # Logs & runtime files
 *.log
 playit

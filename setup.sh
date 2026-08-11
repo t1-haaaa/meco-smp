@@ -9,19 +9,19 @@
 #                     (get it from playit.gg dashboard after first claim)
 #
 # Runtime overrides (optional):
-#   MC_VERSION      - Minecraft version to fetch PaperMC for (default 1.21.1)
+#   MC_VERSION      - Minecraft version to fetch PaperMC for (default 1.20.4)
 # =============================================================================
 set -euo pipefail
 
-MC_VERSION="${MC_VERSION:-1.21.1}"
+MC_VERSION="${MC_VERSION:-1.20.4}"
 PAPER_API="https://api.papermc.io/v2/projects/paper"
 PLAYIT_URL="https://github.com/playit-cloud/playit-agent/releases/latest/download/playit-linux-x86_64"
 
-echo "==> [1/6] Updating system packages..."
+echo "==> [1/7] Updating system packages..."
 sudo apt-get update
 sudo apt-get install -y curl jq wget unzip tar gnupg openjdk-21-jre-headless
 
-echo "==> [2/6] Installing Playit.gg agent (linux-x86_64)..."
+echo "==> [2/7] Installing Playit.gg agent (linux-x86_64)..."
 if ! command -v playit >/dev/null 2>&1; then
   curl -sL "${PLAYIT_URL}" -o playit
   chmod +x playit
@@ -29,7 +29,7 @@ if ! command -v playit >/dev/null 2>&1; then
 fi
 playit --version || true
 
-echo "==> [3/6] Pre-linking playit agent with stored secret (if provided)..."
+echo "==> [3/7] Pre-linking playit agent with stored secret (if provided)..."
 if [ -n "${PLAYIT_SECRET:-}" ]; then
   # Non-interactive link so fresh containers skip the claim-link step.
   mkdir -p "${HOME}/.config/playit"
@@ -39,12 +39,12 @@ else
   echo "      No PLAYIT_SECRET - first run of start.sh will print a Claim Link."
 fi
 
-echo "==> [4/6] Fetching latest PaperMC build for Minecraft ${MC_VERSION}..."
+echo "==> [4/7] Fetching latest PaperMC build for Minecraft ${MC_VERSION}..."
 PAPER_BUILD=$(curl -s "${PAPER_API}/versions/${MC_VERSION}/builds" \
   | jq -r '.builds[-1].build' 2>/dev/null || true)
 if [ -z "${PAPER_BUILD}" ] || [ "${PAPER_BUILD}" = "null" ]; then
   echo "ERROR: No PaperMC build found for version ${MC_VERSION}."
-  echo "       Override with:  MC_VERSION=1.21.4 bash setup.sh"
+  echo "       Override with:  MC_VERSION=1.21.1 bash setup.sh"
   exit 1
 fi
 PAPER_JAR=$(curl -s "${PAPER_API}/versions/${MC_VERSION}/builds/${PAPER_BUILD}" \
@@ -53,7 +53,29 @@ curl -sL -o server.jar \
   "${PAPER_API}/versions/${MC_VERSION}/builds/${PAPER_BUILD}/downloads/${PAPER_JAR}"
 echo "      Downloaded: ${PAPER_JAR} (build ${PAPER_BUILD})"
 
-echo "==> [5/6] Writing eula.txt and server.properties..."
+echo "==> [5/7] Downloading ViaVersion ecosystem (version compatibility plugins)..."
+mkdir -p plugins
+# Each plugin is pulled from its latest GitHub release. The Via family lets
+# clients of ANY Minecraft version join the 1.20.4 server:
+#   ViaVersion  - newer clients (up to latest) can join
+#   ViaBackwards- older clients (back to 1.7.x) can join
+#   ViaRewind   - legacy protocol support (1.7-1.8 clients on ViaBackwards)
+VIA_REPOS="ViaVersion/ViaVersion ViaVersion/ViaBackwards ViaVersion/ViaRewind"
+for repo in ${VIA_REPOS}; do
+  plugin_name="$(basename "${repo}")"
+  jar_url=$(curl -s "https://api.github.com/repos/${repo}/releases/latest" \
+    | jq -r '.assets[] | select(.name | endswith(".jar")) | .browser_download_url' \
+    | head -n 1)
+  if [ -n "${jar_url}" ]; then
+    curl -sL -o "plugins/${plugin_name}.jar" "${jar_url}"
+    echo "      Downloaded: plugins/${plugin_name}.jar (${jar_url##*/})"
+  else
+    echo "WARN: No jar release found for ${repo}"
+  fi
+done
+ls -lh plugins/
+
+echo "==> [6/7] Writing eula.txt and server.properties..."
 echo "eula=true" > eula.txt
 
 cat > server.properties <<'EOF'
@@ -74,7 +96,7 @@ pvp=true
 white-list=false
 EOF
 
-echo "==> [6/6] Configuring GitHub CLI..."
+echo "==> [7/7] Configuring GitHub CLI..."
 if [ -n "${GH_PAT:-}" ]; then
   echo "${GH_PAT}" | gh auth login --with-token
   gh auth status
