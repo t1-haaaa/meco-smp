@@ -7,6 +7,11 @@
   "image": "mcr.microsoft.com/devcontainers/java:21",
   "postCreateCommand": "bash setup.sh",
   "forwardPorts": [25565],
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
   "remoteUser": "vscode",
   "customizations": {
     "vscode": {
