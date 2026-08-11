@@ -1,0 +1,16 @@
+{
+  // .devcontainer/devcontainer.json - auto-configures the Codespace container
+  // - Java 21 JDK pre-installed (image tag: 21)
+  // - Runs setup.sh automatically after container creation
+  // - Forwards the Minecraft port for localhost preview
+  "name": "meco smp - PaperMC Server (Playit.gg)",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "postCreateCommand": "bash setup.sh",
+  "forwardPorts": [25565],
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": ["vscjava.vscode-java-pack"]
+    }
+  }
+}

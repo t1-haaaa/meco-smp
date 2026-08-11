@@ -1,0 +1,5 @@
+# Force LF for scripts so bash works in the Linux Codespace container
+* text=auto
+*.sh text eol=lf
+*.json text eol=lf
+*.md text eol=lf
