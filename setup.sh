@@ -69,8 +69,15 @@ echo "      Downloaded: ${PAPER_JAR} (build ${PAPER_BUILD})"
 # client-protocol support ships in alpha builds before release).
 # -----------------------------------------------------------------------------
 modrinth_jar() {
-  local slug="$1" out="$2" gv="${3:-1.20.4}" prefer="${4:-release}" vers url
-  vers=$(curl -s "https://api.modrinth.com/v2/project/${slug}/version?game_versions=%5B%22${gv}%22%5D&loaders=%5B%22paper%22%2C%22spigot%22%2C%22bukkit%22%5D")
+  local slug="$1" out="$2" gv="${3:-1.20.4}" prefer="${4:-release}" gvq vers url
+  # gv="*" = no game-version filter (for plugins whose Modrinth version list
+  # doesn't enumerate our exact MC version, e.g. EssentialsX 2.22.0).
+  if [ "${gv}" = "*" ]; then
+    gvq="loaders=%5B%22paper%22%2C%22spigot%22%2C%22bukkit%22%5D"
+  else
+    gvq="game_versions=%5B%22${gv}%22%5D&loaders=%5B%22paper%22%2C%22spigot%22%2C%22bukkit%22%5D"
+  fi
+  vers=$(curl -s "https://api.modrinth.com/v2/project/${slug}/version?${gvq}")
   if [ "${prefer}" = "latest" ]; then
     url=$(echo "${vers}" | jq -r '.[0].files[0].url // empty' 2>/dev/null)
   else
@@ -119,6 +126,8 @@ modrinth_jar placeholderapi PlaceholderAPI.jar        # %placeholder% support
 modrinth_jar grimac GrimAC.jar 1.20.4 latest      # anti-cheat (GrimAC) - newest build for newest client protocols
 modrinth_jar tab-was-taken TAB.jar                    # tablist & nametags (NEZNAMY)
 modrinth_jar lifestealz LifeStealZ.jar                # lifesteal hearts mechanic
+modrinth_jar essentialsx EssentialsX.jar "*"              # /spawn, /home, /tpa etc. (EssentialsX)
+modrinth_jar essentialsx-spawn EssentialsXSpawn.jar "*"   # /spawn command module (matches EssentialsX)
 ls -lh plugins/
 
 echo "==> [7/9] Installing keep-alive AFK bot dependencies (mineflayer)..."
