@@ -128,6 +128,16 @@ modrinth_jar tab-was-taken TAB.jar                    # tablist & nametags (NEZN
 modrinth_jar lifestealz LifeStealZ.jar                # lifesteal hearts mechanic
 modrinth_jar essentialsx EssentialsX.jar "*"              # /spawn, /home, /tpa etc. (EssentialsX)
 modrinth_jar essentialsx-spawn EssentialsXSpawn.jar "*"   # /spawn command module (matches EssentialsX)
+# zNPCsPlus - NPC plugin (GitHub release, not on Modrinth). Latest stable.
+ZNPC_URL=$(curl -s "https://api.github.com/repos/Pyrbu/ZNPCsPlus/releases/latest" \
+  | jq -r '.assets[] | select(.name | endswith(".jar")) | .browser_download_url' \
+  | head -n 1)
+if [ -n "${ZNPC_URL}" ]; then
+  curl -sL -o "plugins/ZNPCsPlus.jar" "${ZNPC_URL}"
+  echo "      Downloaded: plugins/ZNPCsPlus.jar (${ZNPC_URL##*/})"
+else
+  echo "WARN: No jar release found for Pyrbu/ZNPCsPlus"
+fi
 ls -lh plugins/
 
 echo "==> [7/9] Installing keep-alive AFK bot dependencies (mineflayer)..."
