@@ -65,3 +65,16 @@ jobs:
             gh codespace ssh -c meco-smp-server-wvrr5r45p769cv9qv -- \
               'cd /workspaces/meco-smp && rm -f world/session.lock world_nether/session.lock world_the_end/session.lock && nohup bash start.sh > server.log 2>&1 & sleep 2; pgrep -f server.jar >/dev/null && echo REVIVED || echo STILL_DOWN' || true
           fi
+
+      - name: Watchdog (revive dead panel)
+        if: steps.state.outputs.state == 'available'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          OUT=$(gh codespace ssh -c meco-smp-server-wvrr5r45p769cv9qv -- \
+            'pgrep -f "[n]ode server.js" >/dev/null 2>&1 && echo UP || echo DOWN' 2>/dev/null || echo SSH_FAIL)
+          echo "panel=$OUT"
+          if [ "$OUT" != "UP" ]; then
+            gh codespace ssh -c meco-smp-server-wvrr5r45p769cv9qv -- \
+              'bash /workspaces/meco-smp/panel/run_panel.sh; sleep 2; pgrep -f "[n]ode server.js" >/dev/null && echo PANEL_REVIVED || echo PANEL_STILL_DOWN' || true
+          fi
