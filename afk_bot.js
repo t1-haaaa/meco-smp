@@ -1,24 +1,22 @@
 /**
- * afk_bot.js - Keep-Alive AFK bot for the "meco smp" Paper 1.20.4 server.
+ * afk_bot.js - Silent keep-alive bot for the "meco smp" Paper 1.20.4 server.
  *
- * Keeps the Codespace-hosted server busy so playit.gg / Codespace idle
- * shutdown doesn't kick in, and prevents anti-AFK kick plugins from
- * disconnecting the bot.
+ * Keeps the server non-idle (prevents Codespace idle shutdown and any
+ * anti-AFK plugin timeout) WITHOUT sending a single chat message or command.
  *
- * Features:
+ * Behavior:
  *   - Joins localhost:25565 as "KeepAliveBot" (server is online-mode=false)
- *   - Auto-registers/logs in with AuthMe if prompted in chat
- *   - Anti-AFK: swings arm + jumps every 30s
- *   - Auto-reconnect: rejoins 10s after any disconnect (server restarts, kicks)
+ *   - Every 45s: gently looks around, then a subtle jump if on the ground
+ *   - NO chat messages, NO commands, NO bot spam
+ *   - Auto-reconnects 15s after any disconnect (server restarts, kicks)
  */
 const mineflayer = require("mineflayer");
 
 const HOST = "localhost";
 const PORT = 25565;
 const USERNAME = "KeepAliveBot";
-const AUTHME_PASSWORD = "KeepAliveBot_Pass_2026!";
-const RECONNECT_DELAY_MS = 10_000;
-const AFK_INTERVAL_MS = 30_000;
+const RECONNECT_DELAY_MS = 15_000;
+const AFK_INTERVAL_MS = 45_000;
 
 let bot = null;
 let afkTimer = null;
@@ -32,35 +30,31 @@ function startAfkLoop(b) {
   afkTimer = setInterval(() => {
     if (!b || !b.entity) return;
     try {
-      b.swingArm(); // triggers animation, counts as activity
-      if (b.entity.onGround && !b.isSleeping) {
-        b.setControlState("jump", true);
-        setTimeout(() => b.setControlState("jump", false), 400);
-      }
+      // Gentle look-around: yaw sweep, no movement packets.
+      const yaw = (b.entity.yaw || 0) + Math.PI / 3;
+      b.look(yaw, 0, true);
+
+      // Subtle jump only when safely on the ground - counts as activity
+      // without triggering movement/velocity checks.
+      setTimeout(() => {
+        if (b && b.entity && b.entity.onGround) {
+          b.setControlState("jump", true);
+          setTimeout(() => {
+            if (b) b.setControlState("jump", false);
+          }, 300);
+        }
+      }, 500);
     } catch (err) {
       log(`AFK tick error: ${err.message}`);
     }
   }, AFK_INTERVAL_MS);
-  log("Anti-AFK loop started (swing + jump every 30s)");
+  log("Silent AFK loop started (look around + gentle jump every 45s)");
 }
 
 function stopAfkLoop() {
   if (afkTimer) {
     clearInterval(afkTimer);
     afkTimer = null;
-  }
-}
-
-function handleChat(username, message) {
-  if (username === "KeepAliveBot") return;
-  const lower = message.toLowerCase();
-  // AuthMe prompts (server is cracked = online-mode=false)
-  if (lower.includes("register") && lower.includes("/register")) {
-    log("AuthMe prompted registration - registering");
-    bot.chat(`/register ${AUTHME_PASSWORD} ${AUTHME_PASSWORD}`);
-  } else if (lower.includes("login") && lower.includes("/login")) {
-    log("AuthMe prompted login - logging in");
-    bot.chat(`/login ${AUTHME_PASSWORD}`);
   }
 }
 
@@ -74,10 +68,9 @@ function connect() {
 
   bot.once("login", () => log(`Logged in to ${HOST}:${PORT} as ${USERNAME}`));
   bot.once("spawn", () => {
-    log("Spawned in the world - bot is active");
+    log("Spawned in the world - bot is active (silent mode)");
     startAfkLoop(bot);
   });
-  bot.on("chat", (username, message) => handleChat(username, message));
   bot.on("error", (err) => log(`Error: ${err.message}`));
 
   bot.on("end", (reason) => {
@@ -87,10 +80,9 @@ function connect() {
   });
 }
 
-log(`Starting KeepAliveBot for ${HOST}:${PORT}...`);
+log(`Starting silent KeepAliveBot for ${HOST}:${PORT}...`);
 connect();
 
-// Handle process signals cleanly
 process.on("SIGTERM", () => {
   log("SIGTERM received - shutting down");
   stopAfkLoop();

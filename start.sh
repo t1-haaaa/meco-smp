@@ -114,19 +114,20 @@ SERVER_PID=$!
 echo "==> Paper server PID: ${SERVER_PID}"
 
 # -----------------------------------------------------------------------------
-# Keep-alive AFK bot (mineflayer): once Paper announces "Done", launch the bot
-# in its own tmux session so the server always has an online player (keeps
-# Codespaces from idle-shutting-down while the playit tunnel stays reachable).
+# Silent keep-alive AFK bot (mineflayer): wait for Paper's "Done (" line, then
+# give the world another 15s to finish loading before launching the bot in its
+# own tmux session - keeps the server non-idle without any chat traffic.
 # -----------------------------------------------------------------------------
 (
   for _ in $(seq 1 180); do
     grep -q "Done (" logs/latest.log 2>/dev/null && break
     sleep 2
   done
+  sleep 15
   if command -v node >/dev/null 2>&1 && [ -f "afk_bot.js" ]; then
     tmux kill-session -t afkbot 2>/dev/null || true
     tmux new-session -d -s afkbot "node afk_bot.js"
-    echo "==> AFK keep-alive bot started (tmux session: afkbot)"
+    echo "==> Silent AFK keep-alive bot started (tmux session: afkbot)"
   else
     echo "==> WARN: node or afk_bot.js missing - keep-alive bot skipped (run: bash setup.sh)"
   fi

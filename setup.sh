@@ -109,7 +109,6 @@ done
 
 echo "==> [6/9] Downloading server plugins (Modrinth, 1.20.4)..."
 mkdir -p plugins
-modrinth_jar authmereloaded AuthMeReloaded.jar        # /register + /login auth for cracked players
 modrinth_jar skinsrestorer SkinsRestorer.jar          # skins for cracked/offline accounts
 modrinth_jar vaultunlocked Vault.jar                  # economy API (VaultUnlocked fork)
 modrinth_jar worldedit WorldEdit.jar                  # world editing for admins
