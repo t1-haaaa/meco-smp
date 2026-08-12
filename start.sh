@@ -19,7 +19,15 @@ set -euo pipefail
 echo "==> Starting Playit.gg agent (static tunnel on port 25565)..."
 pkill -f "playit" 2>/dev/null || true
 sleep 1
-nohup playit ${PLAYIT_SECRET:+--secret "${PLAYIT_SECRET}"} > playit.log 2>&1 &
+PLAYIT_CMD="/usr/local/bin/playit${PLAYIT_SECRET:+ --secret ${PLAYIT_SECRET}}"
+# playit needs a real TTY or it dies with RenderError(Os { 6, "No such device or
+# address" }) inside containers. script(1) provides a PTY; fall back to nohup if
+# it is missing.
+if command -v script >/dev/null 2>&1; then
+  setsid script -qec "${PLAYIT_CMD}" /dev/null > playit.log 2>&1 &
+else
+  nohup ${PLAYIT_CMD} > playit.log 2>&1 &
+fi
 echo "==> Playit agent PID: $!"
 
 # Give the agent a moment to print the Claim Link or tunnel address.

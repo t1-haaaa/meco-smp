@@ -1,0 +1,68 @@
+name: codespace keepalive
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Authenticate gh
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          echo "$GH_TOKEN" | gh auth login --with-token
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          if [ ! -f ~/.ssh/id_ed25519 ]; then
+            ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519 -C "codespace-keepalive" >/dev/null
+            gh ssh-key add ~/.ssh/id_ed25519.pub -t "codespace-keepalive" || true
+          fi
+
+      - name: Idle timeout
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh api -X PATCH user/codespaces/meco-smp-server-wvrr5r45p769cv9qv \
+            -f idle_timeout_minutes=240 >/dev/null 2>&1 || true
+
+      - name: State
+        id: state
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          STATE=$(gh api user/codespaces/meco-smp-server-wvrr5r45p769cv9qv --jq .state 2>/dev/null || echo unknown)
+          echo "state=$STATE" >> "$GITHUB_OUTPUT"
+          echo "state=$STATE"
+
+      - name: Start if not running
+        if: steps.state.outputs.state != 'available' && steps.state.outputs.state != 'starting'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh api -X POST user/codespaces/meco-smp-server-wvrr5r45p769cv9qv/start \
+            --jq '{state: .state, last_used_at: .last_used_at}' || true
+
+      - name: Wake + drive if running
+        if: steps.state.outputs.state == 'available'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh codespace ssh -c meco-smp-server-wvrr5r45p769cv9qv -- 'true' || true
+
+      - name: Watchdog (revive dead server)
+        if: steps.state.outputs.state == 'available'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          OUT=$(gh codespace ssh -c meco-smp-server-wvrr5r45p769cv9qv -- \
+            'pgrep -f server.jar >/dev/null 2>&1 && echo UP || echo DOWN' 2>/dev/null || echo SSH_FAIL)
+          echo "server=$OUT"
+          if [ "$OUT" != "UP" ]; then
+            gh codespace ssh -c meco-smp-server-wvrr5r45p769cv9qv -- \
+              'cd /workspaces/meco-smp && rm -f world/session.lock world_nether/session.lock world_the_end/session.lock && nohup bash start.sh > server.log 2>&1 & sleep 2; pgrep -f server.jar >/dev/null && echo REVIVED || echo STILL_DOWN' || true
+          fi
