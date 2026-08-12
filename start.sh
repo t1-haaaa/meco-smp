@@ -108,9 +108,33 @@ java -Xms"${XMS}" -Xmx"${XMX}" \
   -XX:MaxTenuringThreshold=1 \
   -Dusing.aikars.flags=https://mcflags.emc.gs \
   -Daikars.new.flags=true \
-  -jar server.jar nogui
+  -jar server.jar nogui &
 
-# Graceful shutdown: after the server exits (Ctrl+C), stop the playit agent.
-echo "==> Server stopped - shutting down playit agent..."
+SERVER_PID=$!
+echo "==> Paper server PID: ${SERVER_PID}"
+
+# -----------------------------------------------------------------------------
+# Keep-alive AFK bot (mineflayer): once Paper announces "Done", launch the bot
+# in its own tmux session so the server always has an online player (keeps
+# Codespaces from idle-shutting-down while the playit tunnel stays reachable).
+# -----------------------------------------------------------------------------
+(
+  for _ in $(seq 1 180); do
+    grep -q "Done (" logs/latest.log 2>/dev/null && break
+    sleep 2
+  done
+  if command -v node >/dev/null 2>&1 && [ -f "afk_bot.js" ]; then
+    tmux kill-session -t afkbot 2>/dev/null || true
+    tmux new-session -d -s afkbot "node afk_bot.js"
+    echo "==> AFK keep-alive bot started (tmux session: afkbot)"
+  else
+    echo "==> WARN: node or afk_bot.js missing - keep-alive bot skipped (run: bash setup.sh)"
+  fi
+) &
+
+# Wait for the server process; on exit, clean up the bot and playit agent.
+wait "${SERVER_PID}"
+echo "==> Server stopped - stopping keep-alive bot and playit agent..."
+tmux kill-session -t afkbot 2>/dev/null || true
 pkill -f "playit" 2>/dev/null || true
 exit 0

@@ -20,11 +20,11 @@ PAPER_API="https://fill.papermc.io/v3/projects/paper"
 # to provision in Codespaces containers.
 PLAYIT_URL="https://github.com/playit-cloud/playit-agent/releases/download/v0.17.1/playit-linux-amd64"
 
-echo "==> [1/8] Updating system packages..."
+echo "==> [1/9] Updating system packages..."
 sudo apt-get update
-sudo apt-get install -y curl jq wget unzip tar gnupg openjdk-21-jre-headless
+sudo apt-get install -y curl jq wget unzip tar gnupg openjdk-21-jre-headless nodejs npm
 
-echo "==> [2/8] Installing Playit.gg agent (linux-x86_64)..."
+echo "==> [2/9] Installing Playit.gg agent (linux-x86_64)..."
 # Always fetch a fresh copy: a stale/corrupt cached binary (e.g. an HTML
 # error page saved as `playit`) breaks every later run.
 rm -f ./playit
@@ -34,7 +34,7 @@ chmod +x playit
 sudo mv playit /usr/local/bin/playit
 echo "      playit agent installed ($(head -c 1 /usr/local/bin/playit >/dev/null 2>&1 && echo ok))"
 
-echo "==> [3/8] Pre-linking playit agent with stored secret (if provided)..."
+echo "==> [3/9] Pre-linking playit agent with stored secret (if provided)..."
 if [ -n "${PLAYIT_SECRET:-}" ]; then
   # Non-interactive link so fresh containers skip the claim-link step.
   mkdir -p "${HOME}/.config/playit"
@@ -44,7 +44,7 @@ else
   echo "      No PLAYIT_SECRET - first run of start.sh will print a Claim Link."
 fi
 
-echo "==> [4/8] Fetching latest PaperMC build for Minecraft ${MC_VERSION}..."
+echo "==> [4/9] Fetching latest PaperMC build for Minecraft ${MC_VERSION}..."
 # PaperMC's Fill API (v3): build list is newest-first, stable channel only.
 BUILDS=$(curl -s "${PAPER_API}/versions/${MC_VERSION}/builds")
 PAPER_BUILD=$(echo "${BUILDS}" | jq -r '[.[] | select(.channel == "STABLE")][0].id' 2>/dev/null || true)
@@ -87,7 +87,7 @@ modrinth_jar() {
   fi
 }
 
-echo "==> [5/8] Downloading ViaVersion ecosystem (version compatibility plugins)..."
+echo "==> [5/9] Downloading ViaVersion ecosystem (version compatibility plugins)..."
 mkdir -p plugins
 # The Via family lets clients of ANY Minecraft version join the 1.20.4 server:
 #   ViaVersion  - newer clients (up to latest) can join
@@ -107,7 +107,7 @@ for repo in ${VIA_REPOS}; do
   fi
 done
 
-echo "==> [6/8] Downloading server plugins (Modrinth, 1.20.4)..."
+echo "==> [6/9] Downloading server plugins (Modrinth, 1.20.4)..."
 mkdir -p plugins
 modrinth_jar authmereloaded AuthMeReloaded.jar        # /register + /login auth for cracked players
 modrinth_jar skinsrestorer SkinsRestorer.jar          # skins for cracked/offline accounts
@@ -122,7 +122,10 @@ modrinth_jar tab-was-taken TAB.jar                    # tablist & nametags (NEZN
 modrinth_jar lifestealz LifeStealZ.jar                # lifesteal hearts mechanic
 ls -lh plugins/
 
-echo "==> [7/8] Writing eula.txt and server.properties..."
+echo "==> [7/9] Installing keep-alive AFK bot dependencies (mineflayer)..."
+npm install --no-audit --no-fund --loglevel=error
+
+echo "==> [8/9] Writing eula.txt and server.properties..."
 echo "eula=true" > eula.txt
 
 cat > server.properties <<'EOF'
@@ -143,7 +146,7 @@ pvp=true
 white-list=false
 EOF
 
-echo "==> [8/8] Configuring GitHub CLI..."
+echo "==> [9/9] Configuring GitHub CLI..."
 if [ -n "${GH_PAT:-}" ]; then
   echo "${GH_PAT}" | gh auth login --with-token
   gh auth status
