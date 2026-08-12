@@ -138,6 +138,11 @@ if [ -n "${ZNPC_URL}" ]; then
 else
   echo "WARN: No jar release found for Pyrbu/ZNPCsPlus"
 fi
+# GeyserMC & Floodgate - Bedrock cross-play support
+curl -sL -o "plugins/Geyser-Spigot.jar" "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot"
+echo "      Downloaded: plugins/Geyser-Spigot.jar"
+curl -sL -o "plugins/Floodgate-Spigot.jar" "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot"
+echo "      Downloaded: plugins/Floodgate-Spigot.jar"
 ls -lh plugins/
 
 echo "==> [7/9] Installing keep-alive AFK bot dependencies (mineflayer)..."
