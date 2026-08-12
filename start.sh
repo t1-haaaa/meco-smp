@@ -114,6 +114,16 @@ SERVER_PID=$!
 echo "==> Paper server PID: ${SERVER_PID}"
 
 # -----------------------------------------------------------------------------
+# EssentialsX permission whitelist: no permissions plugin is installed, so flip
+# use-bukkit-permissions to false - this activates the player-commands whitelist
+# in plugins/Essentials/config.yml (includes spawn, home, tpa, ...) so regular
+# players can use those commands. Idempotent; takes effect on next restart.
+# -----------------------------------------------------------------------------
+if [ -f "plugins/Essentials/config.yml" ]; then
+  sed -i "s/^use-bukkit-permissions: true$/use-bukkit-permissions: false/" plugins/Essentials/config.yml
+fi
+
+# -----------------------------------------------------------------------------
 # Silent keep-alive AFK bot (mineflayer): wait for Paper's "Done (" line, then
 # give the world another 15s to finish loading before launching the bot in its
 # own tmux session - keeps the server non-idle without any chat traffic.
