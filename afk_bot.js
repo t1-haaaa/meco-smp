@@ -27,28 +27,28 @@ function log(msg) {
 
 function startAfkLoop(b) {
   stopAfkLoop();
+  let yaw = 0;
   afkTimer = setInterval(() => {
     if (!b || !b.entity) return;
     try {
-      // Gentle look-around: yaw sweep, no movement packets.
-      const yaw = (b.entity.yaw || 0) + Math.PI / 3;
-      b.look(yaw, 0, true);
+      const pos = b.entity.position;
+      // Never touch the network if the entity state is not sane - NaN
+      // coordinates trip GrimAC's CrashC check and spam the console.
+      if (!pos || !Number.isFinite(pos.x) || !Number.isFinite(pos.y) || !Number.isFinite(pos.z)) {
+        log(`Skipping AFK tick - position not finite (x=${pos ? pos.x : "?"}, y=${pos ? pos.y : "?"}, z=${pos ? pos.z : "?"})`);
+        return;
+      }
 
-      // Subtle jump only when safely on the ground - counts as activity
-      // without triggering movement/velocity checks.
-      setTimeout(() => {
-        if (b && b.entity && b.entity.onGround) {
-          b.setControlState("jump", true);
-          setTimeout(() => {
-            if (b) b.setControlState("jump", false);
-          }, 300);
-        }
-      }, 500);
+      // Gentle look-around only (yaw sweep) - pure rotation packets, no
+      // movement, no physics. Physics is disabled for this bot to avoid
+      // NaN position glitches on the floating spawn platform.
+      yaw = (yaw + Math.PI / 3) % (Math.PI * 2);
+      b.look(yaw, 0, true);
     } catch (err) {
       log(`AFK tick error: ${err.message}`);
     }
   }, AFK_INTERVAL_MS);
-  log("Silent AFK loop started (look around + gentle jump every 45s)");
+  log("Silent AFK loop started (look around every 45s, physics disabled)");
 }
 
 function stopAfkLoop() {
@@ -69,6 +69,10 @@ function connect() {
   bot.once("login", () => log(`Logged in to ${HOST}:${PORT} as ${USERNAME}`));
   bot.once("spawn", () => {
     log("Spawned in the world - bot is active (silent mode)");
+    // AFK bots don't need to walk: disable mineflayer physics so the
+    // simulation can never produce NaN positions on the floating spawn
+    // platform (which would trip GrimAC's CrashC check).
+    bot.physicsEnabled = false;
     startAfkLoop(bot);
   });
   bot.on("error", (err) => log(`Error: ${err.message}`));
