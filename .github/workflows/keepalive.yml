@@ -12,11 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Authenticate gh
+      - name: SSH key for codespaces gateway
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          echo "$GH_TOKEN" | gh auth login --with-token
           mkdir -p ~/.ssh && chmod 700 ~/.ssh
           if [ ! -f ~/.ssh/id_ed25519 ]; then
             ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519 -C "codespace-keepalive" >/dev/null
