@@ -59,11 +59,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           OUT=$(gh codespace ssh -c meco-smp-server-wvrr5r45p769cv9qv -- \
-            'pgrep -f server.jar >/dev/null 2>&1 && echo UP || echo DOWN' 2>/dev/null || echo SSH_FAIL)
+            'pgrep -f server[.]jar >/dev/null 2>&1 && echo UP || echo DOWN' 2>/dev/null || echo SSH_FAIL)
           echo "server=$OUT"
           if [ "$OUT" != "UP" ]; then
             gh codespace ssh -c meco-smp-server-wvrr5r45p769cv9qv -- \
-              'cd /workspaces/meco-smp && rm -f world/session.lock world_nether/session.lock world_the_end/session.lock && nohup bash start.sh > server.log 2>&1 & sleep 2; pgrep -f server.jar >/dev/null && echo REVIVED || echo STILL_DOWN' || true
+              'cd /workspaces/meco-smp && rm -f world/session.lock world_nether/session.lock world_the_end/session.lock && nohup bash start.sh > server.log 2>&1 & sleep 2; pgrep -f server[.]jar >/dev/null && echo REVIVED || echo STILL_DOWN' || true
           fi
 
       - name: Watchdog (revive dead panel)
