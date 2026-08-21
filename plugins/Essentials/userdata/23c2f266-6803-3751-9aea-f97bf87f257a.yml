@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.247.55.53
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786486934413
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786546708361
+  login: 1786546520104
+money: '0'
+last-account-name: its2Moro
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: 5.5
+  y: 76.0
+  z: -4.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: 13.473908446025966
+  y: 92.0
+  z: -81.1420932700462
+  yaw: -37.6195068359375
+  pitch: 57.48958206176758

@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.132.59.33
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1787000209419
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1787000684978
+  login: 1787000062369
+money: '0'
+last-account-name: Aliawada200
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -3015.87563542778
+  y: 67.0
+  z: 4285.705445486237
+  yaw: -67.92530059814453
+  pitch: 36.8724479675293
+logoutlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -3000.602969387181
+  y: 54.374454725191406
+  z: 4272.7127937679625
+  yaw: 72.334228515625
+  pitch: -12.534858703613281

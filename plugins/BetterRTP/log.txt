@@ -1,0 +1,60 @@
+2026-08-17 20:38:41 [INFO]: Loading Overrides...
+2026-08-17 20:38:41 [INFO]: Loading World Types...
+2026-08-17 20:38:41 [INFO]: - World Type for 'world' set to 'NORMAL'
+2026-08-17 20:38:41 [INFO]: - World Type for 'world_nether' set to 'NETHER'
+2026-08-17 20:38:41 [INFO]: - World Type for 'world_the_end' set to 'NORMAL'
+2026-08-17 20:38:41 [INFO]: Loading Defaults...
+2026-08-17 20:38:41 [INFO]: Loading Custom Worlds...
+2026-08-17 20:38:41 [INFO]: [WARN] - Custom World 'custom_world_1' was not registered because world does NOT exist
+2026-08-17 20:38:41 [INFO]: [WARN] - Custom World 'other_custom_world' was not registered because world does NOT exist
+2026-08-17 20:38:41 [INFO]: Custom World 'arena' registered:
+2026-08-17 20:38:41 [INFO]: - UseWorldBorder: false
+2026-08-17 20:38:41 [INFO]: - CenterX: 0
+2026-08-17 20:38:41 [INFO]: - CenterZ: 0
+2026-08-17 20:38:41 [INFO]: - MaxRadius: 10
+2026-08-17 20:38:41 [INFO]: - MinRadius: 0
+2026-08-17 20:38:41 [INFO]: - Shape: SQUARE
+2026-08-17 20:38:41 [INFO]: - MinY: 0
+2026-08-17 20:38:41 [INFO]: - MaxY: 320
+2026-08-17 20:38:41 [INFO]: - Cooldown: 0
+2026-08-17 20:38:41 [INFO]: Loading Locations...
+2026-08-17 20:38:41 [INFO]: - Loading Location room_1:
+2026-08-17 20:38:41 [INFO]: - - World: arena
+2026-08-17 20:38:41 [INFO]: - - MaxRadius: 1
+2026-08-17 20:38:41 [INFO]: - - MinRad: 0
+2026-08-17 20:38:41 [INFO]: - - Shape: SQUARE
+2026-08-17 20:38:41 [INFO]: - - MinY: 64
+2026-08-17 20:38:41 [INFO]: - - MaxY: 66
+2026-08-17 20:38:41 [INFO]: - - Cooldown: 0
+2026-08-17 20:38:41 [INFO]: - Location 'room_1' registered
+2026-08-17 20:38:41 [INFO]: - Loading Location room_2:
+2026-08-17 20:38:41 [INFO]: - - World: arena
+2026-08-17 20:38:41 [INFO]: - - MaxRadius: 1
+2026-08-17 20:38:41 [INFO]: - - MinRad: 0
+2026-08-17 20:38:41 [INFO]: - - Shape: SQUARE
+2026-08-17 20:38:41 [INFO]: - - MinY: 64
+2026-08-17 20:38:41 [INFO]: - - MaxY: 66
+2026-08-17 20:38:41 [INFO]: - - Cooldown: 0
+2026-08-17 20:38:41 [INFO]: - Location 'room_2' registered
+2026-08-17 20:38:41 [INFO]: - Loading Location room_3:
+2026-08-17 20:38:41 [INFO]: - - World: arena
+2026-08-17 20:38:41 [INFO]: - - MaxRadius: 1
+2026-08-17 20:38:41 [INFO]: - - MinRad: 0
+2026-08-17 20:38:41 [INFO]: - - Shape: SQUARE
+2026-08-17 20:38:41 [INFO]: - - MinY: 64
+2026-08-17 20:38:41 [INFO]: - - MaxY: 66
+2026-08-17 20:38:41 [INFO]: - - Cooldown: 0
+2026-08-17 20:38:41 [INFO]: - Location 'room_3' registered
+2026-08-17 20:38:41 [INFO]: - Loading Location room_4:
+2026-08-17 20:38:41 [INFO]: - - World: arena
+2026-08-17 20:38:41 [INFO]: - - MaxRadius: 1
+2026-08-17 20:38:41 [INFO]: - - MinRad: 0
+2026-08-17 20:38:41 [INFO]: - - Shape: SQUARE
+2026-08-17 20:38:41 [INFO]: - - MinY: 64
+2026-08-17 20:38:41 [INFO]: - - MaxY: 66
+2026-08-17 20:38:41 [INFO]: - - Cooldown: 0
+2026-08-17 20:38:41 [INFO]: - Location 'room_4' registered
+2026-08-17 20:38:41 [SEVERE]: The particle 'EXPLOSION_NORMAL' created a fatal error when loading particles! Your MC version isn't supported!
+2026-08-17 20:38:45 [INFO]: Database PLAYERS:Players configured and loaded!
+2026-08-17 20:38:45 [INFO]: Database CHUNK_DATA:ChunkData configured and loaded!
+2026-08-17 20:40:09 [WARNING]: Seems like the world `spawn` does not have a `WorldType` declared. Please add/fix this in the config.yml file! This world will be treated as an overworld! If this world is a nether world, configure it to NETHER (example: `- spawn: NETHER`

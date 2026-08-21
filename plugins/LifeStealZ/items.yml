@@ -1,0 +1,104 @@
+# === Custom Items ===
+
+# Here you can modify everything about the custom items
+# You can change which item is dropped on death in the main config.yml
+
+defaultheart: # <- This is the item id that can be used in recipes and for permissions
+  # This is the name of the item that is displayed in the inventory
+  name: "&cHeart"
+  # The lore is the description of the item that is displayed in the inventory
+  lore:
+    - "&7Rightclick to use"
+  #  - "This would be a second line"
+  #  - "And this possibly a third line"
+  # The material is the item that is displayed in the inventory (Find all materials here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
+  material: "NETHER_STAR"
+  # If set to true, the enchant glint will be applied to the item
+  enchanted: false
+  # The custom model data is used to change the appearance of the item without changing the texture of a material
+  customModelData: 100
+  # Custom item type for the item. You can use:
+    # - "heart" for a heart item
+    # - "revive" for a revive item
+    # - "none" for a custom item that can be used for crafting and can be used as a normal item (e.g. if it is an enderpearl it still can be thrown)
+    # - "non-usable" for a custom item that can be used for crafting and cannot be used as a normal item (e.g. if it is an enderpearl it cannot be thrown)
+  customItemType: "heart"
+  # When customItemType is "heart", this value is used to determine how many hearts the item gives
+  customHeartValue: 1
+  # The minimum amount of hearts a player must have to use this item (only relevant if customItemType is "heart")
+  minHearts: 0
+  # The maximum amount of hearts a player can have to use this item (-1 for infinite) (only relevant if customItemType is "heart")
+  maxHearts: -1
+  # If this item requires a permission to be used (lifestealz.item.defaultheart)
+  requirePermission: false
+  # true if this item should be craftable
+  craftable: true
+  recipes:
+    # You can add as many recipes as you want
+    1:
+      # Every item represents one slot in the crafting table
+      # The first item in a row is the left most item in the crafting table
+      # If you want a slot to be blank, use 'AIR' or 'empty'
+      # If you want to use a simple material, use the material name (e.g. "DIAMOND_BLOCK"). Find all materials here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+      # If you want to use other custom item (like hearts) use the custom item name (e.g. "defaultheart")
+      # If you want to use block or item tags, use the tag with a '#' in front (e.g. "#logs" or "#wool")
+      rowOne:
+        - "GOLD_BLOCK"
+        - "GOLD_BLOCK"
+        - "GOLD_BLOCK"
+      rowTwo:
+        - "OBSIDIAN"
+        - "NETHER_STAR"
+        - "OBSIDIAN"
+      rowThree:
+        - "DIAMOND_BLOCK"
+        - "DIAMOND_BLOCK"
+        - "DIAMOND_BLOCK"
+  # If the item should be burnable (Not destroyed by fire, lava, explosions, cactus, etc.)
+  invulnerable: false
+  # If the item should despawn after laying on the ground for 5 minutes
+  despawnable: true
+  sound:
+    enabled: true
+    sound: ENTITY_PLAYER_LEVELUP # Find all sounds here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+    volume: 1.0
+    pitch: 1.0
+
+revive:
+  name: "&dRevive Crystal"
+  lore:
+    - "&7Rightclick to use"
+  material: "AMETHYST_SHARD"
+  enchanted: true
+  customModelData: 101
+  customItemType: "revive"
+  customHeartValue: 0
+  minHearts: 0
+  maxHearts: -1
+  requirePermission: false # (lifestealz.item.revive)
+  craftable: true
+  recipes:
+    1:
+      rowOne:
+        - "AMETHYST_SHARD"
+        - "NETHERITE_BLOCK"
+        - "AMETHYST_SHARD"
+      rowTwo:
+        - "OBSIDIAN"
+        - "BEACON"
+        - "OBSIDIAN"
+      rowThree:
+        - "AMETHYST_SHARD"
+        - "NETHERITE_BLOCK"
+        - "AMETHYST_SHARD"
+  # If the item should burn in fire or lava
+  invulnerable: false
+  # If the item should despawn after laying on the ground for 5 minutes
+  despawnable: true
+  sound:
+    enabled: false
+    sound: ENTITY_PLAYER_LEVELUP
+    volume: 1.0
+    pitch: 1.0
+
+# You can add as many custom items as you want

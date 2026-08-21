@@ -1,16 +1,2 @@
-# Generated artifacts (setup.sh downloads/creates these at runtime)
-server.jar
-eula.txt
-server.properties
-world/
-
-# Downloaded plugins (fetched by setup.sh at runtime)
-plugins/
-
-# Logs & runtime files
-*.log
-playit
-
-# Playit agent config (contains secrets)
-.config/
-agent.json
+node_modules/
+npm-debug.log*

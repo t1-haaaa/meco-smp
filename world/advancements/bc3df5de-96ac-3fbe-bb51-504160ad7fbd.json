@@ -1,0 +1,28 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-08-11 21:46:21 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/torch": {
+    "criteria": {
+      "has_stone_pickaxe": "2026-08-11 21:46:22 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/upgrade_tools": {
+    "criteria": {
+      "stone_pickaxe": "2026-08-11 21:46:22 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2026-08-11 21:53:35 +0000",
+      "minecraft:old_growth_spruce_taiga": "2026-08-11 21:46:37 +0000"
+    },
+    "done": false
+  },
+  "DataVersion": 3700
+}

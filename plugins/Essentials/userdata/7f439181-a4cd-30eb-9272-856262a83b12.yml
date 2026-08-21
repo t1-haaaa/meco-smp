@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.67.177.38
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786748375373
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786748680725
+  login: 1786748593022
+money: '178.9199999999999998'
+last-account-name: REDEX_dz52
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 53.95654764317774
+  y: 87.0
+  z: 53.12064964943785
+  yaw: -21.82476806640625
+  pitch: 35.43313980102539
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 53.407555081906374
+  y: 86.0
+  z: 46.23567492602985
+  yaw: 26.555572509765625
+  pitch: -1.334581971168518
+homes:
+  lifesteal:
+    world: 002f476b-a70b-450a-a595-fbb315471621
+    world-name: world
+    x: 0.5
+    y: 67.0
+    z: 0.5
+    yaw: 99.1535415649414
+    pitch: -12.756917953491211

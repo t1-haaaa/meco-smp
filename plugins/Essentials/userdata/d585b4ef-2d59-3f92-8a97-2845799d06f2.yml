@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.211.6.161
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786626813863
+  login: 1786626753811
+money: '0'
+last-account-name: NAZARJ10
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 54.541064528372914
+  y: 87.0
+  z: 54.0672880693617
+  yaw: -176.21798706054688
+  pitch: 16.552553176879883

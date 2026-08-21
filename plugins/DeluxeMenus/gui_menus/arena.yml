@@ -1,0 +1,25 @@
+# Colosseum Arena teleport menu
+open_command:
+- arena
+menu_title: '&8&l&nColosseum Arena'
+size: 9
+items:
+  enter:
+    material: NETHERITE_SWORD
+    slot: 4
+    display_name: '&e&lEnter the Colosseum'
+    lore:
+    - '&7Teleports you to a random spot'
+    - '&7inside the PvP arena with your kit.'
+    - '&7'
+    - '&cFights here do not cost lives.'
+    left_click_commands:
+    - '[player] mv tp {player} arena'
+    - '[close]'
+    right_click_commands:
+    - '[player] mv tp {player} arena'
+    - '[close]'
+  filler:
+    material: GRAY_STAINED_GLASS_PANE
+    slots: 0,1,2,3,5,6,7,8
+    display_name: ' '

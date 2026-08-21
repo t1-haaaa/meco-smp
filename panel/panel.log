@@ -1,0 +1,2 @@
+meco-panel listening on port 8080
+WARN: AUTH_PASSWORD not set - all /api calls will fail with 500 until set.

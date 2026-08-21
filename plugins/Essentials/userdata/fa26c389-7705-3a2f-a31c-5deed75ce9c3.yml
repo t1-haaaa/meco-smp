@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.61.213.242
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786543693826
+  login: 1786543493973
+money: '0'
+last-account-name: zainwarz
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -9.5
+  y: 79.0
+  z: 9.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 60.72223646545093
+  y: 86.5
+  z: 56.4901245871434
+  yaw: -103.72882843017578
+  pitch: 4.948328971862793

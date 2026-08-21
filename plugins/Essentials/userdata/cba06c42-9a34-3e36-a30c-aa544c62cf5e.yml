@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.16.227.72
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786740147587
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786740161692
+  login: 1786739998037
+money: '0'
+last-account-name: taha2
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 53.57539087254569
+  y: 86.0
+  z: 49.33758451634293
+  yaw: 139.53033447265625
+  pitch: 5.538496494293213
+logoutlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -61.5
+  y: 48.0
+  z: -16.5
+  yaw: 95.41424560546875
+  pitch: 18.13857650756836
+homes:
+  home:
+    world: 002f476b-a70b-450a-a595-fbb315471621
+    world-name: world
+    x: 0.5
+    y: 67.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0

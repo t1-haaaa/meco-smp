@@ -1,0 +1,12 @@
+{
+  "name": "meco-smp-afk-bot",
+  "version": "1.0.0",
+  "description": "Keep-alive AFK bot (mineflayer) for the meco smp Paper server",
+  "main": "afk_bot.js",
+  "scripts": {
+    "start": "node afk_bot.js"
+  },
+  "dependencies": {
+    "mineflayer": "^4.20.1"
+  }
+}

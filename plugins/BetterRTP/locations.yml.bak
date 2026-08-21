@@ -1,0 +1,60 @@
+#Locations where rtp will center upon
+#Format:
+# - LOCATION_NAME:
+#     World: world
+#     CenterX: 100
+#     CenterZ: 150
+#     MaxRadius: 100 #optional
+#     MinRadius: 5 #optional
+#     Shape: square #optional
+#     MinY: 0 #optional
+#     MaxY: 320 #optional
+#     Cooldown: 300 #optional
+
+Enabled: true
+RequirePermission: false
+UseLocationIfAvailable: true
+UseLocationsInSameWorld: true
+# If UseLocationsInSameWorld is set to true, use `betterrtp.bypass.location` to allow rtp'ing to locations in other worlds
+
+Locations:
+  - room1:
+      World: arena
+      CenterX: 45
+      CenterZ: 100
+      MaxRadius: 0
+      MinRadius: 0
+      Shape: square
+      MinY: 64
+      MaxY: 66
+      Cooldown: 0
+  - room2:
+      World: arena
+      CenterX: 100
+      CenterZ: 45
+      MaxRadius: 0
+      MinRadius: 0
+      Shape: square
+      MinY: 64
+      MaxY: 66
+      Cooldown: 0
+  - room3:
+      World: arena
+      CenterX: 101
+      CenterZ: 156
+      MaxRadius: 0
+      MinRadius: 0
+      Shape: square
+      MinY: 64
+      MaxY: 66
+      Cooldown: 0
+  - room4:
+      World: arena
+      CenterX: 158
+      CenterZ: 100
+      MaxRadius: 0
+      MinRadius: 0
+      Shape: square
+      MinY: 64
+      MaxY: 66
+      Cooldown: 0

@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.45.140.249
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786739987487
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786740651333
+  login: 1786740640237
+money: '0'
+last-account-name: GURRD
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 52.94505612653706
+  y: 86.0
+  z: 49.750444484275945
+  yaw: 156.90090942382812
+  pitch: 18.900005340576172
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 54.5
+  y: 87.0
+  z: 54.5
+  yaw: 0.0
+  pitch: 0.0

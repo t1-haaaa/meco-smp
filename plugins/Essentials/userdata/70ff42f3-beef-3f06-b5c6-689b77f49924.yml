@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.110.236.214
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786748766141
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786748805070
+  login: 1786748752354
+money: '0'
+last-account-name: MOHSINspeedo
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: 1.0091972651039067
+  y: 68.79673560066871
+  z: 3.214880639426758
+  yaw: 77.31777954101562
+  pitch: 21.125179290771484
+logoutlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -3058.896014333218
+  y: 77.49520087700593
+  z: 1075.406436907008
+  yaw: -88.37442779541016
+  pitch: 46.398380279541016
+homes:
+  home:
+    world: 002f476b-a70b-450a-a595-fbb315471621
+    world-name: world
+    x: -0.21224520345874476
+    y: 68.0
+    z: 1.0614471611208236
+    yaw: 135.99497985839844
+    pitch: 4.013100624084473

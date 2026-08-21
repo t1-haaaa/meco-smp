@@ -1,0 +1,38 @@
+# Lifesteal teleport flow:
+# - First time (no LuckPerms marker 'lifesteal.home'): RTP into the survival
+#   world, save home 'lifesteal', then set the marker for next time.
+# - Returning (has marker): teleport straight to the saved home.
+# NOTE: the %essentials_has_home_<name>% placeholder does not exist in the
+# installed Essentials PAPI expansion (v1.5.2), so we track the "first time"
+# state with a LuckPerms permission marker instead - 100% reliable.
+open_command:
+- lifestealtp
+menu_title: '&8&lLifesteal Teleport'
+size: 9
+
+open_requirement:
+  requirements:
+    has_marker:
+      type: has permission
+      permission: lifesteal.home
+      deny_commands:
+      - '[player] rtp world'
+      - '[player] sethome lifesteal<delay=40>'
+      - '[console] lp user %player_name% permission set lifesteal.home true<delay=40>'
+      - '[message] &a&l[Lifesteal] &fتم نقلك إلى منطقة عشوائية وحفظ مكانك بنجاح!<delay=40>'
+      - '[close]'
+
+open_commands:
+- '[player] home lifesteal'
+- '[message] &a&l[Lifesteal] &fتم إعادتك إلى منطقتك السابقة!'
+- '[close]'
+
+items:
+  teleport:
+    material: ENDER_PEARL
+    slot: 4
+    display_name: '&a&lLifesteal Teleport'
+    lore:
+    - '&7جارٍ إرسالك...'
+    click_commands:
+    - '[close]'

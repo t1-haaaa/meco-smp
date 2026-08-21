@@ -5,6 +5,7 @@
   // - Forwards the Minecraft port for localhost preview
   "name": "meco smp - PaperMC Server (Playit.gg)",
   "image": "mcr.microsoft.com/devcontainers/java:21",
+  "postStartCommand": "nohup bash /workspaces/meco-smp/watchdog.sh > /tmp/watchdog.log 2>&1 &",
   "postCreateCommand": "bash setup.sh",
   "forwardPorts": [25565],
   "features": {

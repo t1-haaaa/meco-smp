@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.4.189.101
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786744234022
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786744333680
+  login: 1786744201972
+money: '0'
+last-account-name: phantom
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -23.534515313583338
+  y: 69.0
+  z: -5.287533560664942
+  yaw: -67.58090209960938
+  pitch: 22.350027084350586
+logoutlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: 910.5
+  y: 64.0
+  z: 488.5
+  yaw: 19.14321517944336
+  pitch: 14.868834495544434

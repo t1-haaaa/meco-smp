@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.30.4.94
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786546042412
+  login: 1786545354226
+money: '0'
+last-account-name: ahmad
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -6.5
+  y: 69.0
+  z: 9.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -125.9811843572076
+  y: 70.0
+  z: 2.3823963689036782
+  yaw: -83.10009765625
+  pitch: 86.25

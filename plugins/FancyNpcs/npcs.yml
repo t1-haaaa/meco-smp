@@ -1,0 +1,220 @@
+npcs:
+  ae359e04-fbe1-4866-b280-e04e41e898b5:
+    name: lifstel
+    creator: 7f439181-a4cd-30eb-9272-856262a83b12
+    displayName: lifstel
+    type: PLAYER
+    location:
+      world: world
+      x: -71.69999998807907
+      y: 46.5
+      z: -16.662045255051293
+      yaw: -90.81467
+      pitch: 15.776206
+    showInTab: false
+    spawnEntity: true
+    collidable: true
+    glowing: false
+    glowingColor: white
+    turnToPlayer: true
+    turnToPlayerDistance: -1
+    interactionCooldown: 0.0
+    scale: 1.0
+    visibility_distance: -1
+    visibility: ALL
+    skin:
+      mirrorSkin: false
+      identifier: technoblade.png
+      variant: AUTO
+    actions:
+      ANY_CLICK:
+        '1':
+          action: player_command
+          value: home lifesteal
+        '2':
+          action: need_permission
+          value: '!lifesteal.home'
+        '3':
+          action: player_command
+          value: rtp
+        '4':
+          action: wait
+          value: '2'
+        '5':
+          action: player_command
+          value: sethome lifesteal
+        '6':
+          action: wait
+          value: '1'
+        '7':
+          action: console_command
+          value: lp user {player} permission set lifesteal.home true
+        '8':
+          action: message
+          value: تم نقلك لمكان عشوائي وسجلناه لك - اضغط التمثال مرة ثانية للرجوع لبيتك
+        '9':
+          action: block_until_done
+  81c92d3e-7086-4382-afdf-7bf1b78abf7a:
+    name: shop
+    creator: 7f439181-a4cd-30eb-9272-856262a83b12
+    displayName: shop
+    type: PLAYER
+    location:
+      world: world
+      x: -51.30000001192093
+      y: 46.5
+      z: -16.507669364841433
+      yaw: 87.37537
+      pitch: 23.571981
+    showInTab: false
+    spawnEntity: true
+    collidable: true
+    glowing: false
+    glowingColor: white
+    turnToPlayer: true
+    turnToPlayerDistance: -1
+    interactionCooldown: 0.0
+    scale: 1.0
+    visibility_distance: -1
+    visibility: ALL
+    skin:
+      identifier: https://www.minecraftskins.com/uploads/skins/2025/04/14/medieval-merchant-23193657.png?v960
+      variant: AUTO
+      mirrorSkin: false
+    actions:
+      ANY_CLICK:
+        '1':
+          action: player_command
+          value: shop
+  47e2cb5b-40d4-4a94-9ccc-933af2c46d76:
+    name: spawn
+    creator: 7f439181-a4cd-30eb-9272-856262a83b12
+    displayName: spawn
+    type: PLAYER
+    location:
+      world: world
+      x: -61.47617023358017
+      y: 46.5
+      z: -26.69999998807907
+      yaw: 5.984009
+      pitch: 15.126563
+    showInTab: false
+    spawnEntity: true
+    collidable: true
+    glowing: false
+    glowingColor: white
+    turnToPlayer: true
+    turnToPlayerDistance: -1
+    interactionCooldown: 0.0
+    scale: 1.0
+    visibility_distance: -1
+    visibility: ALL
+    skin:
+      identifier: http://textures.minecraft.net/texture/9408b205e6ce763d24d74158ea09fc0b25588ef904170fd51d42e9e7817a60f7
+      variant: AUTO
+      mirrorSkin: false
+    actions:
+      ANY_CLICK:
+        '1':
+          action: console_command
+          value: mv tp {player} spawn
+  b64988a8-f1b6-469c-8975-ad18b820bb08:
+    name: arena
+    creator: 7f439181-a4cd-30eb-9272-856262a83b12
+    displayName: arena
+    type: PLAYER
+    location:
+      world: world
+      x: -61.49715621583821
+      y: 46.5
+      z: -6.327916147782281
+      yaw: 176.72205
+      pitch: 33.997345
+    showInTab: false
+    spawnEntity: true
+    collidable: true
+    glowing: false
+    glowingColor: white
+    turnToPlayer: true
+    turnToPlayerDistance: -1
+    interactionCooldown: 0.0
+    scale: 1.0
+    visibility_distance: -1
+    visibility: ALL
+    skin:
+      mirrorSkin: false
+      identifier: https://textures.minecraft.net/texture/f7dcc10a70057cdee4eda8e3f9d49c981645db35e29811f207ead6fba6151229
+      variant: AUTO
+    actions:
+      ANY_CLICK:
+        '1':
+          action: console_command
+          value: mv tp {player} arena --unsafe
+  b283b23e-da91-4a8c-8143-1ac3baa28a77:
+    name: lifesteal
+    creator: 7f439181-a4cd-30eb-9272-856262a83b12
+    displayName: lifesteal
+    type: PLAYER
+    location:
+      world: spawn
+      x: 52.45479210866018
+      y: 86.5
+      z: 48.35385251171873
+      yaw: -3.9431763
+      pitch: 18.216951
+    showInTab: false
+    spawnEntity: true
+    collidable: true
+    glowing: false
+    glowingColor: white
+    turnToPlayer: true
+    turnToPlayerDistance: -1
+    interactionCooldown: 0.0
+    scale: 1.0
+    visibility_distance: -1
+    visibility: ALL
+    skin:
+      mirrorSkin: false
+      identifier: https://textures.minecraft.net/texture/f7dcc10a70057cdee4eda8e3f9d49c981645db35e29811f207ead6fba6151229
+      variant: AUTO
+    actions:
+      RIGHT_CLICK:
+        '1':
+          action: player_command
+          value: sellgui
+      ANY_CLICK:
+        '1':
+          action: console_command
+          value: warp world {player}
+  1b95aca6-b6c6-4c85-9c6b-16ea6ae5a53b:
+    name: sell
+    creator: 7f439181-a4cd-30eb-9272-856262a83b12
+    displayName: sell
+    type: PLAYER
+    location:
+      world: spawn
+      x: 56.45029042620417
+      y: 86.5
+      z: 48.50584489526026
+      yaw: -2.9385986
+      pitch: 10.343
+    showInTab: false
+    spawnEntity: true
+    collidable: true
+    glowing: false
+    glowingColor: white
+    turnToPlayer: true
+    turnToPlayerDistance: -1
+    interactionCooldown: 0.0
+    scale: 1.0
+    visibility_distance: -1
+    visibility: ALL
+    skin:
+      mirrorSkin: false
+      identifier: https://www.minecraftskins.com/uploads/skins/2025/04/14/medieval-merchant-23193657.png?v960
+      variant: AUTO
+    actions:
+      RIGHT_CLICK:
+        '1':
+          action: player_command
+          value: sellgui

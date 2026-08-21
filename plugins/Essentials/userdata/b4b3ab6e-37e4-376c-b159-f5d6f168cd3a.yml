@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.44.36.43
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786644572380
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786644699542
+  login: 1786643875301
+money: '0'
+last-account-name: itz_Anas
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -60.44948812502692
+  y: 46.5
+  z: -14.109788260967687
+  yaw: -158.74473571777344
+  pitch: 15.94306468963623
+logoutlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: 3587.167504621065
+  y: 77.0
+  z: 4129.046407711571
+  yaw: -63.1895751953125
+  pitch: -7.730051040649414
+homes:
+  home:
+    world: 002f476b-a70b-450a-a595-fbb315471621
+    world-name: world
+    x: -70.69999998807907
+    y: 46.0
+    z: -16.43741855962079
+    yaw: 95.12664794921875
+    pitch: 14.872056007385254

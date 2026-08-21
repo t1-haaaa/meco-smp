@@ -1,0 +1,40 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.249.79.130
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786750219808
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 0
+  login: 1786749113474
+money: '0'
+last-account-name: jeko67cr
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 51.859845551753494
+  y: 86.0
+  z: 50.19185986511431
+  yaw: -162.75015258789062
+  pitch: -2.2500054836273193
+homes:
+  home:
+    world: 002f476b-a70b-450a-a595-fbb315471621
+    world-name: world
+    x: 0.5
+    y: 67.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0

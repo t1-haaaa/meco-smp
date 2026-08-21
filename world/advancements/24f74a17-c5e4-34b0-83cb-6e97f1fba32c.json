@@ -1,0 +1,56 @@
+{
+  "minecraft:recipes/decorations/torch": {
+    "criteria": {
+      "has_stone_pickaxe": "2026-08-13 11:58:30 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/upgrade_tools": {
+    "criteria": {
+      "stone_pickaxe": "2026-08-13 11:58:30 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-08-13 11:58:30 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2026-08-17 21:10:55 +0000",
+      "minecraft:taiga": "2026-08-14 21:59:48 +0000",
+      "minecraft:ocean": "2026-08-13 18:08:29 +0000",
+      "minecraft:river": "2026-08-13 18:07:47 +0000",
+      "minecraft:old_growth_spruce_taiga": "2026-08-13 14:15:44 +0000",
+      "minecraft:plains": "2026-08-13 11:58:31 +0000"
+    },
+    "done": false
+  },
+  "minecraft:recipes/decorations/purple_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2026-08-13 12:13:00 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2026-08-13 18:41:07 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2026-08-14 22:44:44 +0000"
+    },
+    "done": true
+  },
+  "minecraft:nether/netherite_armor": {
+    "criteria": {
+      "netherite_armor": "2026-08-14 22:55:03 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 3700
+}

@@ -1,0 +1,341 @@
+Starting org.bukkit.craftbukkit.Main
+*** Warning, you've not updated in a while! ***
+*** Please download a new build as per instructions from https://papermc.io/downloads/paper ***
+System Info: Java 21 (OpenJDK 64-Bit Server VM 21.0.12+8-LTS) Host: Linux 6.8.0-1052-azure (amd64)
+Loading libraries, please wait...
+2026-08-11 16:02:37,095 ServerMain WARN Advanced terminal features are not available in this environment
+[16:02:42 INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[16:02:44 INFO]: Loaded 1174 recipes
+[16:02:44 INFO]: Loaded 1271 advancements
+[16:02:45 INFO]: Starting minecraft server version 1.20.4
+[16:02:45 INFO]: Loading properties
+[16:02:45 INFO]: This server is running Paper version git-Paper-499 (MC: 1.20.4) (Implementing API version 1.20.4-R0.1-SNAPSHOT) (Git: 9de3f75 on ver/1.20.4)
+[16:02:46 INFO]: Server Ping Player Sample Count: 12
+[16:02:46 INFO]: Using 4 threads for Netty based IO
+[16:02:46 WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[16:02:46 INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 1 worker threads, and gen parallelism of 1 threads
+[16:02:46 INFO]: Default game type: SURVIVAL
+[16:02:46 INFO]: Generating keypair
+[16:02:46 INFO]: Starting Minecraft server on *:25565
+[16:02:46 INFO]: Using epoll channel type
+[16:02:46 INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[16:02:46 INFO]: Paper: Using OpenSSL 3.0.x (Linux x86_64) cipher from Velocity.
+[16:02:47 INFO]: [SpigotLibraryLoader] [ClearLag] Loading 1 libraries... please wait
+[16:02:47 INFO]: [SpigotLibraryLoader] [ClearLag] Loaded library /workspaces/meco-smp/libraries/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loading 17 libraries... please wait
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/ch/jalu/injector/1.0/injector-1.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/javax/inject/javax.inject/1/javax.inject-1.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/javax/annotation/javax.annotation-api/1.3.1/javax.annotation-api-1.3.1.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/net/ricecode/string-similarity/1.0.0/string-similarity-1.0.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/maxmind/geoip2/geoip2/4.3.0/geoip2-4.3.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/maxmind/db/maxmind-db/3.1.1/maxmind-db-3.1.1.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/fasterxml/jackson/core/jackson-databind/2.19.0/jackson-databind-2.19.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.0/jackson-datatype-jsr310-2.19.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/fasterxml/jackson/core/jackson-core/2.19.0/jackson-core-2.19.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/fasterxml/jackson/core/jackson-annotations/2.19.0/jackson-annotations-2.19.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/javatar/javatar/2.5/javatar-2.5.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/apache/commons/commons-email/1.6.0/commons-email-1.6.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/sun/mail/jakarta.mail/1.6.7/jakarta.mail-1.6.7.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/sun/activation/jakarta.activation/1.2.1/jakarta.activation-1.2.1.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/zaxxer/HikariCP/7.0.2/HikariCP-7.0.2.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/slf4j/slf4j-simple/2.0.13/slf4j-simple-2.0.13.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/ch/jalu/datasourcecolumns/0.1.2/datasourcecolumns-0.1.2.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/mysql/mysql-connector-j/9.3.0/mysql-connector-j-9.3.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/google/protobuf/protobuf-java/4.29.0/protobuf-java-4.29.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/mariadb/jdbc/mariadb-java-client/3.5.7/mariadb-java-client-3.5.7.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/checkerframework/checker-qual/3.49.3/checker-qual-3.49.3.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/de/rtner/PBKDF2/1.1.4/PBKDF2-1.1.4.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/picketbox/picketbox/4.0.21.Final/picketbox-4.0.21.Final.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/de/mkammerer/argon2-jvm-nolibs/2.12/argon2-jvm-nolibs-2.12.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/net/java/dev/jna/jna/5.16.0/jna-5.16.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/at/favre/lib/bcrypt/0.10.2/bcrypt-0.10.2.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/at/favre/lib/bytes/1.5.0/bytes-1.5.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/warrenstrange/googleauth/1.5.0/googleauth-1.5.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/commons-codec/commons-codec/1.14/commons-codec-1.14.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/apache/httpcomponents/httpclient/4.5.12/httpclient-4.5.12.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/ch/jalu/configme/1.3.1/configme-1.3.1.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/bstats/bstats-bukkit/3.1.0/bstats-bukkit-3.1.0.jar
+[16:02:47 INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/bstats/bstats-base/3.1.0/bstats-base-3.1.0.jar
+[16:02:47 INFO]: [PlaceholderAPI] Loading server plugin PlaceholderAPI v2.12.3
+[16:02:47 INFO]: [Vault] Loading server plugin Vault v2.20.2
+[16:02:47 INFO]: [ViaVersion] Loading server plugin ViaVersion v5.11.0
+[16:02:47 INFO]: [ViaVersion] ViaVersion 5.11.0 is now loaded. Registering protocol transformers and injecting...
+[16:02:48 INFO]: [ViaBackwards] Loading translations...
+[16:02:48 INFO]: [ViaBackwards] Registering protocols...
+[16:02:49 INFO]: [ViaRewind] Registering protocols...
+[16:02:49 INFO]: [WorldEdit] Loading server plugin WorldEdit v7.3.9+6959-7adf70b
+[16:02:50 INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@6f388efc]
+[16:02:50 INFO]: [ViaBackwards] Loading server plugin ViaBackwards v5.11.0
+[16:02:50 INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.9+5934e49
+[16:02:50 INFO]: [ViaRewind] Loading server plugin ViaRewind v4.1.3
+[16:02:50 INFO]: [CoreLogging] Loading server plugin Multiverse-Core v5.7.3
+[16:02:50 INFO]: [SkinsRestorer] Loading server plugin SkinsRestorer v15.12.5
+[16:02:50 INFO]: [ClearLag] Loading server plugin ClearLag v1.12.3
+[16:02:50 INFO]: [LifeStealZ] Loading server plugin LifeStealZ v2.13.0
+[16:02:50 INFO]: [LifeStealZ] Loading LifeStealZ...
+[16:02:50 INFO]: [LifeStealZ] WorldGuard found! Enabling WorldGuard support...
+[16:02:50 INFO]: [LifeStealZ] WorldGuard found! Enabled WorldGuard support!
+[16:02:50 INFO]: [GrimAC] Loading server plugin GrimAC v2.3.74-2614909
+[16:02:50 ERROR]: [GrimAC] [STDERR] SLF4J(W): No SLF4J providers were found.
+[16:02:50 WARN]: Nag author(s): '[GrimAC]' of 'GrimAC v2.3.74-2614909' about their usage of System.out/err.print. Please use your plugin's logger instead (JavaPlugin#getLogger).
+[16:02:50 ERROR]: [GrimAC] [STDERR] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[16:02:50 ERROR]: [GrimAC] [STDERR] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[16:02:50 INFO]: [GrimAC] Loading PacketEvents...
+[16:02:50 INFO]: [38;5;14m[packetevents] [0mLoading packetevents...
+[16:02:52 INFO]: [38;5;14m[packetevents] [0mLoaded packetevents v2.13.1+4d40422-SNAPSHOT for GrimAC
+[16:02:52 INFO]: [38;5;14m[packetevents] [0mLoading block mappings for V_1_20_3/14...
+[16:02:52 WARN]: [GrimAC] Deprecated Grim command-execute string listener registered; use the Supplier<String> verbose handler and call verbose.get() only when text is needed.
+[16:02:52 INFO]: [TAB] Loading server plugin TAB v6.1.2
+[16:02:52 INFO]: [AuthMe] Loading server plugin AuthMe v6.0.0-b2734
+[16:02:52 INFO]: Server permissions file permissions.yml is empty, ignoring it
+[16:02:52 INFO]: [Vault] Enabling Vault v2.20.2
+[16:02:52 INFO]: [Vault] Enabled Version 2.20.2
+[16:02:52 INFO]: [WorldEdit] Enabling WorldEdit v7.3.9+6959-7adf70b
+[16:02:53 INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[16:02:53 INFO]: WEPIF: Using the Bukkit Permissions API.
+[16:02:53 INFO]: [38;5;14m[packetevents] [0mFinished loading block mappings for V_1_20_3/14 in 533.030047ms
+[16:02:53 INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.v1_20_R3.PaperweightAdapter as the Bukkit adapter
+[16:02:54 INFO]: [ViaRewind] Enabling ViaRewind v4.1.3
+[16:02:54 INFO]: [SkinsRestorer] Enabling SkinsRestorer v15.12.5
+[16:02:54 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1mRunning on Minecraft [33;1m1.20.4[32;1m.[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39mUsing paper join listener![0;39m
+[16:02:55 INFO]: [PlaceholderAPI] Successfully registered internal expansion: skinsrestorer [15.12.5]
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39mPlaceholderAPI expansion registered![0;39m
+[16:02:55 WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[16:02:55 WARN]: The server will make no attempt to authenticate usernames. Beware.
+[16:02:55 WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[16:02:55 WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[16:02:55 INFO]: Preparing level "world"
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1m----------------------------------------------[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1m    +===================+[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1m    |   SkinsRestorer   |[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1m    |-------------------|[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1m    |  [34;1m[4m[21mStandalone Mode[0;39m[32;1m  |[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1m    +===================+[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1m----------------------------------------------[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[36;1m    Version: [32;1m15.12.5[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[36;1m    Commit: [32;1m98b9488[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1m    This is the latest version![0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[32;1m----------------------------------------------[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[34;1mDo you have issues? Read our troubleshooting guide: [33;1mhttps://skinsrestorer.net/docs/troubleshooting[0;39m
+[16:02:55 INFO]: [33;1m[[32;22mSkinsRestorer[33;1m] [0;39m[34;1mWant to support SkinsRestorer or receive priority support? Become a supporter: [33;1mhttps://skinsrestorer.net/pricing[0;39m
+[16:02:56 INFO]: Preparing start region for dimension minecraft:overworld
+[16:02:56 INFO]: Time elapsed: 328 ms
+[16:02:56 INFO]: Preparing start region for dimension minecraft:the_nether
+[16:02:56 INFO]: Time elapsed: 44 ms
+[16:02:56 INFO]: Preparing start region for dimension minecraft:the_end
+[16:02:56 INFO]: Time elapsed: 61 ms
+[16:02:56 INFO]: [PlaceholderAPI] Enabling PlaceholderAPI v2.12.3
+[16:02:57 INFO]: [PlaceholderAPI] Fetching available expansion information...
+[16:02:57 INFO]: [PlaceholderAPI] Successfully registered internal expansion: vaultunlocked [2.13.1]
+[16:02:57 INFO]: [ViaVersion] Enabling ViaVersion v5.11.0
+[16:02:57 INFO]: [ViaVersion] ViaVersion detected server version: 1.20.3-1.20.4 (765)
+[16:02:57 INFO]: [ViaBackwards] Enabling ViaBackwards v5.11.0
+[16:02:57 INFO]: [WorldGuard] Enabling WorldGuard v7.0.9+5934e49
+[16:02:57 INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
+[16:02:57 INFO]: [WorldGuard] (world) Lighters are PERMITTED.
+[16:02:57 INFO]: [WorldGuard] (world) Lava fire is PERMITTED.
+[16:02:57 INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
+[16:02:57 INFO]: [WorldGuard] Loaded configuration for world 'world'
+[16:02:57 INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
+[16:02:57 INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
+[16:02:57 INFO]: [WorldGuard] (world_nether) Lava fire is PERMITTED.
+[16:02:57 INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
+[16:02:57 INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
+[16:02:57 INFO]: [WorldGuard] (world_the_end) TNT ignition is PERMITTED.
+[16:02:57 INFO]: [WorldGuard] (world_the_end) Lighters are PERMITTED.
+[16:02:57 INFO]: [WorldGuard] (world_the_end) Lava fire is PERMITTED.
+[16:02:57 INFO]: [WorldGuard] (world_the_end) Fire spread is UNRESTRICTED.
+[16:02:57 INFO]: [WorldGuard] Loaded configuration for world 'world_the_end'
+[16:02:57 INFO]: [WorldGuard] Loading region data...
+[16:02:58 INFO]: [Multiverse-Core] Enabling Multiverse-Core v5.7.3
+[16:02:59 WARN]: [Multiverse-Core] Failed to find EntityType class. SpawnCategoryMapper will not work.
+[16:02:59 INFO]: [PlaceholderAPI] Successfully registered internal expansion: multiverse-core [5.7.3]
+[16:02:59 INFO]: [Multiverse-Core] API service loaded!
+[16:03:00 INFO]: [Multiverse-Core] [32mVersion 5.7.3 (API v5.7) Enabled - By dumptruckman, Rigby, fernferret, lithium3141, main--, benwoo1110 and Zax71[0m
+[16:03:00 INFO]: [Multiverse-Core] [32mLoving Multiverse-Core? Please consider supporting the project with a small donation: https://github.com/sponsors/Multiverse[0m
+[16:03:00 INFO]: [ClearLag] Enabling ClearLag v1.12.3
+[16:03:00 INFO]: [ClearLag] ClearLag configuration reloaded.
+[16:03:00 INFO]: [ClearLag] Loaded 0 player preferences.
+[16:03:00 WARN]: [ClearLag] No Luckperms found! Running in normal permission mode (OP only except togglemessages command).
+[16:03:00 WARN]: [ClearLag] If you want to have advanced permissions, please download LuckPerms from luckperms.net
+[16:03:00 INFO]: [ClearLag] Dynamic View Distance enabled.
+[16:03:00 INFO]: [ClearLag] Explosion optimization enabled.
+[16:03:00 INFO]: [ClearLag] Auto-Clear is enabled and starts every 300 seconds.
+[16:03:00 INFO]: [ClearLag] Mob AI Optimization is enabled.
+[16:03:00 INFO]: [ClearLag] Performance Warnings are enabled.
+[16:03:00 INFO]: [PlaceholderAPI] Successfully registered internal expansion: clearlag [1.12.3]
+[16:03:00 INFO]: [ClearLag] PlaceholderAPI Expansion for ClearLag registered!
+[16:03:00 INFO]: [ClearLag] ClearLag has been successfully enabled!
+[16:03:00 INFO]: [LifeStealZ] Enabling LifeStealZ v2.13.0
+[16:03:00 INFO]: [LifeStealZ] Using language file: plugins/LifeStealZ/lang/en-US.yml
+[16:03:00 INFO]: [LifeStealZ] Using SQLite storage
+[16:03:00 INFO]: [LifeStealZ] 
+[90m==========================================[0m
+[1mA new version of LifeStealZ is available![0m
+[1mNew Version: [0m[37m2.13.0 -> [1m[31m2.21.1[0m
+[1mDownload here: [0m[37m[0mhttps://modrinth.com/plugin/lifestealz/version/2.21.1
+[90m==========================================[0m
+[16:03:00 INFO]: [PlaceholderAPI] Successfully registered internal expansion: lifestealz [2.13.0]
+[16:03:00 INFO]: [LifeStealZ] PlaceholderAPI found! Enabled PlaceholderAPI support!
+[16:03:00 INFO]: [LifeStealZ] LifeStealZ enabled!
+[16:03:00 INFO]: [GrimAC] Enabling GrimAC v2.3.74-2614909
+[16:03:00 INFO]: [GrimAC] Registering packets...
+[16:03:00 INFO]: [GrimAC] Registering tick schedulers...
+[16:03:01 INFO]: [38;5;7mGrim Version: [38;5;14m2.3.74-2614909[0m
+[16:03:01 INFO]: [grim-datastore] [grim-datastore] SQLite engine 3.42.0 — using modern dialect
+[16:03:01 INFO]: [grim-datastore] [v2-bootstrap] grim:grim_settings (settings): 0 migration(s)
+[16:03:01 INFO]: [grim-datastore] [v2-bootstrap] grim:grim_violations (violations): 0 migration(s)
+[16:03:01 INFO]: [grim-datastore] [v2-bootstrap] grim:grim_checks (checks): 0 migration(s)
+[16:03:01 INFO]: [grim-datastore] [v2-bootstrap] grim:grim_players (players): 0 migration(s)
+[16:03:01 INFO]: [grim-datastore] [v2-bootstrap] grim:grim_sessions (sessions): 0 migration(s)
+[16:03:01 INFO]: [grim-datastore] [v2-bootstrap] grim:server_startups (server_startups): 0 migration(s)
+[16:03:01 INFO]: [grim-datastore] [grim-datastore] v2 cutover complete: 1 v2 backend(s), ac.grim.grimac.internal.storage.core.V2Routes@547e1932 routes installed, 0 legacy backends
+[16:03:01 INFO]: [grim-datastore] [grim-datastore] storage startup claimed: serverName='Prison' instanceId=c64ae0df-6ef6-4797-a405-73ec1a7ecbd9 startupId=61ae1aa2-befc-419a-8f48-02f93faf39ed fence=0a80aab1-e20b-4d44-8332-015a83dd2ae6.
+[16:03:01 ERROR]: [GrimAC] GrimAC has detected that you are using ViaVersion with the `fix-1_21-placement-rotation` option enabled.
+[16:03:01 ERROR]: [GrimAC] This option is known to cause issues with GrimAC and may result in false positives and bypasses.
+[16:03:01 ERROR]: [GrimAC] Please disable this option in your ViaVersion configuration to prevent these issues.
+[16:03:01 INFO]: [GrimAC] Registering singular bukkit event... (PistonEvent)
+[16:03:01 INFO]: [PlaceholderAPI] Successfully registered internal expansion: grim [2.3.74-2614909]
+[16:03:01 INFO]: [TAB] Enabling TAB v6.1.2
+[16:03:01 INFO]: [TAB] [38;5;7mFound NMS implementation: me.neznamy.tab.platforms.bukkit.v1_20_R3.NMSImplementationProvider[0m
+[16:03:01 INFO]: [TAB] [38;5;10mEnabled in 332ms[0m
+[16:03:01 INFO]: [AuthMe] Enabling AuthMe v6.0.0-b2734
+[16:03:02 INFO]: [AuthMe] SQLite Setup finished
+[16:03:02 WARN]: [AuthMe] Error while hooking into Vault [PermissionHandlerException]: Could not load permissions provider service
+[16:03:02 INFO]: [AuthMe] No supported permissions system found! Permissions are disabled!
+[16:03:02 WARN]: [AuthMe] WARNING! The protectInventory feature requires PacketEvents! Disabling it...
+[16:03:02 INFO]: [AuthMe] AuthMe 6.0.0 build n.2734 successfully enabled!
+[16:03:02 INFO]: [PlaceholderAPI] Placeholder expansion registration initializing...
+[16:03:02 INFO]: [38;5;3m0 placeholder hook(s) registered![0m
+[16:03:02 INFO]: Running delayed init tasks
+[16:03:02 INFO]: [AuthMe] Downloading GEO IP database, because the old database is older than 30 days or doesn't exist
+[16:03:02 WARN]: [AuthMe] No MaxMind credentials found in the configuration file! GeoIp protections will be disabled.
+[16:03:02 INFO]: [AuthMe] There is no newer GEO IP database uploaded to MaxMind. Using the old one for now.
+[16:03:02 INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor.
+[16:03:02 INFO]: Done (17.834s)! For help, type "help"
+[16:03:02 INFO]: Timings Reset
+[16:03:02 WARN]: [AuthMe] Could not download GeoLiteAPI database [FileNotFoundException]: plugins/AuthMe/GeoLite2-Country.mmdb (No such file or directory)
+[16:03:02 INFO]: [38;5;10m[ClearLag] You are running the latest version (1.12.3)[0m
+[16:03:03 INFO]: [38;5;10mYou are using the latest version of GrimAC[0m
+[16:05:35 INFO]: UUID of player me2 is 67df70a7-30ec-3bd0-a07e-57c98698f996
+[16:05:40 INFO]: [38;5;9m[TAB] [WARN] Player me2's group (none) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.[0m
+[16:05:40 INFO]: [38;5;11mme2 joined the game[0m
+[16:05:40 INFO]: me2[/127.195.183.67:55675] logged in with entity id 140 at ([world]-2.699999988079071, 68.0, -9.300000011920929)
+[16:05:40 INFO]: me2 lost connection: Disconnected
+[16:05:40 INFO]: [38;5;11mme2 left the game[0m
+[16:05:42 INFO]: UUID of player me2 is 67df70a7-30ec-3bd0-a07e-57c98698f996
+[16:05:43 INFO]: [38;5;11mme2 joined the game[0m
+[16:05:43 INFO]: [38;5;9m[TAB] [WARN] Player me2's group (none) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.[0m
+[16:05:43 INFO]: me2[/127.195.183.67:43713] logged in with entity id 161 at ([world]-2.699999988079071, 68.0, -9.300000011920929)
+[16:06:11 INFO]: [AuthMe] me2 registered 127.195.183.67
+[16:06:11 INFO]: [AuthMe] me2 logged in 127.195.183.67
+[16:08:09 INFO]: me2 was slain by Zombie
+[16:12:30 INFO]: me2 was slain by Spider
+[16:13:29 INFO]: UUID of player REDEX_dz52 is 7f439181-a4cd-30eb-9272-856262a83b12
+[16:13:30 INFO]: [38;5;11mREDEX_dz52 joined the game[0m
+[16:13:30 INFO]: [38;5;9m[TAB] [WARN] Player REDEX_dz52's group (none) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.[0m
+[16:13:30 INFO]: REDEX_dz52[/127.94.47.213:45743] logged in with entity id 1423 at ([world]-24.025070272481518, 72.0, -13.111227977233465)
+[16:14:00 INFO]: REDEX_dz52 lost connection: Login timeout exceeded, you have been kicked from the server, please try again!
+[16:14:00 INFO]: [38;5;11mREDEX_dz52 left the game[0m
+[16:14:02 INFO]: UUID of player REDEX_dz52 is 7f439181-a4cd-30eb-9272-856262a83b12
+[16:14:02 INFO]: [38;5;11mREDEX_dz52 joined the game[0m
+[16:14:02 INFO]: REDEX_dz52[/127.94.47.213:43283] logged in with entity id 1615 at ([world]-24.025070272481518, 72.0, -13.111227977233465)
+[16:14:02 INFO]: [38;5;9m[TAB] [WARN] Player REDEX_dz52's group (none) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.[0m
+[16:14:15 INFO]: [AuthMe] REDEX_dz52 logged in 127.94.47.213
+[16:14:47 INFO]: Made REDEX_dz52 a server operator
+[16:14:49 INFO]: Made me2 a server operator
+[16:15:09 INFO]: REDEX_dz52 issued server command: /gamemode creative
+[16:15:09 INFO]: [3m[38;5;7m[REDEX_dz52: Set own game mode to Creative Mode][0m
+[16:15:15 INFO]: REDEX_dz52 lost connection: Disconnected
+[16:15:15 INFO]: [38;5;11mREDEX_dz52 left the game[0m
+[16:15:22 INFO]: UUID of player REDEX_dz52 is 7f439181-a4cd-30eb-9272-856262a83b12
+[16:15:23 INFO]: [38;5;9m[TAB] [WARN] Player REDEX_dz52's group (none) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.[0m
+[16:15:23 INFO]: [38;5;11mREDEX_dz52 joined the game[0m
+[16:15:23 INFO]: REDEX_dz52[/127.94.47.213:38159] logged in with entity id 1997 at ([world]-51.472766418608465, 76.20000004768372, -18.765463699380902)
+[16:15:34 INFO]: [AuthMe] REDEX_dz52 logged in 127.94.47.213
+[16:16:03 INFO]: REDEX_dz52 issued server command: /mv create spawn normal
+[16:16:11 INFO]: Preparing start region for dimension minecraft:spawn
+[16:16:11 INFO]: Time elapsed: 149 ms
+[16:16:11 INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[16:16:11 INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[16:16:11 INFO]: [WorldGuard] (spawn) TNT ignition is PERMITTED.
+[16:16:11 INFO]: [WorldGuard] (spawn) Lighters are PERMITTED.
+[16:16:11 INFO]: [WorldGuard] (spawn) Lava fire is PERMITTED.
+[16:16:11 INFO]: [WorldGuard] (spawn) Fire spread is UNRESTRICTED.
+[16:16:11 INFO]: [WorldGuard] Loaded configuration for world 'spawn'
+[16:16:17 INFO]: [Not Secure] <REDEX_dz52> وي ويناك
+[16:16:26 INFO]: REDEX_dz52 issued server command: /gamemode creative
+[16:16:26 INFO]: [3m[38;5;7m[REDEX_dz52: Set own game mode to Creative Mode][0m
+[16:16:49 INFO]: [Not Secure] <REDEX_dz52> قول
+[16:16:58 INFO]: [Not Secure] <REDEX_dz52> الايف ستيل راه يخم
+[16:17:10 WARN]: [ClearLag] [ClearLag] Server TPS has dropped to 17.72! Performance is critical!
+[16:17:23 INFO]: REDEX_dz52 issued server command: /mv tp REDEX_dz52 spawn:
+[16:17:34 INFO]: REDEX_dz52 issued server command: /mv tp REDEX_dz52 spawn --unsafe
+[16:17:55 INFO]: REDEX_dz52 issued server command: /gamemode creative
+[16:17:55 INFO]: [3m[38;5;7m[REDEX_dz52: Set own game mode to Creative Mode][0m
+[16:18:24 INFO]: REDEX_dz52 issued server command: /spawnpoint
+[16:18:24 INFO]: [3m[38;5;7m[REDEX_dz52: Set spawn point to 431, 84, 64 [0.0] in minecraft:spawn for REDEX_dz52][0m
+[16:19:29 INFO]: REDEX_dz52 issued server command: /mv tp REDEX_dz52 world
+[16:20:25 INFO]: REDEX_dz52 issued server command: /gamemode creative
+[16:20:25 INFO]: [3m[38;5;7m[REDEX_dz52: Set own game mode to Creative Mode][0m
+[16:20:43 INFO]: Villager EntityVillager['Weaponsmith'/82, uuid='86aba610-3bf1-4202-804a-d0ce71015e3e', l='ServerLevel[world]', x=1.71, y=70.94, z=61.28, cpos=[0, 3], tl=124425, v=true] died, message: 'Weaponsmith was poked to death by a sweet berry bush'
+[16:23:44 INFO]: [Not Secure] <me2> yo
+[16:23:47 INFO]: me2 issued server command: /gamemode creative
+[16:23:47 INFO]: [3m[38;5;7m[me2: Set own game mode to Creative Mode][0m
+[16:23:49 INFO]: [Not Secure] <REDEX_dz52> ويييييييييي
+[16:23:50 INFO]: me2 issued server command: /tp r
+[16:23:55 INFO]: me2 issued server command: /tp REDEX_dz52
+[16:23:55 INFO]: [3m[38;5;7m[me2: Teleported me2 to REDEX_dz52][0m
+[16:24:03 INFO]: [Not Secure] <me2> شاراك دير
+[16:24:08 INFO]: [Not Secure] <me2> حملت بلوقنات
+[16:24:28 INFO]: [Not Secure] <me2> حملت بلوقنات
+[16:24:29 INFO]: [Not Secure] <me2> حملت بلوقنات
+[16:24:29 INFO]: [Not Secure] <me2> حملت بلوقنات
+[16:24:30 INFO]: [Not Secure] <me2> شاراك دير
+[16:24:31 INFO]: [Not Secure] <me2> شاراك دير
+[16:24:33 INFO]: [Not Secure] <me2> شاراك دير
+[16:24:34 INFO]: [Not Secure] <me2> شاراك دير
+[16:24:35 INFO]: [Not Secure] <me2> حملت بلوقنات
+[16:25:06 INFO]: [Not Secure] <me2> متزعقش
+[16:25:10 INFO]: [Not Secure] <me2> الاصدار خرا
+[16:25:11 INFO]: [Not Secure] <REDEX_dz52> وييييييييي
+[16:25:13 INFO]: [Not Secure] <me2> مكاشوميس
+[16:25:21 INFO]: [Not Secure] <REDEX_dz52> نورمال
+[16:25:25 INFO]: [Not Secure] <REDEX_dz52> 1.20.4
+[16:25:27 INFO]: [Not Secure] <me2> مشي نورمال
+[16:25:31 INFO]: [Not Secure] <me2> المهم
+[16:25:34 INFO]: [Not Secure] <me2> دير دير
+[16:25:38 INFO]: [Not Secure] <me2> بلوقنات
+[16:25:41 INFO]: [Not Secure] <me2> نفطر ونجيك
+[16:25:53 INFO]: [Not Secure] <REDEX_dz52> تفطر 5
+[16:25:58 INFO]: me2 issued server command: /lifestealz:hearts 2722
+[16:26:02 INFO]: [Not Secure] <REDEX_dz52> راني داير بلوقنات
+[16:26:02 INFO]: [Not Secure] <me2> نتعشوى
+[16:26:08 INFO]: [Not Secure] <REDEX_dz52> وورد ادت
+[16:26:09 INFO]: me2 issued server command: /tpa
+[16:26:20 INFO]: [Not Secure] <me2> صحا دير سبون
+[16:26:25 INFO]: [Not Secure] <REDEX_dz52> اوكي
+[16:26:30 INFO]: me2 issued server command: /plugins
+[16:26:42 INFO]: [Not Secure] <me2> راك ناسي بلوقن
+[16:26:54 INFO]: [Not Secure] <me2> essential
+[16:26:59 INFO]: [Not Secure] <me2> المهم باي نمشي نفطر
+[16:27:19 INFO]: REDEX_dz52 lost connection: Timed out
+[16:27:19 INFO]: [38;5;11mREDEX_dz52 left the game[0m
+[16:36:04 INFO]: [Not Secure] <me2> ويييي
+[16:36:15 INFO]: me2 issued server command: /plugins
+[16:40:35 INFO]: me2 lost connection: Disconnected
+[16:40:35 INFO]: [38;5;11mme2 left the game[0m
+[16:40:40 INFO]: UUID of player me2 is 67df70a7-30ec-3bd0-a07e-57c98698f996
+[16:40:41 INFO]: [38;5;9m[TAB] [WARN] Player me2's group (none) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.[0m
+[16:40:41 INFO]: [38;5;11mme2 joined the game[0m
+[16:40:41 INFO]: me2[/127.195.183.67:56971] logged in with entity id 9369 at ([world]-36.08226706770607, 70.0, -16.69999998807907)
+[16:40:58 INFO]: me2 lost connection: Disconnected
+[16:40:58 INFO]: [38;5;11mme2 left the game[0m

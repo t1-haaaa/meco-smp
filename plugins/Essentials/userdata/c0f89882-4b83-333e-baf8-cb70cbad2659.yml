@@ -1,0 +1,41 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.176.213.134
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786647833233
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786648004703
+  login: 1786647955680
+money: '0'
+last-account-name: AYMNSKS
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 51.782488697215115
+  y: 86.0
+  z: 51.779715651643784
+  yaw: -104.3438720703125
+  pitch: 12.374987602233887
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 54.47228072347276
+  y: 85.0
+  z: 31.30000001192093
+  yaw: -24.3280029296875
+  pitch: 4.640623092651367
+past-usernames:
+- aymnsks

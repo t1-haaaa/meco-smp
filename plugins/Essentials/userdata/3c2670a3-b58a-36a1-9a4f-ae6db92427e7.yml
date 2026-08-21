@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.232.167.93
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786563513431
+  login: 1786563157629
+money: '0'
+last-account-name: ViP_ObAeDaN
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -3.5
+  y: 79.0
+  z: -3.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 45.92945498722029
+  y: 86.0
+  z: 88.63687293040815
+  yaw: 87.35348510742188
+  pitch: 6.815102577209473

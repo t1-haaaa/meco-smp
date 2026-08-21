@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.61.213.242
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786543694026
+  login: 1786542003639
+money: '0'
+last-account-name: amhx77
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 51.3824603579076
+  y: 86.0
+  z: 58.281516233725995
+  yaw: -149.40283203125
+  pitch: 27.900127410888672
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 30.46873217470404
+  y: 86.41999998688698
+  z: 26.62764110779347
+  yaw: -11.29241943359375
+  pitch: 27.5985107421875

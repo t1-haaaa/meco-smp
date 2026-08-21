@@ -1,0 +1,97 @@
+npcs:
+  ae359e04-fbe1-4866-b280-e04e41e898b5:
+    name: lifstel
+    creator: 7f439181-a4cd-30eb-9272-856262a83b12
+    displayName: lifstel
+    type: PLAYER
+    location:
+      world: world
+      x: -71.69999998807907
+      y: 46.5
+      z: -16.662045255051293
+      yaw: -90.81467
+      pitch: 15.776206
+    showInTab: false
+    spawnEntity: true
+    collidable: true
+    glowing: false
+    glowingColor: white
+    turnToPlayer: true
+    turnToPlayerDistance: -1
+    interactionCooldown: 0.0
+    scale: 1.0
+    visibility_distance: -1
+    visibility: ALL
+    skin:
+      mirrorSkin: false
+      identifier: technoblade.png
+      variant: AUTO
+    actions:
+      ANY_CLICK:
+        '1':
+          action: console_command
+          value: rtp player {player} world
+  81c92d3e-7086-4382-afdf-7bf1b78abf7a:
+    name: shop
+    creator: 7f439181-a4cd-30eb-9272-856262a83b12
+    displayName: shop
+    type: PLAYER
+    location:
+      world: world
+      x: -51.30000001192093
+      y: 46.5
+      z: -16.507669364841433
+      yaw: 87.37537
+      pitch: 23.571981
+    showInTab: false
+    spawnEntity: true
+    collidable: true
+    glowing: false
+    glowingColor: white
+    turnToPlayer: true
+    turnToPlayerDistance: -1
+    interactionCooldown: 0.0
+    scale: 1.0
+    visibility_distance: -1
+    visibility: ALL
+    skin:
+      identifier: https://textures.minecraft.net/texture/445a4b76c8c36c641473950ff4f440051e899b2f6797f26c7100b5220c84c
+      variant: AUTO
+      mirrorSkin: false
+    actions:
+      ANY_CLICK:
+        '1':
+          action: player_command
+          value: shop
+  47e2cb5b-40d4-4a94-9ccc-933af2c46d76:
+    name: spawn
+    creator: 7f439181-a4cd-30eb-9272-856262a83b12
+    displayName: spawn
+    type: PLAYER
+    location:
+      world: world
+      x: -61.47617023358017
+      y: 46.5
+      z: -26.69999998807907
+      yaw: 5.984009
+      pitch: 15.126563
+    showInTab: false
+    spawnEntity: true
+    collidable: true
+    glowing: false
+    glowingColor: white
+    turnToPlayer: true
+    turnToPlayerDistance: -1
+    interactionCooldown: 0.0
+    scale: 1.0
+    visibility_distance: -1
+    visibility: ALL
+    skin:
+      identifier: https://textures.minecraft.net/texture/445a4b76c8c36c641473950ff4f440051e899b2f6797f26c7100b5220c84c
+      variant: AUTO
+      mirrorSkin: false
+    actions:
+      ANY_CLICK:
+        '1':
+          action: console_command
+          value: mv tp {player} spawn

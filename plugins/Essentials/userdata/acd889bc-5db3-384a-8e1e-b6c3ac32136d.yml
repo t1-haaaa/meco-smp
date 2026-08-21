@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.252.206.46
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786547002308
+  login: 1786546887953
+money: '0'
+last-account-name: mhmed
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 24.77983359252169
+  y: 114.0
+  z: 81.77430282426315
+  yaw: -51.64506912231445
+  pitch: 39.479373931884766
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 52.71892626374511
+  y: 86.0
+  z: 58.092529046414
+  yaw: 116.84619140625
+  pitch: 13.133424758911133

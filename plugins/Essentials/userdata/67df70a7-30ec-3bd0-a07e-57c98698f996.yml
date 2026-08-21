@@ -1,0 +1,50 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.103.161.140
+afk: true
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: true
+timestamps:
+  lastteleport: 1787001002826
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786750104563
+  login: 1786999315170
+  kits:
+    notch: 1786632192494
+money: '7875678.84'
+last-account-name: me2
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 53.334297226817235
+  y: 87.0
+  z: 56.09243874968323
+  yaw: 157.2001953125
+  pitch: 18.299991607666016
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: 782.559602352887
+  y: 55.0
+  z: 20.69999998807907
+  yaw: 170.5428466796875
+  pitch: 90.0
+homes:
+  l:
+    world: 002f476b-a70b-450a-a595-fbb315471621
+    world-name: world
+    x: 775.9020180985384
+    y: 55.0
+    z: 14.409002797249707
+    yaw: -111.45722961425781
+    pitch: 76.98554229736328

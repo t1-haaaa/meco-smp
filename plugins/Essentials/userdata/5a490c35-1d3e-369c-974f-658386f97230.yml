@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.31.141.100
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786617994193
+  login: 1786617958679
+money: '0'
+last-account-name: itz_aqwas
+lastlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: 7.5
+  y: 83.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 54.96590175131793
+  y: 87.0
+  z: 54.64940284915991
+  yaw: -155.40003967285156
+  pitch: 28.04999351501465

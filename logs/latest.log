@@ -1,0 +1,801 @@
+[20:38:07] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[20:38:09] [ServerMain/INFO]: Loaded 1174 recipes
+[20:38:09] [ServerMain/INFO]: Loaded 1271 advancements
+[20:38:09] [Server thread/INFO]: Starting minecraft server version 1.20.4
+[20:38:09] [Server thread/INFO]: Loading properties
+[20:38:09] [Server thread/INFO]: This server is running Paper version git-Paper-499 (MC: 1.20.4) (Implementing API version 1.20.4-R0.1-SNAPSHOT) (Git: 9de3f75 on ver/1.20.4)
+[20:38:10] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[20:38:10] [Server thread/INFO]: Using 4 threads for Netty based IO
+[20:38:10] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[20:38:10] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 1 worker threads, and gen parallelism of 1 threads
+[20:38:11] [Server thread/INFO]: Default game type: SURVIVAL
+[20:38:11] [Server thread/INFO]: Generating keypair
+[20:38:11] [Server thread/INFO]: Starting Minecraft server on *:25565
+[20:38:11] [Server thread/INFO]: Using epoll channel type
+[20:38:11] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[20:38:11] [Server thread/INFO]: Paper: Using OpenSSL 3.0.x (Linux x86_64) cipher from Velocity.
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loading 17 libraries... please wait
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/ch/jalu/injector/1.0/injector-1.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/javax/inject/javax.inject/1/javax.inject-1.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/javax/annotation/javax.annotation-api/1.3.1/javax.annotation-api-1.3.1.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/net/ricecode/string-similarity/1.0.0/string-similarity-1.0.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/maxmind/geoip2/geoip2/4.3.0/geoip2-4.3.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/maxmind/db/maxmind-db/3.1.1/maxmind-db-3.1.1.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/fasterxml/jackson/core/jackson-databind/2.19.0/jackson-databind-2.19.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.0/jackson-datatype-jsr310-2.19.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/fasterxml/jackson/core/jackson-core/2.19.0/jackson-core-2.19.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/fasterxml/jackson/core/jackson-annotations/2.19.0/jackson-annotations-2.19.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/javatar/javatar/2.5/javatar-2.5.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/apache/commons/commons-email/1.6.0/commons-email-1.6.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/sun/mail/jakarta.mail/1.6.7/jakarta.mail-1.6.7.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/sun/activation/jakarta.activation/1.2.1/jakarta.activation-1.2.1.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/zaxxer/HikariCP/6.3.0/HikariCP-6.3.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/slf4j/slf4j-simple/2.0.13/slf4j-simple-2.0.13.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/ch/jalu/datasourcecolumns/0.1.2/datasourcecolumns-0.1.2.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/mysql/mysql-connector-j/9.3.0/mysql-connector-j-9.3.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/google/protobuf/protobuf-java/4.29.0/protobuf-java-4.29.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/mariadb/jdbc/mariadb-java-client/3.5.3/mariadb-java-client-3.5.3.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/checkerframework/checker-qual/3.49.3/checker-qual-3.49.3.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/de/rtner/PBKDF2/1.1.4/PBKDF2-1.1.4.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/picketbox/picketbox/4.0.21.Final/picketbox-4.0.21.Final.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/de/mkammerer/argon2-jvm-nolibs/2.12/argon2-jvm-nolibs-2.12.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/net/java/dev/jna/jna/5.16.0/jna-5.16.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/at/favre/lib/bcrypt/0.10.2/bcrypt-0.10.2.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/at/favre/lib/bytes/1.5.0/bytes-1.5.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/com/warrenstrange/googleauth/1.5.0/googleauth-1.5.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/commons-codec/commons-codec/1.14/commons-codec-1.14.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/apache/httpcomponents/httpclient/4.5.12/httpclient-4.5.12.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/ch/jalu/configme/1.3.1/configme-1.3.1.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/bstats/bstats-bukkit/3.1.0/bstats-bukkit-3.1.0.jar
+[20:38:12] [Server thread/INFO]: [SpigotLibraryLoader] [AuthMe] Loaded library /workspaces/meco-smp/libraries/org/bstats/bstats-base/3.1.0/bstats-base-3.1.0.jar
+[20:38:13] [Server thread/INFO]: [SpigotLibraryLoader] [ClearLag] Loading 1 libraries... please wait
+[20:38:13] [Server thread/INFO]: [SpigotLibraryLoader] [ClearLag] Loaded library /workspaces/meco-smp/libraries/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar
+[20:38:14] [Server thread/WARN]: [org.bukkit.craftbukkit.v1_20_R3.legacy.CraftLegacy] Initializing Legacy Material Support. Unless you have legacy plugins and/or data this is a bug!
+[20:38:16] [Server thread/WARN]: Legacy plugin JoeyDrew v1.0-SNAPSHOT does not specify an api-version.
+[20:38:16] [Server thread/INFO]: [ViaVersion] Loading server plugin ViaVersion v5.11.0
+[20:38:16] [Server thread/INFO]: [ViaVersion] ViaVersion 5.11.0 is now loaded. Registering protocol transformers and injecting...
+[20:38:16] [Server thread/INFO]: [ViaBackwards] Loading translations...
+[20:38:16] [Server thread/INFO]: [ViaBackwards] Registering protocols...
+[20:38:17] [Server thread/INFO]: [ViaRewind] Registering protocols...
+[20:38:17] [Server thread/INFO]: [PlaceholderAPI] Loading server plugin PlaceholderAPI v2.12.3
+[20:38:17] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.5.71
+[20:38:18] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[20:38:18] [Server thread/INFO]: [Vault] Loading server plugin Vault v2.20.2
+[20:38:18] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.22.0
+[20:38:18] [Server thread/INFO]: [WorldEdit] Loading server plugin WorldEdit v7.3.9+6959-7adf70b
+[20:38:19] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@2601ffd8]
+[20:38:19] [Server thread/INFO]: [floodgate] Loading server plugin floodgate v2.2.5-SNAPSHOT (b140-8780fa4)
+[20:38:20] [Server thread/INFO]: [floodgate] Took 955ms to boot Floodgate
+[20:38:20] [Server thread/INFO]: [ViaBackwards] Loading server plugin ViaBackwards v5.11.0
+[20:38:20] [Server thread/INFO]: [CoreLogging] Loading server plugin Multiverse-Core v5.7.3
+[20:38:20] [Server thread/INFO]: [EssentialsSpawn] Loading server plugin EssentialsSpawn v2.22.0
+[20:38:20] [Server thread/INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.9+5934e49
+[20:38:20] [Server thread/INFO]: [FancyNpcs] Loading server plugin FancyNpcs v2.9.0.322
+[20:38:20] [Server thread/INFO]: [Geyser-Spigot] Loading server plugin Geyser-Spigot v2.11.1-SNAPSHOT
+[20:38:20] [Server thread/INFO]: [Geyser-Spigot] Loading extensions...
+[20:38:20] [Server thread/INFO]: [Geyser-Spigot] Loaded 0 extension(s)
+[20:38:20] [Server thread/INFO]: [ViaRewind] Loading server plugin ViaRewind v4.1.3
+[20:38:20] [Server thread/INFO]: [SkinsRestorer] Loading server plugin SkinsRestorer v15.12.5
+[20:38:20] [Server thread/INFO]: [InvLogging] Loading server plugin Multiverse-Inventories v5.3.5
+[20:38:20] [Server thread/INFO]: [AuthMe] Loading server plugin AuthMe v5.7.0-b2660
+[20:38:20] [Server thread/INFO]: [ClearLag] Loading server plugin ClearLag v1.12.3
+[20:38:20] [Server thread/INFO]: [LifeStealZ] Loading server plugin LifeStealZ v2.13.0
+[20:38:20] [Server thread/INFO]: [LifeStealZ] Loading LifeStealZ...
+[20:38:20] [Server thread/INFO]: [LifeStealZ] WorldGuard found! Enabling WorldGuard support...
+[20:38:20] [Server thread/INFO]: [LifeStealZ] WorldGuard found! Enabled WorldGuard support!
+[20:38:20] [Server thread/INFO]: [DeluxeMenus] Loading server plugin DeluxeMenus v1.14.1-Release
+[20:38:20] [Server thread/INFO]: [DeluxeMenus] NMS hook has been setup successfully!
+[20:38:20] [Server thread/INFO]: [Multiverse-Portals] Loading server plugin Multiverse-Portals v5.2.3
+[20:38:20] [Server thread/INFO]: [GrimAC] Loading server plugin GrimAC v2.3.74-2614909
+[20:38:20] [Server thread/ERROR]: [GrimAC] [STDERR] SLF4J(W): No SLF4J providers were found.
+[20:38:20] [Server thread/WARN]: Nag author(s): '[GrimAC]' of 'GrimAC v2.3.74-2614909' about their usage of System.out/err.print. Please use your plugin's logger instead (JavaPlugin#getLogger).
+[20:38:20] [Server thread/ERROR]: [GrimAC] [STDERR] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[20:38:20] [Server thread/ERROR]: [GrimAC] [STDERR] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[20:38:21] [Server thread/INFO]: [GrimAC] Loading PacketEvents...
+[20:38:21] [Server thread/INFO]: [packetevents] Loading packetevents...
+[20:38:22] [Server thread/INFO]: [packetevents] Loaded packetevents v2.13.1+4d40422-SNAPSHOT for GrimAC
+[20:38:22] [pool-24-thread-1/INFO]: [packetevents] Loading block mappings for V_1_20_3/14...
+[20:38:23] [Server thread/WARN]: [GrimAC] Deprecated Grim command-execute string listener registered; use the Supplier<String> verbose handler and call verbose.get() only when text is needed.
+[20:38:23] [Server thread/INFO]: [ItemJoin] Loading server plugin ItemJoin v6.1.7-RELEASE-b1135
+[20:38:23] [Server thread/INFO]: [voicechat] Loading server plugin voicechat v2.6.21
+[20:38:23] [Server thread/INFO]: [EconomyShopGUI] Loading server plugin EconomyShopGUI v7.2.0
+[20:38:23] [Server thread/INFO]: [TAB] Loading server plugin TAB v6.1.2
+[20:38:23] [Server thread/INFO]: [BetterRTP] Loading server plugin BetterRTP v3.6.13
+[20:38:23] [Server thread/INFO]: [ServerListPlus] Loading server plugin ServerListPlus v3.5.0
+[20:38:23] [Server thread/INFO]: [JoeyDrew] Loading server plugin JoeyDrew v1.0-SNAPSHOT
+[20:38:23] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[20:38:23] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.5.71
+[20:38:23] [pool-24-thread-1/INFO]: [packetevents] Finished loading block mappings for V_1_20_3/14 in 444.065715ms
+[20:38:23] [Server thread/INFO]:         __    
+[20:38:23] [Server thread/INFO]:   |    |__)   LuckPerms v5.5.71
+[20:38:23] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[20:38:23] [Server thread/INFO]: 
+[20:38:23] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[20:38:24] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[20:38:24] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[20:38:24] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1318ms)
+[20:38:24] [Server thread/INFO]: [Vault] Enabling Vault v2.20.2
+[20:38:24] [Server thread/INFO]: [Vault] Enabled Version 2.20.2
+[20:38:24] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[20:38:24] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v7.3.9+6959-7adf70b
+[20:38:24] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[20:38:24] [Server thread/INFO]: WEPIF: Vault detected! Using Vault for permissions
+[20:38:24] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.v1_20_R3.PaperweightAdapter as the Bukkit adapter
+[20:38:25] [Server thread/INFO]: [ViaRewind] Enabling ViaRewind v4.1.3
+[20:38:25] [Server thread/INFO]: [SkinsRestorer] Enabling SkinsRestorer v15.12.5
+[20:38:26] [Server thread/INFO]: [SkinsRestorer] Running on Minecraft 1.20.4.
+[20:38:26] [Server thread/INFO]: [SkinsRestorer] Floodgate skin listener registered
+[20:38:26] [Server thread/INFO]: [SkinsRestorer] Using paper join listener!
+[20:38:26] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: skinsrestorer [15.12.5]
+[20:38:26] [Server thread/INFO]: [SkinsRestorer] PlaceholderAPI expansion registered!
+[20:38:26] [Server thread/INFO]: [ItemJoin] Enabling ItemJoin v6.1.7-RELEASE-b1135
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     +===================+
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |   SkinsRestorer   |
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |-------------------|
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     |  Standalone Mode  |
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     +===================+
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     Version: 15.12.5
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     Commit: 98b9488
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer]     This is the latest version!
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] ----------------------------------------------
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] Do you have issues? Read our troubleshooting guide: https://skinsrestorer.net/docs/troubleshooting
+[20:38:26] [Folia Async Scheduler Thread #1/INFO]: [SkinsRestorer] Want to support SkinsRestorer or receive priority support? Become a supporter: https://skinsrestorer.net/pricing
+[20:38:28] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[20:38:28] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[20:38:28] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[20:38:28] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[20:38:28] [Server thread/INFO]: Preparing level "world"
+[20:38:29] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[20:38:29] [Server thread/INFO]: Time elapsed: 420 ms
+[20:38:29] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[20:38:29] [Server thread/INFO]: Time elapsed: 62 ms
+[20:38:29] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[20:38:29] [Server thread/INFO]: Time elapsed: 47 ms
+[20:38:29] [Server thread/INFO]: [ViaVersion] Enabling ViaVersion v5.11.0
+[20:38:29] [Server thread/INFO]: [ViaVersion] ViaVersion detected server version: 1.20.3-1.20.4 (765)
+[20:38:29] [Server thread/INFO]: [PlaceholderAPI] Enabling PlaceholderAPI v2.12.3
+[20:38:30] [Server thread/INFO]: [PlaceholderAPI] Fetching available expansion information...
+[20:38:30] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: vaultunlocked [2.13.1]
+[20:38:30] [Server thread/INFO]: [Essentials] Enabling Essentials v2.22.0
+[20:38:31] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[20:38:31] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[20:38:31] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Paper Server State Provider as the provider for ServerStateProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.11+ Item Unbreakable Provider as the provider for ItemUnbreakableProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.14.4+ Persistent Data Container Provider as the provider for PersistentDataProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Reflection Formatted Command Alias Provider as the provider for FormattedCommandAliasProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Paper 1.13+ Tile Entity Provider as the provider for TileEntityProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Paper Tick Count Provider as the provider for TickCountProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Paper Biome Key Provider as the provider for BiomeKeyProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Reflection Online Mode Provider as the provider for OnlineModeProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.12+ Spawner Block Provider as the provider for SpawnerBlockProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Paper Serialization Provider as the provider for SerializationProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.9-1.20.4 Potion Meta Provider as the provider for PotionMetaProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.8.3+ Spawner Item Provider as the provider for SpawnerItemProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.14+ Sign Data Provider as the provider for SignDataProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Reflection Sync Commands Provider as the provider for SyncCommandsProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Paper Material Tag Provider as the provider for MaterialTagProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Legacy Biome Name Provider as the provider for BiomeNameProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.17.1+ World Info Provider as the provider for WorldInfoProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.13+ Spawn Egg Provider as the provider for SpawnEggProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.12.2+ Player Locale Provider as the provider for PlayerLocaleProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Paper Known Commands Provider as the provider for KnownCommandsProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Paper Container Provider as the provider for ContainerProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected Legacy InventoryView Abstract Class ABI Provider as the provider for InventoryViewProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.20.4+ Damage Event Provider as the provider for DamageEventProvider
+[20:38:31] [Server thread/INFO]: [Essentials] Selected 1.20.5+ Banner Data Provider as the provider for BannerDataProvider
+[20:38:32] [Server thread/INFO]: [Essentials] Loaded 46312 items from items.json.
+[20:38:32] [Server thread/INFO]: [Essentials] Using locale en_US
+[20:38:32] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[20:38:32] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[20:38:32] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[20:38:32] [Server thread/INFO]: [floodgate] Enabling floodgate v2.2.5-SNAPSHOT (b140-8780fa4)
+[20:38:33] [Server thread/INFO]: [ViaBackwards] Enabling ViaBackwards v5.11.0
+[20:38:33] [Server thread/INFO]: [Multiverse-Core] Enabling Multiverse-Core v5.7.3
+[20:38:34] [Server thread/WARN]: [Multiverse-Core] Failed to find EntityType class. SpawnCategoryMapper will not work.
+[20:38:34] [Server thread/INFO]: Preparing start region for dimension minecraft:arena
+[20:38:35] [Server thread/INFO]: Time elapsed: 953 ms
+[20:38:35] [Server thread/INFO]: Preparing start region for dimension minecraft:spawn
+[20:38:35] [Server thread/INFO]: Time elapsed: 28 ms
+[20:38:36] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: multiverse-core [5.7.3]
+[20:38:36] [Server thread/INFO]: [Multiverse-Core] API service loaded!
+[20:38:36] [Server thread/INFO]: [Multiverse-Core] Version 5.7.3 (API v5.7) Enabled - By dumptruckman, Rigby, fernferret, lithium3141, main--, benwoo1110 and Zax71
+[20:38:36] [Server thread/INFO]: [Multiverse-Core] Loving Multiverse-Core? Please consider supporting the project with a small donation: https://github.com/sponsors/Multiverse
+[20:38:36] [Server thread/INFO]: [EssentialsSpawn] Enabling EssentialsSpawn v2.22.0
+[20:38:36] [Server thread/INFO]: [EssentialsSpawn] Starting Metrics. Opt-out using the global bStats config.
+[20:38:36] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.9+5934e49
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world) Lighters are PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world) Lava fire is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world'
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world_nether) Lava fire is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world_the_end) TNT ignition is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world_the_end) Lighters are PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world_the_end) Lava fire is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (world_the_end) Fire spread is UNRESTRICTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_the_end'
+[20:38:36] [Server thread/INFO]: [WorldGuard] (arena) TNT ignition is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (arena) Lighters are PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (arena) Lava fire is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (arena) Fire spread is UNRESTRICTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'arena'
+[20:38:36] [Server thread/INFO]: [WorldGuard] (spawn) TNT ignition is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (spawn) Lighters are PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (spawn) Lava fire is PERMITTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] (spawn) Fire spread is UNRESTRICTED.
+[20:38:36] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'spawn'
+[20:38:36] [Server thread/INFO]: [WorldGuard] Loading region data...
+[20:38:37] [Server thread/INFO]: [FancyNpcs] Enabling FancyNpcs v2.9.0.322
+[20:38:37] [Server thread/WARN]: [org.mineskin.MineSkinClient] Creating MineSkinClient without API key
+[20:38:37] [ForkJoinPool.commonPool-worker-1/WARN]: [FancyNpcs] 
+-------------------------------------------------------
+You are not using the latest version of the FancyNpcs plugin.
+Please update to the newest version (2.11.0).
+https://modrinth.com/plugin/FancyNpcs
+-------------------------------------------------------
+
+[20:38:37] [FancyLogger/INFO]: [FancyNpcs] (ForkJoinPool.commonPool-worker-1) WARN: You are not using the latest version of the FancyNpcs plugin.
+[20:38:37] [Server thread/INFO]: [Geyser-Spigot] Enabling Geyser-Spigot v2.11.1-SNAPSHOT
+[20:38:37] [FancyLogger/INFO]: [FancyNpcs] (Server thread) INFO: FancyNpcs (2.9.0.322) has been enabled.
+[20:38:38] [Server thread/INFO]: [Multiverse-Inventories] Enabling Multiverse-Inventories v5.3.5
+[20:38:38] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: multiverse-inventories [5.3.5]
+[20:38:38] [Server thread/INFO]: [Multiverse-Inventories] Loading player names map...
+[20:38:38] [Server thread/INFO]: [Multiverse-Inventories] Version 5.3.5 (API v5.3) Enabled - By dumptruckman and benwoo1110
+[20:38:38] [Server thread/INFO]: [AuthMe] Enabling AuthMe v5.7.0-b2660
+[20:38:38] [Server thread/INFO]: [AuthMe] SQLite Setup finished
+[20:38:38] [Server thread/INFO]: [AuthMe] Hooked into LuckPerms!
+[20:38:38] [Server thread/INFO]: [AuthMe] Hooked successfully into Essentials
+[20:38:39] [Server thread/WARN]: [AuthMe] WARNING! The protectInventory feature requires ProtocolLib! Disabling it...
+[20:38:39] [Server thread/INFO]: [AuthMe] AuthMe 5.7.0 build n.2660 successfully enabled!
+[20:38:39] [Server thread/INFO]: [ClearLag] Enabling ClearLag v1.12.3
+[20:38:39] [Server thread/INFO]: [ClearLag] Plugin hooks detected: FancyNpcs
+[20:38:39] [Server thread/INFO]: [ClearLag] Hook enabled: FancyNpcs
+[20:38:39] [Server thread/INFO]: [ClearLag] ClearLag configuration reloaded.
+[20:38:39] [Server thread/INFO]: [ClearLag] Loaded 0 player preferences.
+[20:38:39] [Server thread/WARN]: [ClearLag] Luckperms detected! Running in advanced permission mode.
+[20:38:39] [Server thread/INFO]: [ClearLag] Dynamic View Distance enabled.
+[20:38:39] [Server thread/INFO]: [ClearLag] Explosion optimization enabled.
+[20:38:39] [Server thread/INFO]: [ClearLag] Auto-Clear is enabled and starts every 300 seconds.
+[20:38:39] [Server thread/INFO]: [ClearLag] Mob AI Optimization is enabled.
+[20:38:39] [Server thread/INFO]: [ClearLag] Performance Warnings are enabled.
+[20:38:39] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: clearlag [1.12.3]
+[20:38:39] [Server thread/INFO]: [ClearLag] PlaceholderAPI Expansion for ClearLag registered!
+[20:38:39] [Server thread/INFO]: [ClearLag] ClearLag has been successfully enabled!
+[20:38:39] [Server thread/INFO]: [LifeStealZ] Enabling LifeStealZ v2.13.0
+[20:38:39] [Server thread/INFO]: [LifeStealZ] Geyser found, enabling Bedrock player support.
+[20:38:39] [Server thread/INFO]: [LifeStealZ] Using language file: plugins/LifeStealZ/lang/en-US.yml
+[20:38:39] [Server thread/INFO]: [LifeStealZ] Using SQLite storage
+[20:38:39] [Server thread/INFO]: [LifeStealZ] 
+==========================================
+A new version of LifeStealZ is available!
+New Version: 2.13.0 -> 2.21.1
+Download here: https://modrinth.com/plugin/lifestealz/version/2.21.1
+==========================================
+[20:38:39] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: lifestealz [2.13.0]
+[20:38:39] [Server thread/INFO]: [LifeStealZ] PlaceholderAPI found! Enabled PlaceholderAPI support!
+[20:38:39] [Server thread/INFO]: [LifeStealZ] LifeStealZ enabled!
+[20:38:39] [Server thread/INFO]: [DeluxeMenus] Enabling DeluxeMenus v1.14.1-Release
+[20:38:39] [Server thread/INFO]: [DeluxeMenus] Successfully hooked into PlaceholderAPI!
+[20:38:39] [Server thread/INFO]: [DeluxeMenus] Successfully hooked into Vault!
+[20:38:39] [Server thread/WARN]: [DeluxeMenus] Found 'data' option for item: teststone in menu: basics_menu. This option is deprecated and will be removed soon. Please use 'damage' instead.
+[20:38:39] [Server thread/INFO]: [DeluxeMenus] 5 GUI menus loaded!
+[20:38:39] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: deluxemenus [1.14.1-Release]
+[20:38:39] [Server thread/INFO]: [DeluxeMenus] You are running the latest version of DeluxeMenus!
+[20:38:39] [Server thread/INFO]: [Multiverse-Portals] Enabling Multiverse-Portals v5.2.3
+[20:38:39] [Server thread/INFO]: [Multiverse-Portals] 0 - Portals(s) loaded
+[20:38:40] [Server thread/INFO]: [Multiverse-Portals] Found WorldEdit. Using it for selections.
+[20:38:40] [Server thread/INFO]: [Multiverse-Portals] Version 5.2.3 (API v5.2) Enabled - By Rigby, fernferret and benwoo1110
+[20:38:40] [Server thread/INFO]: [GrimAC] Enabling GrimAC v2.3.74-2614909
+[20:38:40] [Server thread/INFO]: [GrimAC] Registering packets...
+[20:38:40] [Server thread/INFO]: [GrimAC] Registering tick schedulers...
+[20:38:40] [Server thread/INFO]: Grim Version: 2.3.74-2614909
+[20:38:40] [Server thread/INFO]: [grim-datastore] [grim-datastore] SQLite engine 3.42.0 — using modern dialect
+[20:38:40] [Server thread/INFO]: [grim-datastore] [v2-bootstrap] grim:grim_violations (violations): 0 migration(s)
+[20:38:40] [Server thread/INFO]: [grim-datastore] [v2-bootstrap] grim:grim_checks (checks): 0 migration(s)
+[20:38:40] [Server thread/INFO]: [grim-datastore] [v2-bootstrap] grim:grim_settings (settings): 0 migration(s)
+[20:38:40] [Server thread/INFO]: [grim-datastore] [v2-bootstrap] grim:grim_players (players): 0 migration(s)
+[20:38:40] [Server thread/INFO]: [grim-datastore] [v2-bootstrap] grim:grim_sessions (sessions): 0 migration(s)
+[20:38:40] [Server thread/INFO]: [grim-datastore] [v2-bootstrap] grim:server_startups (server_startups): 0 migration(s)
+[20:38:40] [Server thread/INFO]: [grim-datastore] [grim-datastore] v2 cutover complete: 1 v2 backend(s), ac.grim.grimac.internal.storage.core.V2Routes@2f1dece9 routes installed, 0 legacy backends
+[20:38:40] [Server thread/INFO]: [grim-datastore] [grim-datastore] storage startup claimed: serverName='Prison' instanceId=c64ae0df-6ef6-4797-a405-73ec1a7ecbd9 startupId=4574da99-8074-47f4-aed4-0c3145bdbf35 fence=37ef3757-393a-45d4-83af-63a2021d6ee5.
+[20:38:40] [Server thread/WARN]: [grim-datastore] [grim-datastore] recovered startupId=7ffd5463-7782-47ad-b510-807550391654 serverName='Prison' reason=expired-ownership and closed 4 open session(s).
+[20:38:40] [Server thread/WARN]: [grim-datastore] [grim-datastore] recovered 4 open session(s) after claiming storage startup
+[20:38:40] [Server thread/ERROR]: [GrimAC] GrimAC has detected that you are using ViaVersion with the `fix-1_21-placement-rotation` option enabled.
+[20:38:40] [Server thread/ERROR]: [GrimAC] This option is known to cause issues with GrimAC and may result in false positives and bypasses.
+[20:38:40] [Server thread/ERROR]: [GrimAC] Please disable this option in your ViaVersion configuration to prevent these issues.
+[20:38:40] [Server thread/INFO]: [GrimAC] Registering singular bukkit event... (PistonEvent)
+[20:38:40] [Server thread/INFO]: [GrimAC] LuckPerms detected
+[20:38:40] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: grim [2.3.74-2614909]
+[20:38:40] [Server thread/INFO]: [voicechat] Enabling voicechat v2.6.21
+[20:38:40] [Server thread/INFO]: [voicechat] Initializing compatibility for version 1.20.4-R0.1
+[20:38:40] [Server thread/INFO]: [voicechat] Compatibility version 20
+[20:38:40] [Server thread/INFO]: [voicechat] Successfully initialized commodore command completion
+[20:38:40] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: voicechat [2.6.21]
+[20:38:40] [Server thread/INFO]: [voicechat] Successfully registered PlaceholderAPI expansion
+[20:38:40] [Server thread/INFO]: [voicechat] Successfully added ViaVersion mappings
+[20:38:40] [Server thread/INFO]: [EconomyShopGUI] Enabling EconomyShopGUI v7.2.0
+[20:38:40] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Initializing paper meta...
+[20:38:40] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Using lang-en.yml as language file
+[20:38:40] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Completed loading 16 section configs from /sections/
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Completed loading 16 shop configs from /shops/
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Updating Shop settings...
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Successfully hooked into Vault and using EssentialsX Economy as economy provider
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Completed loading 1 economy provider(s) for all 14 shop sections.
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Using minecraft version 1.20.4...
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Spawner provider set to AUTO in config
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Automatically searching for compatible spawner provider....
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Failed to automatically find compatible spawner provider, using default...
+[20:38:41] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: esgui [1.1.0]
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Debug mode is enabled.
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Loading all items...
+[20:38:41] [Server thread/INFO]: [EconomyShopGUI] [INFO]: Initialized - Took 506ms to complete
+[20:38:41] [Server thread/INFO]: [TAB] Enabling TAB v6.1.2
+[20:38:41] [Server thread/INFO]: [TAB] Found NMS implementation: me.neznamy.tab.platforms.bukkit.v1_20_R3.NMSImplementationProvider
+[20:38:41] [ESGUI_UTIL_THREAD #0/INFO]: [EconomyShopGUI] [INFO]: There is an update available for EconomyShopGUI, you are running v7.2.0 but found v7.2.1.
+[20:38:41] [ESGUI_UTIL_THREAD #0/INFO]: [EconomyShopGUI] [INFO]: Download at: https://www.spigotmc.org/resources/economyshopgui.69927/
+[20:38:41] [Server thread/INFO]: [TAB] Enabled in 156ms
+[20:38:41] [Server thread/INFO]: [BetterRTP] Enabling BetterRTP v3.6.13
+[20:38:41] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: betterrtp [3.6.13]
+[20:38:41] [Server thread/INFO]: [ServerListPlus] Enabling ServerListPlus v3.5.0
+[20:38:41] [Server thread/INFO]: [ServerListPlus] [Core] Reloading configuration...
+[20:38:41] [Server thread/INFO]: [ServerListPlus] [Core] Loaded configuration: ServerStatusConf
+[20:38:41] [Server thread/INFO]: [ServerListPlus] [Core] Loaded configuration: PluginConf
+[20:38:41] [Server thread/INFO]: [ServerListPlus] [Core] Loaded configuration: BukkitConf
+[20:38:41] [Server thread/WARN]: [ServerListPlus] [Core] Configuration is not enabled, nothing will be changed on the server! Please execute /slp enable to enable the configuration.
+[20:38:42] [Server thread/INFO]: [ServerListPlus] [Core] Reloading saved player identities...
+[20:38:42] [Server thread/INFO]: [ServerListPlus] Successfully loaded!
+[20:38:42] [Server thread/INFO]: [ServerListPlus] ServerListPlus v3.5.0 enabled.
+[20:38:42] [Server thread/INFO]: [JoeyDrew] Enabling JoeyDrew v1.0-SNAPSHOT*
+[20:38:42] [Server thread/INFO]: [JoeyDrew] [STDOUT] Hello World
+[20:38:42] [Server thread/WARN]: Nag author(s): '[IFroject]' of 'JoeyDrew v1.0-SNAPSHOT' about their usage of System.out/err.print. Please use your plugin's logger instead (JavaPlugin#getLogger).
+[20:38:42] [Server thread/INFO]: [PlaceholderAPI] Placeholder expansion registration initializing...
+[20:38:42] [Server thread/INFO]: [Geyser-Spigot] ******************************************
+[20:38:42] [Server thread/INFO]: [Geyser-Spigot] 
+[20:38:42] [Server thread/INFO]: [Geyser-Spigot] Loading Geyser version 2.11.1-b1218 (git-master-5ef5efb)
+[20:38:42] [Server thread/INFO]: [Geyser-Spigot] 
+[20:38:42] [Server thread/INFO]: [Geyser-Spigot] ******************************************
+[20:38:43] [Server thread/INFO]: [Geyser-Spigot] Registered 199 custom block overrides.
+[20:38:43] [Server thread/INFO]: [Geyser-Spigot] Registered 2 custom block item overrides.
+[20:38:43] [Server thread/INFO]: [Geyser-Spigot] Registered 7 custom blocks.
+[20:38:44] [Server thread/INFO]: [Geyser-Spigot] Registered 1 custom items
+[20:38:45] [GeyserServer-3-1/INFO]: [Geyser-Spigot] Started Geyser on UDP port 19132
+[20:38:45] [Server thread/INFO]: [Geyser-Spigot] Done (3.093s)! Run /geyser help for help!
+[20:38:45] [Server thread/INFO]: Starting remote control listener
+[20:38:45] [Server thread/INFO]: Thread RCON Listener started
+[20:38:45] [Server thread/INFO]: RCON running on 0.0.0.0:25575
+[20:38:45] [Server thread/INFO]: Running delayed init tasks
+[20:38:45] [Craft Scheduler Thread - 8 - Essentials/INFO]: [Essentials] Fetching version information...
+[20:38:45] [Craft Scheduler Thread - 7 - ViaVersion/INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor.
+[20:38:45] [Craft Scheduler Thread - 4 - ItemJoin/INFO]: [ItemJoin] Hooked into { AuthMe, Multiverse-Core, Multiverse-Inventories, WorldGuard, PlaceholderAPI, SkinsRestorer, Vault }
+[20:38:45] [Craft Scheduler Thread - 10 - AuthMe/INFO]: [AuthMe] Downloading GEO IP database, because the old database is older than 30 days or doesn't exist
+[20:38:45] [Craft Scheduler Thread - 10 - AuthMe/WARN]: [AuthMe] No MaxMind credentials found in the configuration file! GeoIp protections will be disabled.
+[20:38:45] [Craft Scheduler Thread - 10 - AuthMe/INFO]: [AuthMe] There is no newer GEO IP database uploaded to MaxMind. Using the old one for now.
+[20:38:45] [Craft Scheduler Thread - 14 - ItemJoin/INFO]: [ItemJoin] Checking for updates...
+[20:38:45] [Craft Scheduler Thread - 10 - AuthMe/WARN]: [AuthMe] Could not download GeoLiteAPI database [FileNotFoundException]: plugins/AuthMe/GeoLite2-Country.mmdb (No such file or directory)
+[20:38:45] [Craft Scheduler Thread - 5 - ClearLag/INFO]: ========================================
+[20:38:45] [Craft Scheduler Thread - 5 - ClearLag/INFO]: ClearLag is outdated!
+[20:38:45] [Craft Scheduler Thread - 5 - ClearLag/INFO]: Your version: 1.12.3
+[20:38:45] [Craft Scheduler Thread - 5 - ClearLag/INFO]: Newest version: 1.12.5
+[20:38:45] [Craft Scheduler Thread - 5 - ClearLag/INFO]: Download the new version here: https://modrinth.com/plugin/7bhTp28M
+[20:38:45] [Craft Scheduler Thread - 5 - ClearLag/INFO]: ========================================
+[20:38:45] [Craft Scheduler Thread - 11 - GrimAC/INFO]: New GrimAC version found! Version 2.3.74-f48f450 is available to be downloaded here: https://modrinth.com/plugin/grimac
+[20:38:45] [Craft Scheduler Thread - 14 - ItemJoin/INFO]: [ItemJoin] You are up to date!
+[20:38:45] [Server thread/INFO]: [ItemJoin] 35/35 Custom item(s) loaded!
+[20:38:45] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v2.20.2)!
+[20:38:45] [Server thread/INFO]: Done (36.354s)! For help, type "help"
+[20:38:45] [Server thread/INFO]: Timings Reset
+[20:38:45] [Server thread/INFO]: [voicechat] Loading plugins
+[20:38:45] [Server thread/INFO]: [voicechat] Loaded 0 plugin(s)
+[20:38:45] [Server thread/INFO]: [voicechat] Initializing plugins
+[20:38:45] [Server thread/INFO]: [voicechat] Initialized 0 plugin(s)
+[20:38:45] [Server thread/WARN]: [voicechat] Running in offline mode - Voice chat encryption is not secure!
+[20:38:45] [VoiceChatServerThread/INFO]: [voicechat] Voice host is 'mauritania-disease.tun.ply.gg:16012'
+[20:38:45] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: player [2.0.9]
+[20:38:45] [VoiceChatServerThread/INFO]: [voicechat] Voice chat server started at port 24454
+[20:38:45] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: essentials [1.5.2]
+[20:38:45] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: luckperms [5.4-R2]
+[20:38:45] [Server thread/INFO]: 3 placeholder hook(s) registered!
+[20:38:47] [User Authenticator #0/INFO]: UUID of player KeepAlive_Bot is 24f74a17-c5e4-34b0-83cb-6e97f1fba32c
+[20:38:48] [Server thread/INFO]: KeepAlive_Bot joined the game
+[20:38:48] [Server thread/INFO]: KeepAlive_Bot[/[0:0:0:0:0:0:0:1%0]:57322] logged in with entity id 84 at ([spawn]0.0, 0.0, 0.0)
+[20:38:52] [Craft Scheduler Thread - 11 - AuthMe/INFO]: [AuthMe] KeepAlive_Bot logged in 0:0:0:0:0:0:0:1%0
+[20:38:58] [Server thread/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[20:39:36] [User Authenticator #0/INFO]: UUID of player TxGOLDEN is 608f10be-7699-3c2f-975d-f20a4db9bdf6
+[20:39:36] [Server thread/INFO]: com.mojang.authlib.GameProfile@33f0393e[id=608f10be-7699-3c2f-975d-f20a4db9bdf6,name=TxGOLDEN,properties={}] lost connection: Disconnected
+[20:39:50] [User Authenticator #0/INFO]: UUID of player TxGOLDEN is 608f10be-7699-3c2f-975d-f20a4db9bdf6
+[20:39:51] [Server thread/INFO]: TxGOLDEN joined the game
+[20:39:51] [Server thread/INFO]: TxGOLDEN[/127.233.21.86:58679] logged in with entity id 92 at ([spawn]0.0, 0.0, 0.0)
+[20:40:01] [Craft Scheduler Thread - 6 - AuthMe/INFO]: [AuthMe] TxGOLDEN logged in 127.233.21.86
+[20:40:07] [Server thread/INFO]: TxGOLDEN fell out of the world
+[20:40:28] [Server thread/INFO]: TxGOLDEN issued server command: /rtp
+[20:40:39] [Server thread/INFO]: TxGOLDEN issued server command: /rtp
+[20:40:44] [Server thread/INFO]: TxGOLDEN issued server command: /sellgui
+[20:40:47] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world TxGOLDEN
+[20:41:01] [Server thread/INFO]: TxGOLDEN issued server command: /home lifesteal
+[20:41:20] [Server thread/INFO]: TxGOLDEN issued server command: /skin Algazal
+[20:41:21] [Server thread/WARN]: TxGOLDEN was kicked due to keepalive timeout!
+[20:41:21] [Server thread/INFO]: TxGOLDEN lost connection: Timed out
+[20:41:21] [Server thread/INFO]: [voicechat] Disconnecting client TxGOLDEN
+[20:41:21] [Server thread/INFO]: TxGOLDEN left the game
+[20:41:26] [User Authenticator #1/INFO]: UUID of player TxGOLDEN is 608f10be-7699-3c2f-975d-f20a4db9bdf6
+[20:41:26] [Server thread/INFO]: TxGOLDEN (/127.233.21.86:57173) lost connection: Disconnected
+[20:41:51] [User Authenticator #1/INFO]: UUID of player me2 is 67df70a7-30ec-3bd0-a07e-57c98698f996
+[20:41:55] [Server thread/INFO]: me2 joined the game
+[20:41:55] [Server thread/INFO]: me2[/127.103.161.140:57957] logged in with entity id 426 at ([spawn]0.0, 0.0, 0.0)
+[20:42:15] [Craft Scheduler Thread - 14 - AuthMe/INFO]: [AuthMe] me2 logged in 127.103.161.140
+[20:42:18] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[20:42:18] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[20:42:19] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[20:42:21] [Server thread/INFO]: me2 fell out of the world
+[20:42:37] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world me2
+[20:42:46] [Server thread/INFO]: Teleported me2 to arena.
+[20:43:13] [Server thread/INFO]: me2 issued server command: /summon iron_golem
+[20:43:13] [Server thread/INFO]: [me2: Summoned new Iron Golem]
+[20:43:20] [Server thread/INFO]: me2 issued server command: /spawn
+[20:43:21] [Server thread/INFO]: me2 issued server command: /summon iron_golem
+[20:43:21] [Server thread/INFO]: [me2: Summoned new Iron Golem]
+[20:43:33] [Server thread/INFO]: Named entity EntityWolf['حمدون يسلم عليكم'/83, uuid='335425a1-99b9-4d1d-8c31-605c9df7a9d2', l='ServerLevel[spawn]', x=54.37, y=87.00, z=54.93, cpos=[3, 3], tl=79590, v=true] died: حمدون يسلم عليكم was slain by Iron Golem
+[20:43:45] [Server thread/INFO]: me2 has made the advancement [Acquire Hardware]
+[20:43:56] [Server thread/INFO]: me2 issued server command: /summon iron_golem
+[20:43:56] [Server thread/INFO]: [me2: Summoned new Iron Golem]
+[20:44:50] [Server thread/INFO]: me2 issued server command: /summon iron_golem
+[20:44:50] [Server thread/INFO]: [me2: Summoned new Iron Golem]
+[20:45:39] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[20:45:52] [Server thread/INFO]: me2 issued server command: /tp k
+[20:45:54] [Server thread/INFO]: me2 issued server command: /tp k
+[20:46:00] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[20:46:01] [Server thread/INFO]: me2 issued server command: /tp k
+[20:46:03] [Server thread/INFO]: me2 issued server command: /tp k
+[20:46:06] [Server thread/INFO]: me2 issued server command: /spawn
+[20:47:26] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[20:47:28] [Server thread/INFO]: me2 issued server command: /sellgui
+[20:47:32] [Server thread/INFO]: Shop >> me2 sold 9x Iron Ingot(Ores.page1.items.16), 2x Poppy(Dyes.page1.items.28) for $12.92 with the sell gui.
+[20:47:39] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world me2
+[20:48:32] [Server thread/INFO]: me2 issued server command: /home lifesteal
+[20:48:50] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[20:49:05] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[20:49:05] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[20:50:57] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[20:53:07] [User Authenticator #2/INFO]: UUID of player swighl is 013c415e-3208-31a7-8c2b-01f92ab417b7
+[20:53:08] [Server thread/INFO]: swighl joined the game
+[20:53:08] [Server thread/INFO]: swighl[/127.74.225.16:57887] logged in with entity id 2383 at ([spawn]0.0, 0.0, 0.0)
+[20:53:08] [Server thread/INFO]: swighl has made the advancement [Getting an Upgrade]
+[20:53:08] [Server thread/INFO]: swighl lost connection: Disconnected
+[20:53:08] [Server thread/INFO]: [voicechat] Disconnecting client swighl
+[20:53:08] [Server thread/INFO]: swighl left the game
+[20:53:14] [User Authenticator #2/INFO]: UUID of player swighl is 013c415e-3208-31a7-8c2b-01f92ab417b7
+[20:53:14] [Server thread/INFO]: swighl joined the game
+[20:53:14] [Server thread/INFO]: swighl[/127.74.225.16:39015] logged in with entity id 2384 at ([spawn]0.0, 0.0, 0.0)
+[20:53:31] [Server thread/INFO]: [AuthMe] swighl registered 127.74.225.16
+[20:53:31] [Craft Scheduler Thread - 20 - AuthMe/INFO]: [AuthMe] swighl logged in 127.74.225.16
+[20:53:38] [Server thread/INFO]: swighl fell out of the world
+[20:53:53] [Server thread/INFO]: me2 issued server command: /tp s
+[20:54:00] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[20:54:04] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[20:54:09] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[20:54:19] [Server thread/INFO]: swighl has made the advancement [Cover Me with Diamonds]
+[20:54:20] [User Authenticator #3/INFO]: UUID of player Aliawada200 is b7fb60bd-2c38-362e-a99b-59c5b46e7929
+[20:54:22] [Server thread/INFO]: Aliawada200 joined the game
+[20:54:22] [Server thread/INFO]: Aliawada200[/127.132.59.33:49433] logged in with entity id 2527 at ([spawn]0.0, 0.0, 0.0)
+[20:54:22] [Server thread/INFO]: Aliawada200 has made the advancement [Getting an Upgrade]
+[20:54:24] [Server thread/INFO]: swighl issued server command: /skin swight
+[20:54:31] [Async Chat Thread - #0/INFO]: [Not Secure] <swighl> thx
+[20:54:49] [Server thread/INFO]: [AuthMe] Aliawada200 registered 127.132.59.33
+[20:54:49] [Craft Scheduler Thread - 26 - AuthMe/INFO]: [AuthMe] Aliawada200 logged in 127.132.59.33
+[20:54:55] [Server thread/INFO]: Aliawada200 fell out of the world
+[20:55:05] [Server thread/INFO]: swighl issued server command: /sellgui
+[20:55:05] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world swighl
+[20:55:09] [Server thread/INFO]: swighl issued server command: /shop
+[20:55:12] [Server thread/INFO]: Aliawada200 issued server command: /rtp
+[20:55:24] [Netty Epoll Server IO #1/INFO]: [packetevents] Loading block mappings for V_1_20/12...
+[20:55:24] [Netty Epoll Server IO #1/INFO]: [packetevents] Finished loading block mappings for V_1_20/12 in 210.219982ms
+[20:55:27] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed TimerLimit (x47) 
+[20:55:31] [Server thread/INFO]: Aliawada200 issued server command: /betterrtp
+[20:55:40] [Server thread/INFO]: Aliawada200 issued server command: /sellgui
+[20:55:41] [Server thread/INFO]: Aliawada200 issued server command: /sellgui
+[20:55:41] [Server thread/INFO]: Aliawada200 issued server command: /sellgui
+[20:55:44] [Server thread/INFO]: Aliawada200 issued server command: /sellgui
+[20:55:44] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world Aliawada200
+[20:55:50] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world me2
+[20:55:55] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[20:56:00] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[20:56:00] [Server thread/INFO]: swighl issued server command: /shop
+[20:56:01] [Server thread/INFO]: Teleported Aliawada200 to spawn.
+[20:56:19] [Server thread/INFO]: me2 issued server command: /invsee a
+[20:56:21] [Server thread/INFO]: Aliawada200 has made the advancement [Cover Me with Diamonds]
+[20:56:24] [Async Chat Thread - #1/INFO]: [Not Secure] <swighl> لو ضعيف scoreboard كان احسن
+[20:56:30] [Async Chat Thread - #1/INFO]: [Not Secure] <swighl> ضايف
+[20:56:36] [Async Chat Thread - #1/INFO]: [Not Secure] <me2> اي في بس بعدين نفعلها
+[20:56:40] [Server thread/INFO]: Aliawada200 issued server command: /sellgui
+[20:56:40] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world Aliawada200
+[20:56:43] [Async Chat Thread - #1/INFO]: [Not Secure] <swighl> تمام
+[20:56:45] [Server thread/INFO]: swighl issued server command: /shop
+[20:56:48] [Async Chat Thread - #1/INFO]: [Not Secure] <me2> يلا العبو
+[20:56:49] [Server thread/INFO]: Aliawada200 issued server command: /home lifesteal
+[20:56:49] [Server thread/INFO]: Aliawada200 issued server command: /rtp
+[20:56:51] [Server thread/INFO]: Aliawada200 issued server command: /sethome lifesteal
+[20:56:51] [Server thread/INFO]: swighl issued server command: /home lifesteal
+[20:56:51] [Server thread/INFO]: swighl issued server command: /rtp
+[20:56:52] [luckperms-command-executor/INFO]: [LP] Set lifesteal.home to true for aliawada200 in context global.
+[20:56:53] [Server thread/INFO]: swighl issued server command: /sethome lifesteal
+[20:56:54] [luckperms-command-executor/INFO]: [LP] Set lifesteal.home to true for swighl in context global.
+[20:57:08] [Server thread/INFO]: me2 issued server command: /tp a
+[20:57:22] [Server thread/INFO]: me2 issued server command: /tp Aliawada200
+[20:57:26] [Server thread/INFO]: me2 issued server command: /tp Aliawada200
+[20:57:38] [Server thread/INFO]: me2 issued server command: /d
+[20:57:42] [Server thread/INFO]: me2 issued server command: /day
+[20:57:54] [Server thread/INFO]: Aliawada200 has made the advancement [Monster Hunter]
+[20:58:18] [Server thread/INFO]: swighl issued server command: /plugins
+[20:58:21] [Async Chat Thread - #3/INFO]: [Not Secure] <Aliawada200> ليش
+[20:58:27] [Async Chat Thread - #3/INFO]: [Not Secure] <Aliawada200> ما فني اضربك
+[20:58:34] [Async Chat Thread - #3/INFO]: [Not Secure] <me2> creative
+[20:58:39] [Server thread/INFO]: me2 issued server command: /
+[20:58:41] [Server thread/INFO]: me2 issued server command: /
+[20:58:41] [Async Chat Thread - #3/INFO]: [Not Secure] <Aliawada200> انت ادنم
+[20:58:42] [Async Chat Thread - #3/INFO]: [Not Secure] <me2> creative
+[20:58:45] [Async Chat Thread - #3/INFO]: [Not Secure] <Aliawada200> ادمن
+[20:58:47] [Async Chat Thread - #3/INFO]: [Not Secure] <me2> owner
+[20:58:49] [Server thread/INFO]: Aliawada200 issued server command: /nv
+[20:58:55] [Async Chat Thread - #3/INFO]: [Not Secure] <me2> atare99
+[20:59:03] [Async Chat Thread - #3/INFO]: [Not Secure] <Aliawada200> ما فيا نيت
+[20:59:10] [Server thread/INFO]: Aliawada200 issued server command: /nv
+[20:59:15] [Server thread/INFO]: Aliawada200 issued server command: /help
+[20:59:15] [Server thread/INFO]: [Essentials] Aliawada200 was denied access to command.
+[20:59:16] [Async Chat Thread - #3/INFO]: [Not Secure] <swighl> شو اسم استضافة
+[20:59:28] [Server thread/INFO]: me2 issued server command: /tp s
+[20:59:32] [Async Chat Thread - #3/INFO]: [Not Secure] <Aliawada200> ما فيا night_vision
+[20:59:42] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed Simulation (x74) .152508 /gl 74
+[20:59:47] [Server thread/INFO]: me2 issued server command: /effect give @a minecraft:night_vision infinite
+[20:59:47] [Server thread/INFO]: [me2: Applied effect Night Vision to 4 targets]
+[20:59:48] [Netty Epoll Server IO #1/INFO]: Grim » swighl failed TimerLimit (x100) 
+[20:59:49] [Netty Epoll Server IO #1/INFO]: Grim » swighl failed TimerLimit (x140) 
+[20:59:51] [Server thread/INFO]: swighl lost connection: Disconnected
+[20:59:51] [Server thread/INFO]: [voicechat] Disconnecting client swighl
+[20:59:51] [Server thread/INFO]: swighl left the game
+[21:00:03] [User Authenticator #4/INFO]: UUID of player swighl is 013c415e-3208-31a7-8c2b-01f92ab417b7
+[21:00:03] [Server thread/INFO]: [EconomyShopGUI] [DEBUG]: Detected skin change of swighl, updating cached skin...
+[21:00:03] [Server thread/INFO]: swighl joined the game
+[21:00:03] [Server thread/INFO]: swighl[/127.74.225.16:43741] logged in with entity id 4985 at ([spawn]0.0, 0.0, 0.0)
+[21:00:03] [Craft Scheduler Thread - 31 - AuthMe/INFO]: [AuthMe] swighl logged in 127.74.225.16
+[21:00:06] [Server thread/INFO]: Aliawada200 issued server command: /tpa KeepAlive_Bot
+[21:00:14] [Server thread/INFO]: swighl issued server command: /sellgui
+[21:00:14] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world swighl
+[21:00:23] [Server thread/INFO]: Aliawada200 issued server command: /tpa swighl
+[21:00:53] [Server thread/INFO]: swighl lost connection: Disconnected
+[21:00:53] [Server thread/INFO]: [voicechat] Disconnecting client swighl
+[21:00:53] [Server thread/INFO]: swighl left the game
+[21:01:06] [User Authenticator #5/INFO]: UUID of player swighl is 013c415e-3208-31a7-8c2b-01f92ab417b7
+[21:01:06] [Server thread/INFO]: swighl joined the game
+[21:01:06] [Server thread/INFO]: swighl[/127.74.225.16:57271] logged in with entity id 5717 at ([spawn]0.0, 0.0, 0.0)
+[21:01:06] [Craft Scheduler Thread - 31 - AuthMe/INFO]: [AuthMe] swighl logged in 127.74.225.16
+[21:01:08] [Server thread/INFO]: me2 issued server command: /tp a
+[21:01:12] [Server thread/INFO]: me2 issued server command: /tp Aliawada200
+[21:01:41] [Server thread/INFO]: me2 issued server command: /tphere a
+[21:01:43] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world swighl
+[21:01:48] [Server thread/INFO]: swighl issued server command: /home lifesteal
+[21:02:02] [Server thread/INFO]: Aliawada200 has made the advancement [Acquire Hardware]
+[21:02:09] [Server thread/INFO]: me2 issued server command: /tphere a
+[21:02:47] [Async Chat Thread - #5/INFO]: [Not Secure] <Aliawada200> شكرا
+[21:02:47] [Server thread/INFO]: swighl lost connection: Disconnected
+[21:02:47] [Server thread/INFO]: [voicechat] Disconnecting client swighl
+[21:02:47] [Server thread/INFO]: swighl left the game
+[21:02:51] [User Authenticator #6/INFO]: UUID of player swighl is 013c415e-3208-31a7-8c2b-01f92ab417b7
+[21:02:51] [Server thread/INFO]: swighl joined the game
+[21:02:51] [Server thread/INFO]: swighl[/127.74.225.16:46423] logged in with entity id 6725 at ([spawn]0.0, 0.0, 0.0)
+[21:02:51] [Craft Scheduler Thread - 17 - AuthMe/INFO]: [AuthMe] swighl logged in 127.74.225.16
+[21:02:51] [Server thread/INFO]: swighl lost connection: Disconnected
+[21:02:51] [Server thread/INFO]: [voicechat] Disconnecting client swighl
+[21:02:51] [Server thread/INFO]: swighl left the game
+[21:02:53] [Async Chat Thread - #5/INFO]: [Not Secure] <me2> اسويلك بيت
+[21:02:59] [Async Chat Thread - #5/INFO]: [Not Secure] <Aliawada200> لا
+[21:03:05] [User Authenticator #6/INFO]: UUID of player swighl is 013c415e-3208-31a7-8c2b-01f92ab417b7
+[21:03:05] [Server thread/INFO]: swighl joined the game
+[21:03:05] [Server thread/INFO]: swighl[/127.74.225.16:40807] logged in with entity id 6742 at ([spawn]0.0, 0.0, 0.0)
+[21:03:05] [Craft Scheduler Thread - 21 - AuthMe/INFO]: [AuthMe] swighl logged in 127.74.225.16
+[21:03:06] [Async Chat Thread - #5/INFO]: [Not Secure] <Aliawada200> انا بسوي
+[21:03:10] [Server thread/INFO]: me2 issued server command: /tphere a
+[21:03:12] [Server thread/INFO]: me2 issued server command: /tphere a
+[21:03:18] [Server thread/INFO]: swighl issued server command: /sellgui
+[21:03:18] [Server thread/INFO]: [Essentials] CONSOLE issued server command: /warp world swighl
+[21:03:21] [Async Chat Thread - #5/INFO]: [Not Secure] <me2> شوف ايش رح اسوي
+[21:03:24] [Server thread/INFO]: swighl issued server command: /home lifesteal
+[21:03:29] [Async Chat Thread - #5/INFO]: [Not Secure] <me2> شوف ايش رح اسوي
+[21:03:42] [Server thread/INFO]: me2 issued server command: //set air
+[21:03:48] [Async Chat Thread - #5/INFO]: [Not Secure] <Aliawada200> هههه
+[21:03:52] [Async Chat Thread - #5/INFO]: [Not Secure] <Aliawada200> انا بعرف
+[21:04:05] [Async Chat Thread - #5/INFO]: [Not Secure] <Aliawada200> . /fill
+[21:04:09] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed AimDuplicateLook (x20) 
+[21:04:13] [Async Chat Thread - #5/INFO]: [Not Secure] <me2> لا أوامر ثانية
+[21:04:23] [Async Chat Thread - #5/INFO]: [Not Secure] <swighl> تستخدم world edit
+[21:04:25] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x10) 
+[21:04:29] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x15) 
+[21:04:30] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x20) 
+[21:04:30] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x25) 
+[21:04:30] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x30) 
+[21:04:31] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x35) 
+[21:04:33] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x40) 
+[21:04:38] [Server thread/INFO]: me2 issued server command: //undo
+[21:04:40] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x45) 
+[21:04:41] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x50) 
+[21:04:41] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x55) 
+[21:04:42] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x60) 
+[21:04:42] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x65) 
+[21:04:42] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x70) 
+[21:04:42] [Server thread/INFO]: me2 issued server command: //undo
+[21:04:42] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x75) 
+[21:04:43] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x80) 
+[21:04:43] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x85) 
+[21:04:44] [Netty Epoll Server IO #0/INFO]: Grim » Aliawada200 failed NoSlow (x90) 
+[21:04:44] [Server thread/INFO]: Aliawada200 lost connection: Disconnected
+[21:04:44] [Server thread/INFO]: [voicechat] Disconnecting client Aliawada200
+[21:04:44] [Server thread/INFO]: Aliawada200 left the game
+[21:04:50] [Server thread/INFO]: me2 issued server command: /redo
+[21:05:25] [Server thread/INFO]: me2 issued server command: /tphere s
+[21:05:43] [Async Chat Thread - #7/INFO]: [Not Secure] <swighl> ه //
+[21:05:55] [Server thread/INFO]: me2 issued server command: //set air
+[21:06:02] [Server thread/INFO]: me2 issued server command: //set air
+[21:06:04] [Server thread/INFO]: me2 issued server command: //set air
+[21:06:05] [Server thread/INFO]: me2 issued server command: //set air
+[21:06:13] [Async Chat Thread - #7/INFO]: [Not Secure] <swighl> ادري
+[21:06:33] [Async Chat Thread - #7/INFO]: [Not Secure] <me2> شوف شوف الوحوش
+[21:06:39] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:06:41] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:06:42] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:06:47] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:06:48] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:06:49] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:06:49] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:06:49] [Async Chat Thread - #7/INFO]: [Not Secure] <swighl> killall all
+[21:06:49] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:06:50] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:06:51] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:07:02] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:07:17] [Server thread/INFO]: swighl issued server command: /sellgui
+[21:07:19] [Server thread/INFO]: me2 issued server command: /mobkill all
+[21:07:39] [Server thread/INFO]: me2 issued server command: /tphere s
+[21:08:40] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> اسويلك بيس
+[21:08:49] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> ليش لا
+[21:08:53] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> يب
+[21:08:53] [Server thread/INFO]: me2 issued server command: /home l
+[21:09:06] [User Authenticator #7/INFO]: UUID of player DualCone7646 is c9a14a79-b70e-3b3a-b5be-b1af9606e2f2
+[21:09:07] [Server thread/INFO]: DualCone7646 joined the game
+[21:09:07] [Server thread/INFO]: DualCone7646[/127.168.247.33:33947] logged in with entity id 10634 at ([spawn]0.0, 0.0, 0.0)
+[21:09:07] [Server thread/INFO]: DualCone7646 has made the advancement [Getting an Upgrade]
+[21:09:07] [Server thread/INFO]: [voicechat] Received secret request of DualCone7646 (20)
+[21:09:07] [Server thread/INFO]: [voicechat] Sent secret to DualCone7646
+[21:09:14] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> منور
+[21:09:21] [VoiceChatPacketProcessingThread/INFO]: [voicechat] Successfully authenticated player c9a14a79-b70e-3b3a-b5be-b1af9606e2f2
+[21:09:22] [VoiceChatPacketProcessingThread/INFO]: [voicechat] Successfully validated connection of player c9a14a79-b70e-3b3a-b5be-b1af9606e2f2
+[21:09:22] [VoiceChatPacketProcessingThread/INFO]: [voicechat] Player DualCone7646 (c9a14a79-b70e-3b3a-b5be-b1af9606e2f2) successfully connected to voice chat
+[21:09:23] [Server thread/INFO]: me2 issued server command: /home l
+[21:09:37] [Server thread/INFO]: [AuthMe] DualCone7646 registered 127.168.247.33
+[21:09:37] [Craft Scheduler Thread - 45 - AuthMe/INFO]: [AuthMe] DualCone7646 logged in 127.168.247.33
+[21:09:43] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> السلام عليكم
+[21:09:43] [Server thread/INFO]: DualCone7646 fell out of the world
+[21:09:53] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> وعليكم السلام
+[21:10:00] [Server thread/INFO]: me2 issued server command: //copy
+[21:10:02] [Server thread/INFO]: me2 issued server command: /tp s
+[21:10:10] [Server thread/INFO]: me2 issued server command: //paste
+[21:10:18] [Server thread/INFO]: me2 issued server command: //undo
+[21:10:19] [Server thread/INFO]: DualCone7646 issued server command: /skin iMAGICx
+[21:10:37] [Server thread/INFO]: me2 issued server command: //paste
+[21:10:43] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> شباب منو يتيم؟
+[21:10:53] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> اني محترف pvp وبناء
+[21:10:55] [Server thread/INFO]: me2 issued server command: /tpall
+[21:11:03] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> سويتلكم بيس عشان تتيمو
+[21:11:09] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> سويتلكم بيس عشان تتيمو
+[21:11:14] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[21:11:15] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> شكو
+[21:11:25] [Server thread/INFO]: me2 issued server command: /gm spectator k
+[21:11:26] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> شكرا
+[21:11:28] [Server thread/INFO]: me2 issued server command: /gm spectator KeepAlive_Bot
+[21:11:29] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[21:11:31] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[21:11:31] [Server thread/INFO]: me2 issued server command: /gamemode survival
+[21:11:32] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> سيف عطيته لي بلغلط صح
+[21:11:45] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> عطيته لك
+[21:11:52] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> هلو شباب
+[21:11:56] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> شكراااا
+[21:11:58] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> I'm owner
+[21:12:01] [Server thread/INFO]: me2 issued server command: /gamemode creative
+[21:12:18] [Server thread/INFO]: me2 issued server command: /invsee d
+[21:12:20] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> انت اثر؟
+[21:12:21] [Server thread/INFO]: DualCone7646 has made the advancement [Cover Me with Diamonds]
+[21:12:36] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> عاا
+[21:12:41] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> yeah
+[21:12:50] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> يلا تيمو
+[21:12:53] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> افضل اونر بالعالم
+[21:12:57] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> تحتاجون شي اكتبوها بتلي
+[21:13:03] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> ok
+[21:13:11] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> thx bro
+[21:13:17] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> شنو اسمك
+[21:13:24] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> اثر
+[21:13:28] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> اطينه قرويين و وضائف
+[21:13:40] [User Authenticator #8/INFO]: UUID of player GURD4 is a6e062b9-94c6-3039-874d-ed33d1f62653
+[21:13:41] [Server thread/INFO]: GURD4 joined the game
+[21:13:41] [Server thread/INFO]: GURD4[/127.45.140.249:38367] logged in with entity id 11611 at ([spawn]0.0, 0.0, 0.0)
+[21:13:41] [Server thread/INFO]: GURD4 has made the advancement [Getting an Upgrade]
+[21:13:52] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> تريدون وياه لو لا
+[21:14:00] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> ياهو
+[21:14:01] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> المهم علمود تنقلون هنا سوو ست هوم
+[21:14:08] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> اونر
+[21:14:15] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> ممكن وضائف
+[21:14:23] [Server thread/INFO]: DualCone7646 has made the advancement [Diamonds!]
+[21:14:25] [Server thread/INFO]: GURD4 issued server command: /2fa
+[21:14:28] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> وضائف
+[21:14:30] [Server thread/INFO]: swighl has made the advancement [Diamonds!]
+[21:14:34] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> مافي بعدين اسوي لكم
+[21:14:40] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> دطيني
+[21:14:41] [Server thread/INFO]: GURD4 lost connection: Disconnected
+[21:14:41] [Server thread/INFO]: [voicechat] Disconnecting client GURD4
+[21:14:41] [Server thread/INFO]: GURD4 left the game
+[21:14:45] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> اني اضبط
+[21:14:58] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> بس اطيني وضايف بربك
+[21:15:09] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> بربك
+[21:15:15] [User Authenticator #9/INFO]: UUID of player GURD4 is a6e062b9-94c6-3039-874d-ed33d1f62653
+[21:15:16] [Server thread/INFO]: GURD4 joined the game
+[21:15:16] [Server thread/INFO]: GURD4[/127.45.140.249:41479] logged in with entity id 11908 at ([spawn]0.0, 0.0, 0.0)
+[21:15:21] [Async Chat Thread - #9/INFO]: [Not Secure] <DualCone7646> ولك وضايف
+[21:15:24] [Netty Epoll Server IO #1/INFO]: Grim » DualCone7646 failed AimDuplicateLook (x20) 
+[21:15:26] [Async Chat Thread - #9/INFO]: [Not Secure] <me2> باي شباب بافك في منزل وتيبي
+[21:15:28] [Async Chat Thread - #9/INFO]: [Not Secure] <swighl> برح اجمع خشب
+[21:15:28] [Netty Epoll Server IO #1/INFO]: Grim » DualCone7646 failed Simulation (x98) .120626 /gl 222
+[21:15:32] [Server thread/INFO]: me2 issued server command: /afk
+[21:15:35] [Server thread/INFO]: swighl issued server command: /sethome
+[21:15:44] [Server thread/INFO]: swighl issued server command: /home
+[21:15:46] [Server thread/INFO]: DualCone7646 issued server command: /sethome h
+[21:15:49] [Server thread/INFO]: me2 issued server command: /afk
+[21:15:59] [Server thread/INFO]: DualCone7646 issued server command: /home h
+[21:16:00] [Server thread/INFO]: swighl issued server command: /rtp
+[21:16:05] [Netty Epoll Server IO #1/INFO]: Grim » DualCone7646 failed GroundSpoof (x5) claimed false
+[21:16:16] [Server thread/INFO]: GURD4 lost connection: Login timeout exceeded, you have been kicked from the server, please try again!
+[21:16:16] [Server thread/INFO]: [voicechat] Disconnecting client GURD4
+[21:16:16] [Server thread/INFO]: GURD4 left the game
+[21:16:40] [Async Chat Thread - #11/INFO]: [Not Secure] <DualCone7646> اسود
+[21:16:41] [Netty Epoll Server IO #1/INFO]: Grim » DualCone7646 failed Simulation (x174) .001127 /gl 44
+[21:16:48] [Server thread/INFO]: swighl issued server command: /rtp
+[21:17:34] [Server thread/INFO]: swighl issued server command: /home
+[21:17:50] [Server thread/INFO]: swighl has made the advancement [What a Deal!]
+[21:18:40] [Netty Epoll Server IO #1/INFO]: Grim » DualCone7646 failed AimDuplicateLook (x60) 
+[21:18:41] [Netty Epoll Server IO #1/INFO]: Grim » DualCone7646 failed Simulation (x214) .007418 /gl 149
+[21:20:04] [Async Chat Thread - #13/INFO]: [Not Secure] <DualCone7646> احح منيلك
+[21:20:12] [Async Chat Thread - #13/INFO]: [Not Secure] <swighl> ولك انت ملقلق
+[21:20:18] [Async Chat Thread - #13/INFO]: [Not Secure] <DualCone7646> اطيني
+[21:20:26] [Async Chat Thread - #13/INFO]: [Not Secure] <swighl> نونونو
+[21:20:32] [Netty Epoll Server IO #1/INFO]: Grim » DualCone7646 failed Simulation (x257) .053288 /gl 242
+[21:20:40] [Netty Epoll Server IO #1/INFO]: Grim » DualCone7646 failed Simulation (x296) .387395 /gl 25
+[21:20:42] [Server thread/WARN]: DualCone7646 was kicked due to keepalive timeout!
+[21:20:42] [Server thread/INFO]: DualCone7646 lost connection: Timed out
+[21:20:42] [Server thread/INFO]: [voicechat] Disconnecting client DualCone7646
+[21:20:42] [Server thread/INFO]: DualCone7646 left the game
+[21:21:48] [Server thread/INFO]: swighl issued server command: /plugins
+[21:21:57] [User Authenticator #10/INFO]: UUID of player DualCone7646 is c9a14a79-b70e-3b3a-b5be-b1af9606e2f2
+[21:22:15] [Server thread/INFO]: DualCone7646 joined the game
+[21:22:16] [Server thread/INFO]: DualCone7646[/127.168.247.33:43279] logged in with entity id 14031 at ([spawn]0.0, 0.0, 0.0)
+[21:22:16] [Craft Scheduler Thread - 47 - AuthMe/INFO]: [AuthMe] DualCone7646 logged in 127.168.247.33
+[21:22:16] [Server thread/INFO]: [voicechat] Received secret request of DualCone7646 (20)
+[21:22:16] [Server thread/INFO]: [voicechat] Sent secret to DualCone7646
+[21:22:36] [VoiceChatPacketProcessingThread/INFO]: [voicechat] Successfully authenticated player c9a14a79-b70e-3b3a-b5be-b1af9606e2f2
+[21:22:37] [VoiceChatPacketProcessingThread/INFO]: [voicechat] Successfully validated connection of player c9a14a79-b70e-3b3a-b5be-b1af9606e2f2
+[21:22:37] [VoiceChatPacketProcessingThread/INFO]: [voicechat] Player DualCone7646 (c9a14a79-b70e-3b3a-b5be-b1af9606e2f2) successfully connected to voice chat
+[21:22:50] [Server thread/INFO]: DualCone7646 issued server command: /home h
+[21:23:32] [Server thread/WARN]: DualCone7646 was kicked due to keepalive timeout!
+[21:23:32] [Server thread/INFO]: DualCone7646 lost connection: Timed out
+[21:23:32] [Server thread/INFO]: [voicechat] Disconnecting client DualCone7646
+[21:23:32] [Server thread/INFO]: DualCone7646 left the game
+[21:23:51] [Server thread/INFO]: swighl issued server command: /version ItemJoin
+[21:23:54] [Server thread/INFO]: swighl issued server command: /rtp

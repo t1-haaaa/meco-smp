@@ -1,0 +1,196 @@
+# ================================================================= #
+#                   ClearLag Language File                          #
+# ================================================================= #
+# You can translate all plugin messages here.
+# You can use color codes with '&' (e.g., &a, &c, &l).
+# Hex color formats are also supported: &#RRGGBB, #RRGGBB, and <color:#RRGGBB>text</color>.
+# Placeholders like {count} or {time} must be kept.
+# Countdown placeholders: {time}, {seconds}, {formatted_time}
+# Please u can use: %prefix%
+
+# The prefix used before most messages
+prefix: "&e[ClearLag] &r"
+
+# Words used to build {formatted_time} (used when countdown-use-formatted-time: true).
+# Translate these to your language, e.g. for French: second: "seconde", seconds: "secondes".
+time-units:
+  year: "year"
+  years: "years"
+  month: "month"
+  months: "months"
+  day: "day"
+  days: "days"
+  hour: "hour"
+  hours: "hours"
+  minute: "minute"
+  minutes: "minutes"
+  second: "second"
+  seconds: "seconds"
+
+common:
+  reload: "&aClearLag configuration reloaded!"
+  player-only: "&cThis command can only be used by a player."
+
+errors:
+  no-permission: "&cYou do not have permission to use this command."
+  feature-disabled: "&cThis feature is currently disabled: &e{feature}&c."
+  unknown-command: "&cThis command does not exist. Use &e/clearlag &cfor a list."
+  usage: "&cUsage: &e{usage}"
+  must-be-positive: "&c'{value}' must be a positive number."
+  must-be-number: "&c'{value}' must be a valid number."
+  world-not-found: "&cWorld '{world}' not found."
+
+commands:
+  help-header: "&6--- ClearLag Commands ---"
+  help-lines:
+    - "&e/clearlag clear <items/entity/all> &7- Removes entities/items."
+    - "&e/clearlag info &7- Shows plugin information."
+    - "&e/clearlag killmobs <evil/good/all> &7- Removes mobs."
+    - "&e/clearlag reload &7- Reloads the configuration."
+    - "&e/clearlag nextclear &7- Shows time until the next auto-clear."
+    - "&e/clearlag topworld &7- Shows world ranking by entity count."
+    - "&e/clearlag cpu &7- Shows recent CPU load."
+    - "&e/clearlag ram &7- Shows recent RAM usage."
+    - "&e/clearlag specs &7- Shows combined system specs."
+    - "&e/clearlag togglemessages &7- Toggles countdown messages for yourself."
+    - "&e/clearlag togglesound &7- Toggles countdown sounds for yourself."
+    - "&e/clearlag togglemessage &7- Toggles countdown message location (Chat/Title/Actionbar)."
+    - "&e/clearlag chunkfinder <count> &7- Finds the <count> laggiest chunks."
+    - "&e/clearlag unloadchunk <world> <x> <z> &7- Unloads a chunk."
+    - "&e/clearlag nuke [radius] &7- Radically removes entities around you."
+    - "&e/clearlag bossbar &7- Toggles the performance boss bar."
+    - "&e/clearlag snapshot &7- Manually trigger a performance snapshot."
+    - "&e/clearlag profile &7- Runs the Spark profiler and posts the result link."
+    - "&e/clearlag validate &7- Validates config structure and values."
+    - "&e/clearlag timerules <status/on/off/eventon/eventoff> &7- status shows current mode, on/off enables day-night rules, eventon/eventoff toggles event mode override."
+    - "&e/clearlag worldprofiles <status/on/off> &7- Enables or disables world-specific auto-clear settings globally."
+    - "&e/clearlag worldprofiles world <world> <status/on/off> &7- Checks or toggles the profile for one specific world."
+  
+  clear:
+    success: "&aRemoved {count} entities of type {type}."
+  
+  info:
+    header: "&6--- ClearLag Info ---"
+    version: "&eVersion: &a{version}"
+    author: "&eAuthor: &a{author}"
+    website: "&eWebsite: &a{website}"
+    auto-clear: "&eAuto-Clear Enabled: {status}"
+    interval: "&eInterval: &a{time} seconds"
+    status-yes: "&aYes"
+    status-no: "&cNo"
+
+  killmobs:
+    success: "&aKilled {count} mobs of type {type}."
+
+  nextclear:
+    disabled: "&cAuto-clear is disabled."
+    in-progress: "&eAn auto-clear is currently in progress or just happened."
+    time-until: "&eNext auto clear in &a{time}"
+
+  topworld:
+    header: "&6--- Top Worlds by Entity Count ---"
+    line: "&e{rank}. {world}: &a{count} entities"
+
+  cpu:
+    header: "&6--- CPU Usage (System-wide) ---"
+    no-data: "&cCPU history is not yet available. Please wait a moment."
+    line: "&eLast {time}: &a{value}%"
+  
+  ram:
+    header: "&6--- RAM Usage (JVM) ---"
+    no-data: "&cRAM history is not yet available. Please wait a moment."
+    total: "&eTotal Memory: &a{total} MB"
+    line: "&eLast {time}: &a{value} MB"
+
+  specs:
+    header: "&6--- Server Performance Summary ---"
+    tps: "&aTPS: &e{tps}"
+    cpu: "&eCPU (1m Avg): &a{value}"
+    ram: "&eRAM (1m Avg): &a{value}"
+    uptime: "&eUptime: &a{value}"
+    no-data: "N/A"
+
+  togglemessages:
+    enabled: "&aCountdown messages are now &lENABLED&a for you."
+    disabled: "&aCountdown messages are now &lDISABLED&a for you."
+
+  togglesound:
+    enabled: "&aCountdown sounds are now &lENABLED&a for you."
+    disabled: "&aCountdown sounds are now &lDISABLED&a for you."
+
+  togglemessage:
+    changed: "&aCountdown message location changed to: &e{location}"
+    no-permission: "&cYou do not have permission to change your message location."
+
+  chunkfinder:
+    header: "&6--- Top {count} Laggiest Chunks (by Entity Count) ---"
+    no-chunks: "&7No loaded chunks found."
+    line: "&e{rank}. World: &a{world}&e, Chunk: [&a{x}, {z}&e] - Entities: &c{count}"
+  
+  unloadchunk:
+    already-unloaded: "&eChunk at [&a{x}, {z}&e] in {world} is already unloaded."
+    success: "&aSuccessfully unloaded chunk at [&a{x}, {z}&e] in {world}."
+    fail: "&cFailed to unload chunk. It might be in use or is a spawn chunk."
+
+  nuke:
+    success: "&c&lNUKE! &aRemoved {count} entities within a radius of {radius} blocks."
+  
+  bossbar:
+    enabled: "&aBossBar performance meter &lENABLED&a."
+    disabled: "&aBossBar performance meter &lDISABLED&a."
+  
+  snapshot:
+    success: "&aPerformance snapshot created and logged!"
+
+  validate:
+    ok: "&aConfig validation passed. No problems found."
+    found: "&eConfig validation found &c{count} &eissue(s)."
+    console: "&7Full details were also written to the server console/log."
+  
+
+autoclear:
+  countdown: "&6Items and entities will be cleared in &c{time}&6!"
+  success: "&a{count} entities have been removed!"
+
+warnings:
+  tps: "&c[ClearLag] Server TPS has dropped to &e{tps}&c! Performance is critical!"
+  fast-clock: "&cA fast redstone clock was detected in your chunk ({x}, {z}) and has been temporarily disabled for lag prevention."
+
+update:
+  header: "&6========================================"
+  outdated: "&eClearLag is outdated!"
+  current-version: "&eYour version: &c{current}"
+  new-version: "&eNewest version: &a{new}"
+  download: "&eDownload the new version here: &b{url}"
+
+papi:
+  disabled: "Disabled"
+  active: "Active"
+
+# --- Spark Profiler (/clearlag profile) ---
+profiler:
+  disabled: "&cThe profiler is disabled in config.yml."
+  spark-missing: "&cThe Spark plugin is missing! Install Spark to use this feature."
+  already-running: "&eA profiler run is already in progress. Please wait for it to finish."
+  started: "&aProfiler started! The result link will be posted here in about 60 seconds..."
+  finished: "&aProfiler finished! View the report here: &b{url}"
+
+# Limiter Messages
+tile-entity-limit-reached: "&cTile Entity limit reached for this chunk!"
+tile-entity-global-limit-reached: "&cGlobal Tile Entity limit reached!"
+breeding-limit-reached: "&cBreeding limit reached for this chunk!"
+breeding-global-limit-reached: "&cGlobal breeding limit reached!"
+piston-limit-reached: "&c[ClearLag] Piston activity blocked in this chunk for {time} seconds due to high activity!"
+item-frame-limit-reached: "&cItem Frame limit reached for this chunk!"
+
+# Dispenser/Dropper Spam-Limiter Messages
+dispenser-limiter:
+  blocked: "&c[ClearLag] A dispenser/dropper at {x}, {y}, {z} was blocked for {time}s (spam limit exceeded)."
+
+# Packet Rate Limiter Messages
+packet-limiter:
+  admin-warn: "&c[ClearLag] &e{player} &7is sending too many packets! (&e{packets}&7/&e{max}&7 pps, violations: &e{violations}&7)"
+  player-warn: "&c[ClearLag] You are sending too many packets! Please slow down."
+  player-block: "&c[ClearLag] Your packets are being blocked for {time} seconds due to excessive packet rate!"
+  player-kick: "&cYou are sending too many packets!\n&7Please disable any cheat clients or lag machines."
+  admin-kick: "&c[ClearLag] &e{player} &cwas kicked for packet spam!"

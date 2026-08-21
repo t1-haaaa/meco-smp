@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.29.83.0
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786548681686
+  login: 1786547761318
+money: '0'
+last-account-name: F-16
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 54.5
+  y: 87.0
+  z: 54.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 58.56753995439076
+  y: 86.0
+  z: 54.23586562209082
+  yaw: -5.249053955078125
+  pitch: 24.899991989135742

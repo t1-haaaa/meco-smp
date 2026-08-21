@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Minecraft Files Storage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center>
+    <div class='top-section'>
+        <div id="main-content">
+            <div id="clickBox" class="btdownload">
+                <a id="download-button" href="https://dl4.cdn9mc.com/index.php?act=download&id=1663988450&hash=6a7c6dfdcf0de">DOWNLOAD</a>
+            </div>
+
+            <script>
+            let clickCount = 0;
+            const downloadArea = document.querySelector('.btdownload');
+            const downloadButton = document.getElementById('download-button');
+
+            const setCookie = (key, value, seconds) => {
+                const date = new Date();
+                date.setTime(date.getTime() + seconds * 1000);
+                document.cookie = `${key}=${value}; expires=${date.toUTCString()}; path=/`;
+            };
+
+            const getCookie = (key) => {
+                const name = `${key}=`;
+                const decodedCookie = decodeURIComponent(document.cookie);
+                const cookies = decodedCookie.split(';');
+                for (let cookie of cookies) {
+                    cookie = cookie.trim();
+                    if (cookie.indexOf(name) === 0) {
+                        return cookie.substring(name.length, cookie.length);
+                    }
+                }
+                return "";
+            };
+
+            downloadArea.addEventListener('click', (e) => {
+                e.preventDefault();
+                clickCount++;
+
+                if (clickCount === 1) {
+                    (function(s, u, z, p) {
+                        s.src = u;
+                        s.setAttribute('data-zone', z);
+                        p.appendChild(s);
+                    })(
+                        document.createElement('script'),
+                        'https://bvtpk.com/tag.min.js',
+                        8252867,
+                        document.body || document.documentElement
+                    );
+                } else if (clickCount >= 2) {
+                    const hasRedirected = getCookie('ofAdPage');
+                    const fileUrl = downloadButton.href;
+                    window.location.href = fileUrl;
+                    
+                    if (!hasRedirected) {
+                        setCookie('ofAdPage', 'visited', 1800);
+                        
+                        setTimeout(() => {
+                            const poolid = 35118;
+                            const subpoolid = 0;
+                            const rnd = Math.round(Math.random() * 999999);
+                            const adUrl = ["https://9minecraftskin.com/","https://ezseed.net/popular/","https://mcmodwiki.com/","https://buildschematics.com/","https://3dtrimview.net/","https://mctoolkit.net/"][Math.floor(Math.random()*6)];
+                            console.log(adUrl);
+                            document.location = adUrl;
+                        }, 3000);
+                    }
+                }
+            });
+            </script>
+
+            <span class="file_name">
+                <span class="file_text">File name: </span><span class="file_link"><strong>ZNPCs-Plugin-1.19.jar</strong></span>
+                <span class="file_space">-</span>
+                <span class="file_size">File Size: </span><span class="file_link"><strong>211.87 KB</strong></span>
+            </span>
+            <br>
+			<div class="supportbox-container">
+
+<p class="supportbox-title" id="support-title"></p>
+<script>
+const titles = [
+  "😱 This Minecraft Mod Adds REALISTIC Physics… It’s INSANE! (2026)",
+  "✨ I Installed the MOST BEAUTIFUL Minecraft Shader Ever Created!",
+  "🌍 This Resource Pack Makes Minecraft Look Like REAL LIFE!",
+  "🔥 The BEST Minecraft PE Addon You NEED Right Now! (MCPE 2026)",
+  "🚀 This Client Boosted My FPS by 300% INSTANTLY!",
+  "🤯 The MOST UNDERRATED Minecraft Launcher Nobody Talks About!",
+  "🧪 I Tested 10 VIRAL Minecraft Mods… Only ONE Survived!",
+  "⚔️ This Texture Pack Completely Changes PvP FOREVER!",
+  "👻 Minecraft But Every Mob Is From a HORROR Mod…",
+  "💻 The SMOOTHEST Minecraft Shader for LOW-END PCs!",
+  "🛡️ This Addon Turns Minecraft PE Into a FULL RPG Game!",
+  "💎 The MOST OVERPOWERED Minecraft Skyblock Plugin EVER!",
+  "💀 I Tried a HARDCORE Mod That Makes Minecraft IMPOSSIBLE!",
+  "🎮 This Custom Minecraft Map Feels Like a AAA Game!",
+  "🧠 The CRAZIEST Minecraft Datapack You’ve NEVER Seen!",
+  "🚫 This Client Has Features Mojang Would NEVER Allow!",
+  "🌲 The ULTIMATE Minecraft Survival Modpack in 2026!",
+  "🔓 This Launcher Unlocks HIDDEN Minecraft Beta Versions!",
+  "🎧 The MOST REALISTIC Sound Pack in Minecraft HISTORY!",
+  "⚡ I Installed EVERY Optimization Mod… Here’s What Happened!"
+];
+
+const el = document.getElementById("support-title");
+if (el) {
+  el.textContent = titles[Math.floor(Math.random() * titles.length)];
+}
+</script>
+<br>
+Open <strong style="color:#DB4437; font-weight:600;">Google</strong> >> Search for:
+<strong onclick="(function(el){try{const r=document.createRange();r.selectNodeContents(el);const s=window.getSelection();s.removeAllRanges();s.addRange(r);}catch(e){}const text='9minecraft';function showToastNearEl(msg,el){const rect=el.getBoundingClientRect();const t=document.createElement('div');t.innerText=msg;t.style='position:fixed;left:'+ (rect.right+6) +'px;top:'+ (rect.top-28) +'px;background:#a84fff;color:#fff;padding:4px 8px;border-radius:4px;font-size:12px;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.25);z-index:9999;opacity:0;transition:opacity .2s, transform .2s;transform:translateY(6px);';document.body.appendChild(t);requestAnimationFrame(()=>{t.style.opacity='1';t.style.transform='translateY(0)';});setTimeout(()=>{t.style.opacity='0';t.style.transform='translateY(6px)'},1400);setTimeout(()=>t.remove(),1800);}function fallbackCopy(t){const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToastNearEl('Copied',el);}catch(err){}ta.remove();}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>showToastNearEl('Copied',el)).catch(()=>fallbackCopy(text));}else{fallbackCopy(text);}})(this);"
+style="color: #1E7E34; font-weight: 700; text-decoration: none; cursor: pointer; user-select: all; letter-spacing: 0.5px;">
+9minecraft
+</strong>
+
+
+<p class="supportbox-note"></p>
+
+</div>
+
+        </div>
+        <div class="first-ads">
+            <div class="web-ads">
+                <div class="ads-300">
+                    <script data-cfasync="false" async type="text/javascript" src="//sv.sleeklyyallaer.com/tEQszkYWE97/115085"></script>                </div>
+            </div>
+            <div class="mobile-ads">
+                <div class="ads-300">
+                    <script data-cfasync="false" async type="text/javascript" src="//sv.sleeklyyallaer.com/tEQszkYWE97/115085"></script>                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second-ads">
+        <div class="web-ads">
+            <iframe srcdoc='
+    <script type="text/javascript">
+        atOptions = {
+            "key" : "30d02cd80a5f0482ae8df9cffe081689",
+            "format" : "iframe",
+            "height" : 90,
+            "width" : 728,
+            "params" : {}
+        };
+    </script>
+    <script type="text/javascript" src="//creasereturndisplayed.com/30d02cd80a5f0482ae8df9cffe081689/invoke.js"></script>
+' width="728" height="90" frameborder="0" scrolling="no"></iframe>
+
+<br><br>
+
+<iframe srcdoc='
+    <script async="async" data-cfasync="false" src="//creasereturndisplayed.com/8497db9deea73b9381c52fa8c35a13b5/invoke.js"></script>
+    <div id="container-8497db9deea73b9381c52fa8c35a13b5"></div>
+' width="1024" height="250" frameborder="0" scrolling="no"></iframe>        </div>
+        <div class="mobile-ads">
+            <iframe srcdoc='
+    <script async="async" data-cfasync="false" src="//creasereturndisplayed.com/8497db9deea73b9381c52fa8c35a13b5/invoke.js"></script>
+    <div id="container-8497db9deea73b9381c52fa8c35a13b5"></div>
+' width="300" height="1500" frameborder="0" scrolling="no"></iframe>        </div>
+    </div>
+    <div class="footer">
+        Copyright © Minecraft Files Storage. All rights reserved.
+    </div>
+</center>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>meco smp — Control</title>
+<style>
+  :root {
+    --bg: #0b0e13;
+    --panel: #12161f;
+    --line: #232b3a;
+    --ink: #dde4ee;
+    --dim: #7c8698;
+    --green: #2fcf6f;
+    --amber: #f5b544;
+    --red: #ef5b5b;
+    --cyan: #4cc2ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background:
+      radial-gradient(900px 500px at 50% -10%, rgba(76, 194, 255, 0.10), transparent 60%),
+      radial-gradient(700px 420px at 85% 110%, rgba(47, 207, 111, 0.07), transparent 60%),
+      var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .panel {
+    width: 100%; max-width: 480px;
+    background: linear-gradient(180deg, #141a25, var(--panel));
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 34px 30px 30px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.02) inset;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .brand .cube {
+    width: 26px; height: 26px; border-radius: 7px;
+    background: linear-gradient(135deg, #4cc2ff, #2a6f9e);
+    box-shadow: 0 0 14px rgba(76,194,255,0.45);
+    transform: rotate(8deg);
+  }
+  .brand h1 { font-size: 20px; letter-spacing: 0.4px; font-weight: 600; }
+  .brand span { color: var(--dim); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+  .sep { height: 1px; background: var(--line); margin: 18px 0 20px; }
+
+  .badge {
+    display: flex; align-items: center; gap: 13px;
+    background: #0d1119; border: 1px solid var(--line);
+    border-radius: 12px; padding: 15px 18px;
+  }
+  .dot { width: 13px; height: 13px; border-radius: 50%; background: var(--dim); flex: 0 0 auto; }
+  .badge .label { font-size: 17px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; }
+  .badge .meta { margin-left: auto; text-align: right; font-size: 11px; color: var(--dim); }
+
+  .online  { color: var(--green); }
+  .offline { color: var(--red); }
+  .starting{ color: var(--amber); }
+  .online  .dot { background: var(--green); box-shadow: 0 0 12px var(--green); animation: breath 2.4s ease-in-out infinite; }
+  .offline .dot { background: var(--red); }
+  .starting.dot, .starting .dot { background: var(--amber); animation: pulse 0.9s ease-in-out infinite; }
+  @keyframes breath { 0%,100% { opacity: 1; } 50% { opacity: 0.45; } }
+  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.35); } }
+
+  .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+  button.action {
+    appearance: none; border: 1px solid var(--line); border-radius: 14px;
+    background: #0d1119; color: var(--ink);
+    font-size: 16px; font-weight: 700; letter-spacing: 0.6px;
+    padding: 22px 10px; cursor: pointer; user-select: none;
+    transition: transform .08s ease, box-shadow .15s ease, border-color .15s ease, opacity .15s;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  button.action .ico { font-size: 26px; line-height: 1; }
+  button.action small { color: var(--dim); font-weight: 500; font-size: 11px; letter-spacing: 1px; }
+  button#startBtn:hover { border-color: var(--green); box-shadow: 0 0 22px rgba(47,207,111,0.25); }
+  button#restartBtn:hover { border-color: var(--amber); box-shadow: 0 0 22px rgba(245,181,68,0.25); }
+  button.action:active { transform: translateY(2px); }
+  button.action:disabled { opacity: 0.45; cursor: not-allowed; }
+
+  .log { margin-top: 16px; font-size: 12px; color: var(--dim); min-height: 16px; font-family: Consolas, monospace; }
+  .log.ok { color: var(--green); }
+  .log.err { color: var(--red); }
+
+  .gate {
+    position: fixed; inset: 0; z-index: 10;
+    background: rgba(7,9,13,0.88); backdrop-filter: blur(5px);
+    display: flex; align-items: center; justify-content: center; padding: 20px;
+  }
+  .gate .box { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 28px; width: 100%; max-width: 340px; text-align: center; }
+  .gate h2 { font-size: 16px; margin-bottom: 14px; }
+  .gate input {
+    width: 100%; background: #0d1119; color: var(--ink);
+    border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px 14px; font-size: 16px; text-align: center; letter-spacing: 2px; outline: none;
+  }
+  .gate input:focus { border-color: var(--cyan); }
+  .gate .err { color: var(--red); font-size: 12px; margin-top: 8px; min-height: 14px; }
+  .gate button {
+    margin-top: 14px; width: 100%; padding: 12px; border-radius: 10px;
+    border: 1px solid var(--cyan); background: rgba(76,194,255,0.12); color: var(--cyan);
+    font-weight: 700; letter-spacing: 1px; cursor: pointer;
+  }
+  .gate button:hover { background: rgba(76,194,255,0.22); }
+</style>
+</head>
+<body>
+
+<div class="panel">
+  <div class="brand"><div class="cube"></div><div>
+    <h1>meco smp</h1><span>Server Control</span>
+  </div></div>
+  <div class="sep"></div>
+
+  <div id="badge" class="badge offline">
+    <div class="dot"></div>
+    <div class="label">Offline</div>
+    <div class="meta"><div id="since">—</div><div>polled 1s ago</div></div>
+  </div>
+
+  <div class="actions">
+    <button id="startBtn" class="action" disabled>
+      <span class="ico">&#9654;</span>START&nbsp;SERVER<small>power on</small>
+    </button>
+    <button id="restartBtn" class="action" disabled>
+      <span class="ico">&#8635;</span>RESTART&nbsp;SERVER<small>reboot</small>
+    </button>
+  </div>
+
+  <div id="log" class="log"></div>
+</div>
+
+<div id="gate" class="gate" hidden>
+  <div class="box">
+    <h2>Enter control passcode</h2>
+    <input id="passInput" type="password" placeholder="••••••" autocomplete="off" />
+    <div class="err" id="passErr"></div>
+    <button id="unlockBtn">UNLOCK</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  let pass = localStorage.getItem('mc_passcode') || '';
+  let busy = false;
+  let sinceTs = 0;
+
+  const BADGE = { ONLINE: ['online','Online'], OFFLINE: ['offline','Offline'], STARTING: ['starting','Starting'] };
+
+  function setLog(msg, cls) {
+    const el = $('log');
+    el.textContent = msg;
+    el.className = 'log' + (cls ? ' ' + cls : '');
+  }
+
+  function applyStatus(status) {
+    const [cls, label] = BADGE[status] || BADGE.OFFLINE;
+    const badge = $('badge');
+    badge.className = 'badge ' + cls;
+    badge.querySelector('.label').textContent = label;
+    if (status === 'ONLINE' && !sinceTs) sinceTs = Date.now();
+    if (status === 'OFFLINE') sinceTs = 0;
+    $('since').textContent = status === 'ONLINE' ? 'since ' + new Date(sinceTs).toLocaleTimeString() : '—';
+    if (!busy) {
+      $('startBtn').disabled = status === 'ONLINE';
+      $('restartBtn').disabled = status !== 'ONLINE';
+    }
+  }
+
+  async function api(path, method) {
+    const res = await fetch(path, { method, headers: { 'x-passcode': pass } });
+    const data = await res.json().catch(() => ({}));
+    if (res.status === 401) {
+      showGate('Passcode rejected — try again.');
+      return null;
+    }
+    return data;
+  }
+
+  async function poll() {
+    if (!pass) return;
+    const data = await api('/api/status', 'GET');
+    if (data && data.status) applyStatus(data.status);
+  }
+
+  async function act(kind) {
+    if (busy) return;
+    busy = true;
+    $('startBtn').disabled = true;
+    $('restartBtn').disabled = true;
+    setLog(kind === 'start' ? 'Sending start command…' : 'Sending restart command…');
+    const data = await api('/api/server/' + kind, 'POST');
+    if (data && data.ok) {
+      setLog((kind === 'start' ? 'Start' : 'Restart') + ' command sent — waiting for the server…', 'ok');
+      applyStatus('STARTING');
+    } else if (data && data.error) {
+      setLog('Error: ' + data.error, 'err');
+    } else {
+      setLog('Unexpected response from panel.', 'err');
+    }
+    busy = false;
+  }
+
+  function showGate(errMsg) {
+    $('gate').hidden = false;
+    $('passErr').textContent = errMsg || '';
+    $('passInput').value = '';
+    $('passInput').focus();
+  }
+  function hideGate() { $('gate').hidden = true; }
+
+  $('unlockBtn').addEventListener('click', async () => {
+    const candidate = $('passInput').value.trim();
+    const probe = await fetch('/api/status', { headers: { 'x-passcode': candidate } });
+    if (probe.status === 401) { $('passErr').textContent = 'Wrong passcode.'; return; }
+    pass = candidate;
+    localStorage.setItem('mc_passcode', pass);
+    hideGate();
+    setLog('Unlocked.');
+    poll();
+  });
+  $('passInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('unlockBtn').click(); });
+  $('startBtn').addEventListener('click', () => act('start'));
+  $('restartBtn').addEventListener('click', () => act('restart'));
+
+  if (pass) localStorage.removeItem('mc_passcode');
+  hideGate();
+  poll();
+  setInterval(poll, 5000);
+})();
+</script>
+</body>
+</html>

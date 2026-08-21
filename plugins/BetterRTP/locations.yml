@@ -1,0 +1,58 @@
+# Locations where rtp will center upon
+# Format:
+# - LOCATION_NAME:
+#     World: world
+#     CenterX: 100
+#     CenterZ: 100
+#     MaxRadius: 0
+#     MinRadius: 0
+#     Shape: square
+#     MinY: 64
+#     MaxY: 66
+
+Enabled: true
+RequirePermission: false
+UseLocationIfAvailable: true
+UseLocationsInSameWorld: true
+
+Locations:
+- room_1:
+    World: arena
+    CenterX: 45.244
+    CenterZ: 100.505
+    MaxRadius: 1
+    MinRadius: 0
+    Shape: square
+    MinY: 64
+    MaxY: 66
+    Cooldown: 0
+- room_2:
+    World: arena
+    CenterX: 100.413
+    CenterZ: 44.674
+    MaxRadius: 1
+    MinRadius: 0
+    Shape: square
+    MinY: 64
+    MaxY: 66
+    Cooldown: 0
+- room_3:
+    World: arena
+    CenterX: 101.015
+    CenterZ: 156.311
+    MaxRadius: 1
+    MinRadius: 0
+    Shape: square
+    MinY: 64
+    MaxY: 66
+    Cooldown: 0
+- room_4:
+    World: arena
+    CenterX: 157.557
+    CenterZ: 100.406
+    MaxRadius: 1
+    MinRadius: 0
+    Shape: square
+    MinY: 64
+    MaxY: 66
+    Cooldown: 0

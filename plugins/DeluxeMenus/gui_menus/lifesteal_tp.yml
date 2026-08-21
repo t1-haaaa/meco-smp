@@ -1,0 +1,15 @@
+open_command:
+- lifestealtp
+menu_title: '&8&lليفستيل'
+size: 9
+items:
+  teleport:
+    material: ENDER_PEARL
+    slot: 4
+    display_name: '&eتمثال الليفستيل'
+    lore:
+    - '&7اضغط التمثال في المبنى:'
+    - '&7- أول مرة: نقل عشوائي + حفظ بيتك'
+    - '&7- بعدها: رجوع لبيتك'
+    click_commands:
+    - '[close]'

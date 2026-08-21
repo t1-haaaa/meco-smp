@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.20.9.89
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786737683990
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786737701133
+  login: 1786737543740
+money: '0'
+last-account-name: gazall
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 52.35170689781921
+  y: 86.0
+  z: 50.16028391905181
+  yaw: -173.39993286132812
+  pitch: 1.7999939918518066
+logoutlocation:
+  world: 002f476b-a70b-450a-a595-fbb315471621
+  world-name: world
+  x: -62.98501635102668
+  y: 46.5
+  z: -19.228367940572877
+  yaw: -2.3496830463409424
+  pitch: 25.558671951293945

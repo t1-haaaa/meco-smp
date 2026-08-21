@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.181.195.156
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786643232431
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786643255892
+  login: 1786641844830
+money: '0'
+last-account-name: senehhh
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 52.717972478235964
+  y: 86.0
+  z: 49.37503238630357
+  yaw: 169.050048828125
+  pitch: 23.25000762939453
+homes:
+  home:
+    world: 002f476b-a70b-450a-a595-fbb315471621
+    world-name: world
+    x: -70.33289615796384
+    y: 46.0
+    z: -14.509420497576363
+    yaw: 132.65020751953125
+    pitch: -0.24135766923427582
+logoutlocation:
+  world: 18c28da6-b3a9-4bf6-80b2-2a8039f4c00b
+  world-name: arena
+  x: 102.66185447706002
+  y: 65.0
+  z: 96.74281786064006
+  yaw: 48.484375
+  pitch: 16.99848747253418

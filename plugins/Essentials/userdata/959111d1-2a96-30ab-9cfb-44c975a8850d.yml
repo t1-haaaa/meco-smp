@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.64.163.82
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1786746592209
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1786746784275
+  login: 1786746647872
+money: '7.98'
+last-account-name: Xllps
+lastlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 55.58306000207444
+  y: 87.0
+  z: 53.84112399460737
+  yaw: 24.99749755859375
+  pitch: 44.441062927246094
+logoutlocation:
+  world: 54a2762e-a140-4e9e-8288-7a88b815b61b
+  world-name: spawn
+  x: 58.96664644274153
+  y: 86.0
+  z: 42.330892313233335
+  yaw: 162.33274841308594
+  pitch: 34.09743881225586
+homes:
+  home:
+    world: 002f476b-a70b-450a-a595-fbb315471621
+    world-name: world
+    x: 777.432254521352
+    y: 55.0
+    z: 17.13322367346592
+    yaw: 127.91535949707031
+    pitch: 18.637033462524414
